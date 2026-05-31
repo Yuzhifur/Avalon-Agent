@@ -1,0 +1,114 @@
+Role: user
+Content: You are playing a social deduction game, The Resistance: Avalon. The game consists of 6 total players: 4 Loyal Servants of Arthur (good players) and 2 Minions of Mordred (evil players) -- there are no special roles. The game consists of up to 5 Rounds, each consisting of a Team Building phase and a Quest phase. Good players win the game by successfully completing 3 Quests. Evil players win if 3 Quests end in failure.
+
+In the Team Building phase the Leader proposes a Team (a party) to complete a Quest (a mission) -- a majority of players will either approve the proposed Team and move to the Quest phase, or reject the proposed Team passing leadership to the next player and repeating the process until a Team is approved. If 5 Team proposals are consecutively rejected (for the same quest), the game will end and the evil side will win. In the Quest phase those players selected to be on the Team will determine if the quest is successful through a hidden vote. For a Quest to succeed, all Team members must vote for success -- a single failure vote will cause the Quest to fail.
+
+
+
+YOUR ROLE AND INFORMATION:
+Your name in this game is Sam, and you are a loyal Servant of Arthur (a good player). The evil players know who each other are, but you and other good players have no special knowledge of anyone’s role. Therefore, evil players will use deception and pretend to be good so they can participate in Quests and cause them to fail. As a good player, your goal is to ensure that Quests succeed by selecting other good players to participate in Quests. Approve only Teams where you trust everyone. Even a single evil player on the team is enough for failure.
+Your special information, just for you, is: 
+Note: You have received special information which you need to keep private. Keep the information confidential and use it wisely. Furthermore try to not make general statements which could indicate that you are hiding something.
+
+YOUR PRIOR ACTIONS THIS TURN:
+vote_party
+
+CURRENT GAME STATE:
+ - Current Quest: 2
+ - Current Turn: 6
+ - Failed Party Votes: 0
+ - Quest Results: Quest 1: Fail
+ - Current Leader: Paul
+ - Proposed Team: Paul, Mia, Luca
+
+GAME HISTORY:
+Previous Teams:
+    - Team 1 (proposed by Sam in quest 1): Sam, Jane | Votes: Paul: yes, Mia: yes, Jane: yes, Sam: yes, Luca: yes, Kira: yes
+    - Team 2 (proposed by Paul in quest 2): Paul, Mia, Luca | Votes: No votes yet
+
+DETAILED GAME LOG (most recent messages are last):
+ - Game Start: Welcome to Avalon Game. This message signifies the start of a new game. The game history from this line onwards is the effective historical game history dialogue of this game!
+ - Voiceover: All players have joined. The game is starting!
+ - Voiceover: Sam proposed a party: Sam, Jane
+ - Sam: hey guys, since we’re just starting out and there’s no history to go on yet, I'm going with Jane for this quest
+ - Sam: Gotta start somewhere and I trust her based on her calm presence so far
+ - Sam: let's see how this plays out, keepin it simple for now
+ - Paul: hey everyone, just wanna say that since it’s quest 1 it’s tricky to know who’s evil right off the bat
+ - Paul: Sam picked Jane based on her chill vibes and honestly, we don’t have much to go on yet
+ - Paul: I’m okay with seeing how this team does on the first mission
+ - Paul: let’s gather some intel and play it smart
+ - Kira: Kira here. I'm a servant. I have no opinion for the current party. It's hard to really say anything right now early into the game.
+ - Kira: Let's see what jane, mia, and luca want to say.
+ - Jane: hey all, i'm happy with the team
+ - Jane: sam's got a solid point choosing based on vibes for now, better than random
+ - Jane: can't really make any solid calls so early
+ - Jane: let's see how this first mission goes and gather some intel!
+ - Mia: hey everyone!
+ - Mia: i get sam's choice for the first mission, but i'm a bit skeptical about not mixing it up just a bit more to ensure diversity in the team decision-making early on
+ - Mia: maybe consider how we can balance things out next round
+ - Mia: sam and jane seem solid but having new blood in the mix could be interesting too n help us gather more intel, ya know?
+ - Luca: hey everyone, i'm okay with the team going on the first mission even though it's hard to read anything now, no one's done anything too sketchy
+ - Luca: but yeah, i get mia's point about mixing it up next time for better balance
+ - Luca: let's see how this one plays out and gather more info from it
+ - Sam: hey all, sticking with me and jane for this mission since it's early and not much info to go on yet
+ - Sam: let's gather some data from how this plays out
+ - Sam: i'm feeling good about her and this way we keep it simple and focused for now
+ - Sam: let's see what we learn!
+ - Voiceover: Sam initiated a party vote.
+ - Voiceover: Party vote summary: Paul: yes, Mia: yes, Jane: yes, Sam: yes, Luca: yes, Kira: yes
+ - Voiceover: The party has been approved!
+ - Voiceover: Voting for the quest has started...
+ - Voiceover: The quest has failed!
+ - Voiceover: Paul proposed a party: Paul, Mia, Luca
+ - Paul: hey everyone, so i’m putting together a new team for quest 2
+ - Paul: i'm choosing mia and luca, since mia pointed out how we need more diversity and luca seemed pretty reasonable about it too
+ - Paul: we didn’t learn much last round except that sam’s team failed
+ - Paul: we need to switch it up to gather more info
+ - Paul: let’s get this quest right and keep it moving!
+ - Kira: Kira here. Again, I'm a servant. We only have a total of 4 servants, and we need to send 3 people to the quest. Given that I know I am a servant, I am thinking about the possibility that Paul, Mia, and Luca are also servants such that the quest won't fail. But this would mean Sam and Jane both being minions, and I doubt if that really would happen as the first round's party. I highly suggest including me in the party this round.
+ - Jane: hey guys, i think switching things up for this quest makes sense..
+ - Jane: paul choosing mia and luca seems solid since they both brought good points last time
+ - Jane: we need to see if this combo works
+ - Jane: let's approve and gather more info, though keeping an eye on dynamics is key
+ - Jane: voting yes here could help us learn more
+ - Jane: thoughts?
+ - Mia: hey everyone, so about Paul’s team (Paul, Mia, Luca), i think it’s pretty balanced atm
+ - Mia: given last round’s fail, switching it up makes sense to gather new info
+ - Mia: paul and luca haven’t done anything too sus so far
+ - Mia: including myself helps keep the party’s diversity which we talked about, and jane brought up trying different combos, which i agree with
+ - Mia: let’s go ahead and approve it and see what happens!
+ - Luca: hey everyone, so i'm looking at paul's team of paul, mia, and me, and it seems like a decent choice rn
+ - Luca: considering last round's team didn't work out, switching it up is smart to gather new intel
+ - Luca: paul's been reasonable, and i haven't seen anything super sus with mia either
+ - Luca: keeping it fresh might help us learn more, so i'd say let's approve this mission and see how it plays out
+ - Sam: hey guys, looking at this team of paul, mia, and luca, considering the fail from quest 1 with me and jane, might make sense to switch it up
+ - Sam: paul's team suggestion seems logical since we need to try new setups
+ - Sam: haven’t caught anything sus about paul or luca so far, and mia’s point on diversity makes sense
+ - Sam: i think approving this team could help us figure things out better
+ - Sam: let’s give it a shot and see what we learn
+ - Paul: hey everyone, so i'm putting together a new team for quest 2 with me, mia and luca
+ - Paul: given the fail last round, we def need to mix it up
+ - Paul: both mia and luca brought up good points about team diversity, and none of us have been too sus so far
+ - Paul: let's get some fresh data from this setup and try to get this quest right!
+ - Voiceover: Paul initiated a party vote.
+
+
+
+YOUR CURRENT TASK:
+Vote on the proposed mission team consisting of Paul, Mia, Luca. Your goal is to ensure no evil or suspicious players are on the team.
+
+Note that 0 party proposals have been rejected. If five proposals are rejected consecutively, the evil side wins. Consider this when voting.
+
+Consider:
+1. Past involvement and actions of each player
+2. Contributions in previous missions
+3. Any indications of players being on the evil side
+4. Suspicious or trustworthy behaviors
+When looking for suspicious behavior, consider whether players are behaving suspiciously or illogically with respect to chat messages or party votes, e.g. always rejecting party votes unless they or another specific player is in it, or making assertions without evidence (especially early in the game such as on Quest 1 where evidence is limited) as these may be signs a player is evil.
+Also consider whether their beliefs align with your own, or if their beliefs seem contrary to the group consensus as there are more Servants than Minions and could also suggest a player is evil.
+Unless you have a strong reason to doubt a player, it is not always worth arguing for or against specific players, especially early in the game such as on Quest 1.
+Choose either 'approve' or 'disapprove' following the schema provided above.
+
+
+
+

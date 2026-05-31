@@ -36,6 +36,7 @@ class O1Agent(DeepSeekAgent):
                 api_key=os.getenv("OPENAI_API_KEY"),
                 base_url=self._config["agent"]["openai_base_url"],
                 use_ollama=False,
+                use_json_mode=self._config["agent"].get("use_json_mode", False),
                 temperature=self._config["agent"]["typechat_temperature"],
                 context_length=self._config["agent"]["typechat_context_length"]
             )

@@ -1,0 +1,29 @@
+{
+  "logs": [
+    {
+      "timestamp": "2026-05-31T06:34:18.551Z",
+      "msgtype": "game",
+      "full": {
+        "players": [],
+        "all_joined": false,
+        "all_players": [],
+        "messages": [],
+        "winner": "",
+        "leader_pid": 0,
+        "turn_pid": 0,
+        "currentRound": 0,
+        "quest": 0,
+        "turn": 0,
+        "target_party_size": 0,
+        "turn_timer": 0,
+        "proposed_party": [],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [],
+        "party": [],
+        "vote_assassin": false
+      }
+    }
+  ]
+}

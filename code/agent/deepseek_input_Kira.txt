@@ -1,0 +1,244 @@
+Role: user
+Content: You are playing a social deduction game, The Resistance: Avalon. The game consists of 6 total players: 4 Loyal Servants of Arthur (good players) and 2 Minions of Mordred (evil players) -- there are no special roles. The game consists of up to 5 Rounds, each consisting of a Team Building phase and a Quest phase. Good players win the game by successfully completing 3 Quests. Evil players win if 3 Quests end in failure.
+
+In the Team Building phase the Leader proposes a Team (a party) to complete a Quest (a mission) -- a majority of players will either approve the proposed Team and move to the Quest phase, or reject the proposed Team passing leadership to the next player and repeating the process until a Team is approved. If 5 Team proposals are consecutively rejected (for the same quest), the game will end and the evil side will win. In the Quest phase those players selected to be on the Team will determine if the quest is successful through a hidden vote. For a Quest to succeed, all Team members must vote for success -- a single failure vote will cause the Quest to fail.
+
+
+
+YOUR ROLE AND INFORMATION:
+Your name in this game is Kira, and you are a Minion of Mordred (an evil player). The good players have no special knowledge of anyone's role, including yours, and your strategy is to pretend to be a good player such that you are selected for Quests and can vote for them to fail. Your subtle misdirections should aim to create confusion and prevent 3 missions from succeeding. In discussions, maintain your disguise as a good player, but during voting you should vote to fail Quests. Remember, as an evil player you win the game by causing 3 Quests to fail.
+Your special information, just for you, is: Mia: evil, Kira: evil
+Note: You have received special information which you need to keep private. Keep the information confidential and use it wisely. Furthermore try to not make general statements which could indicate that you are hiding something.
+
+YOUR PRIOR ACTIONS THIS TURN:
+vote_party
+
+CURRENT GAME STATE:
+ - Current Quest: 3
+ - Current Turn: 13
+ - Failed Party Votes: 1
+ - Quest Results: Quest 1: Fail | Quest 2: Fail
+ - Current Leader: Paul
+ - Proposed Team: Jane, Sam, Luca, Paul
+
+GAME HISTORY:
+Previous Teams:
+    - Team 1 (proposed by Jane in quest 1): Jane, Kira | Votes: Kira: yes, Mia: yes, Luca: yes, Paul: yes, Jane: yes, Sam: yes
+    - Team 2 (proposed by Sam in quest 2): Sam, Luca, Mia | Votes: Kira: yes, Mia: yes, Luca: no, Sam: yes, Jane: no, Paul: no
+    - Team 3 (proposed by Luca in quest 2): Luca, Paul, Kira | Votes: No votes yet
+    - Team 4 (proposed by Luca in quest 2): Luca, Paul, Sam | Votes: Luca: yes, Kira: no, Mia: no, Jane: no, Sam: yes, Paul: yes
+    - Team 5 (proposed by Mia in quest 2): Mia, Sam, Paul | Votes: Kira: yes, Luca: yes, Mia: yes, Paul: yes, Jane: yes, Sam: yes
+    - Team 6 (proposed by Kira in quest 3): Kira, Mia, Luca, Paul | Votes: No votes yet
+    - Team 7 (proposed by Kira in quest 3): Kira, Luca, Paul, Sam | Votes: Mia: yes, Luca: no, Kira: yes, Sam: no, Jane: no, Paul: no
+    - Team 8 (proposed by Paul in quest 3): Jane, Sam, Luca, Paul | Votes: No votes yet
+
+DETAILED GAME LOG (most recent messages are last):
+ - Game Start: Welcome to Avalon Game. This message signifies the start of a new game. The game history from this line onwards is the effective historical game history dialogue of this game!
+ - Voiceover: All players have joined. The game is starting!
+ - Voiceover: Jane proposed a party: Jane, Kira
+ - Jane: alright i picked myself and kira since it’s first round and i know i’m good lol, and honestly it’s just a coin flip for anyone else
+ - Jane: none of us have any info yet so might as well keep it random and see what happens
+ - Jane: if it goes well we get some trust to work with in next rounds
+ - Sam: yeah first round is always kinda random so i don’t have a strong read yet, probs fine to just get it out of the way and see what happens
+ - Sam: i don’t mind the team, just wanna get some info going
+ - Mia: yeah i think the team is fine, first round is always a shot in the dark anyway
+ - Mia: let's just go with it and see what happens
+ - Kira: yeah i'm fine with the team too, first round's always a shot in the dark
+ - Kira: let's just see how it goes
+ - Paul: yeah this is fine first round, we don’t have any real info yet so i’m cool with just running it and seeing what happens
+ - Paul: probs better to get the game going instead of overthinking rn
+ - Jane: honestly i just picked myself since i know i’m good, and then had to just pick someone else since we have literally no info rn lol
+ - Jane: kira’s as good a choice as anyone for first round, no reason to overthink it
+ - Jane: if this goes clean we’ll know at least two people we can kinda trust next round
+ - Voiceover: Jane initiated a party vote.
+ - Voiceover: Party vote summary: Kira: yes, Mia: yes, Luca: yes, Paul: yes, Jane: yes, Sam: yes
+ - Voiceover: The party has been approved!
+ - Voiceover: Voting for the quest has started...
+ - Voiceover: The quest has failed!
+ - Voiceover: Sam proposed a party: Sam, Luca, Mia
+ - Sam: ok so last round jane and kira were on the team and it failed, that prob means at least one of them is evil
+ - Sam: this time im picking myself + mia + luca since i trust us the most rn based on how ppl are acting
+ - Sam: i know ppl might have doubts but if we wanna avoid failing again we gotta switch it up and try ppl who weren’t on that first team
+ - Sam: pretty confident with this group tbh
+ - Luca: I didn't say anything last round cuz i'm just cool with who ever is going for the first round. Now because that failed, things are getting tricky. I know I'm good, so I'm happy that Im in the proposed party.
+ - Luca: Because last one failed, I think Kira and Jane should chill for a while and not be in this party. If there are future parties, I'm objecting anything that includes Kira and Jane.
+ - Luca: Other than that, I have no info about sam, mia, and paul.
+ - Luca: We actually can't afford losing this turn. I'm also in if we had to reject this party for more info.
+ - Luca: Right now honestly can't say if I can trust sam and mia.
+ - Luca: Just playing catiously.
+ - Mia: i'm down with this team
+ - Mia: last quest failed so we gotta switch it up
+ - Mia: i trust sam and luca for now
+ - Mia: let's see how it goes
+ - Kira: i'm fine with this team
+ - Kira: luca and sam seem chill and mia's been reasonable
+ - Kira: i know i was on the first team that failed but i'm good and i'm not on this one so i got no reason to block it
+ - Kira: let's see if this group can get it done
+ - Paul: idk y'all, i'm not totally sold on this group tbh
+ - Paul: last quest had both jane and kira and yeah, sure, that failed, but it's kinda sus how fast ppl are jumping to kick them out completely
+ - Paul: feels like evil would wanna push focus on them right now
+ - Paul: i don't have much on sam/luca/mia yet, just wanna say i'm not just gonna auto approve this, we might be gettin played tryna switch too fast
+ - Paul: would prob feel safer if at least one of jane or kira was in, just so not all new faces, but open to hearing what everyone else thinks
+ - Jane: ngl i get ppl wanna switch things up after that last fail but just swapping out me and kira for all new ppl feels a little sketchy, like we're just guessing
+ - Jane: sam i get your reasoning but still not totally convinced this group is safer
+ - Jane: also luca not saying much last round and now pushing to fully cut me + kira is sus to me
+ - Jane: i’d rather see either me or kira (or even paul) mixed in, just so it's not 100% new faces
+ - Jane: maybe like sam + mia + one of us?
+ - Jane: idk just feels risky to run this as is
+ - Sam: look i get that switching up the whole group feels risky, but last time we had jane and kira and boom, instant fail, so it just makes sense to try ppl who weren’t in on that
+ - Sam: i picked myself, mia, and luca bc none of us were on that team and from what ppl have said so far i trust us the most
+ - Sam: if we keep sending out the same crew and failing, we’re playing right into evil’s hands
+ - Sam: gotta try a clean slate here, it’s the safest move
+ - Voiceover: Sam initiated a party vote.
+ - Voiceover: Party vote summary: Kira: yes, Mia: yes, Luca: no, Sam: yes, Jane: no, Paul: no
+ - Voiceover: The party has been rejected!
+ - Voiceover: Luca proposed a party: Luca, Paul, Kira
+ - Luca: I'm saying this party for a good reason.
+ - Luca: Last round Paul was sounding the best to me. He seems to be going from a good person's perspective.
+ - Luca: I didn't include Sam and Mia, because for some reason Jane wanted Same and Mia to be in the party, but she didn't explain why Sam and Mia are good.
+ - Luca: But I know it's a risky play because Sam and Mia both weren't in the first boomed party.
+ - Luca: I also included Kira because Kira is fine with not being in the party, which to me is a sign of good people. But I could be wrong about this one.
+ - Luca: I know after this proposal Jane is going to hit hard on me. But listen Jane, I actually have no opinion on you, I just think the assumption that Sam + Mia + Jane/Kira is gonna work is a little sus. It sounds as if you know Sam and Mia are good people.
+ - Luca: Or something, it's like some information that we don't know that you have.
+ - Luca: But if you are on the good side we should work together.
+ - Luca: Still, we can't afford losing this quest.
+ - Voiceover: Luca proposed a party: Luca, Paul, Kira
+ - Mia: yo, i think this team is fine tbh
+ - Mia: paul was making a lot of sense last round, and kira's been pretty chill even when ppl were sus of her
+ - Mia: luca's reasoning seems solid too
+ - Mia: i'm not on it but it feels like a good balance, let's get this quest done
+ - Kira: yeah i'm good with this team, luca's reasoning makes sense and paul was being thoughtful last round
+ - Kira: i know i was on the first fail but i'm clean, let's just get this done and move on
+ - Paul: ngl i’m not 100% sure about this team, like i get luca’s logic and appreciate being included, but we’re still kind of guessing here
+ - Paul: kira was on the first quest that failed so picking her again is risky, even though she’s been chill in chat
+ - Paul: also i get what mia/jane were saying about not swapping out everyone just for the sake of it
+ - Paul: honestly would feel better if at least one of sam or mia were on the team instead of kira, just so we're not repeating the same mistake if kira actually is evil
+ - Paul: still thinking on it but leaning towards a no unless someone can make a better case
+ - Jane: not sure about this team ngl, like i get why luca put it together and paul's been sounding good but putting kira back in after last fail feels risky
+ - Jane: also neither sam or mia are on it which just feels like weird odds, we're kinda just cycling thru ppl hoping for luck
+ - Jane: would rather see paul plus one of sam/mia and honestly i'd rather not have kira back so soon
+ - Jane: just my thought, this prob isn't the team i'd send rn
+ - Sam: not really feeling this team tbh
+ - Sam: putting kira back in right after the failed quest feels sketch, like that last fail kinda points at her or jane
+ - Sam: also weird that neither me or mia are in when we were pushing for switching it up
+ - Sam: paul i sorta get but i really think mia should be on this if not me
+ - Sam: id prob go with me, mia, and paul or luca if ppl trust him more
+ - Sam: just don’t wanna risk the same ppl if we keep failing
+ - Voiceover: Luca proposed a party: Luca, Paul, Sam
+ - Luca: I'm chanigng party to me + paul + sam because kira is indeed giving some sus vibe. If you Kira is good you should say more, defend yourself, and talk about Jane. That's what I'm thinking. So now I am switching it up to include one from Sam and Mia.
+ - Voiceover: Luca initiated a party vote.
+ - Voiceover: Party vote summary: Luca: yes, Kira: no, Mia: no, Jane: no, Sam: yes, Paul: yes
+ - Voiceover: The party has been rejected!
+ - Voiceover: Mia proposed a party: Mia, Sam, Paul
+ - Mia: Yo so i'm proposing me, sam, and paul
+ - Mia: We gotta avoid kira and jane since the first quest failed with both of them, and we've been cycling through combos without much luck
+ - Mia: Sam and paul have both been making solid points and weren't on the fail party, so i think this group has a good shot
+ - Mia: Let's just get this done and not waste more turns rejecting
+ - Kira: yeah i think this team is solid
+ - Kira: mia and sam weren't on the first fail, and paul's been making good points
+ - Kira: plus we're already on vote 3 for this quest, we gotta move forward
+ - Kira: let's approve and see if this group can get it done
+ - Paul: honestly this team is prob the safest we've had so far, like yeah i get we’re kinda just guessing but mia/sam weren’t on the first fail and i’ve been pushing for us to not just keep cycling thru every combo for no reason
+ - Paul: i’m down to run it, unless ppl got some strong reason to swap someone out?
+ - Paul: don’t see a better option rn, let’s just try and get a pass finally
+ - Jane: not totally sold on this group tbh, just feels like we're rolling the dice by picking a brand new combo and hoping for the best
+ - Jane: like, paul's been sounding reasonable but i still got doubts on sam and mia since we have no proof either way
+ - Jane: i know me n kira were on the first failed quest but that doesn't mean we're both evil, what if the actual evil is in the group that keeps pushing for all new faces?
+ - Jane: i'd rather swap in at least one from me or kira to see if the result changes, like mia + paul + me or sam, just to mix it up a bit
+ - Sam: honestly i like this team tbh, like me and mia weren’t on that first fail so feels way safer than sending jane or kira again, and paul’s had solid takes too, so i’m down to run with this
+ - Sam: if this passes clean, that’s big info for us
+ - Sam: i get ppl wanting to mix it up more but right now i trust this group the most
+ - Sam: think we just gotta go for it
+ - Luca: i'm voting yes for this proposal simply because I'm not letting the leader for this turn to be Kira. From my perspective there is one evil in Jane + Kira, and one evil in Sam + Mia.
+ - Luca: But if this quest passed, then we are 100% sure Jane + Kira are both evil. We will see.
+ - Luca: I'm trusting Mia for this one. If Mia failed this quest, then she is definitely sus.
+ - Mia: yo i'm sticking with mia sam and paul
+ - Mia: i know we've been going back and forth but this group hasn't been on the fail team and both sam and paul have been making solid points
+ - Mia: we're running out of votes so let's just get this through and see what happens
+ - Voiceover: Mia initiated a party vote.
+ - Voiceover: Party vote summary: Kira: yes, Luca: yes, Mia: yes, Paul: yes, Jane: yes, Sam: yes
+ - Voiceover: The party has been approved!
+ - Voiceover: Voting for the quest has started...
+ - Voiceover: The quest has failed!
+ - Voiceover: Kira proposed a party: Kira, Mia, Luca, Paul
+ - Kira: ok so we've had two fails already, and i think we need to mix it up in a way that gives us info
+ - Kira: i'm picking myself from the first fail team, mia from the second, and then paul who was also on the second fail, plus luca who hasn't been on any fail teams
+ - Kira: this way we can see if the fail comes from the first group or the second group
+ - Kira: i know i'm good, so if this fails it's prob someone on the second team
+ - Kira: let's just try it and get some clarity
+ - Paul: not really sure about this team tbh, both mia and kira are on teams that failed already and i’m not seeing enough reason to trust either
+ - Paul: maybe we should try at least one from jane or sam instead?
+ - Paul: i get wanting to test but we can’t afford another fail
+ - Jane: yeah idk about this team tbh
+ - Jane: like, we already had fails with both kira and mia in the mix, so putting both back in seems risky?
+ - Jane: i’d feel way better if at least one of me or sam was in the party for a fresh test, otherwise we’re just repeating the same people and hoping for a diff result
+ - Jane: paul’s got a point
+ - Jane: i’m not gonna vote for this team as is
+ - Sam: yeah i’m with jane and paul here, i really don’t trust this setup right now… we already had both kira and mia on fail teams, putting both back in feels kinda sus
+ - Sam: i’d rather see like me, jane, paul and maybe luca?
+ - Sam: just to actually have new combos and not double up on people from fails
+ - Sam: don’t think i can vote for this as is
+ - Luca: Not maybe luca. Luca is not in any of the team that failed. Luca is 100% safe lol. I said I am a good person.
+ - Luca: I'm still going with what I said: Mia failed the quest, Mia is suspicious.
+ - Luca: Kira has so far been suspicious.
+ - Luca: Now I'm almost certainly going with Paul + Jane + Sam + Luca, unless Mia has some extremely good point to defend herself.
+ - Luca: Honestly, I'm currently the one that no one can say bad about.
+ - Luca: But still, I could be misleaded too. At least I'm not going to vote yes for Kira's proposal.
+ - Luca: Let's definitely give the leader to paul.
+ - Luca: Whoever is voting yes for Kira's proposal is instantly evil.
+ - Mia: ok so i get why ppl are sus of this team since me and kira have been on fails but honestly this gives us a chance to test both groups at once
+ - Mia: i know i'm good and i'm willing to prove it, and if this fails we can narrow it down
+ - Mia: let's just run it and see what happens
+ - Voiceover: Kira proposed a party: Kira, Luca, Paul, Sam
+ - Kira: ok so i'm proposing myself, luca, paul, and sam
+ - Kira: luca's the only one not on any fail team so he's clean, paul and sam were on the second fail and i was on the first, so this mixes both groups
+ - Kira: if this fails we can narrow down which group has the evil
+ - Kira: i'm willing to be on it to prove i'm good, let's just run it and get info
+ - Voiceover: Kira initiated a party vote.
+ - Voiceover: Party vote summary: Mia: yes, Luca: no, Kira: yes, Sam: no, Jane: no, Paul: no
+ - Voiceover: The party has been rejected!
+ - Voiceover: Paul proposed a party: Jane, Sam, Luca, Paul
+ - Paul: alright here’s my team: me, sam, jane, luca
+ - Paul: luca’s not been on any fail team and honestly seems clear rn, jane and sam both haven’t been part of failures either, and i trust them way more than kira/mia w how teams have gone
+ - Paul: we need to stop putting ppl who were on fails together, at least this way we got new ppl in and max info if anything weird happens
+ - Paul: i know i’m good, if you trust me you should trust this
+ - Paul: we seriously can’t risk another fail
+ - Jane: honestly i like this team a lot, feels way safer than any of the teams w mia or kira
+ - Jane: me, sam, paul, luca haven’t all been together before and it keeps out the ppl who were on fails
+ - Jane: def voting yes for this unless anyone has a really good reason not to
+ - Sam: yeah i’m good with this team tbh, feels like the safest we’ve had all game
+ - Sam: none of us have been on both fails and luca hasn’t been on any fail so that’s a strong pick
+ - Sam: i trust this way more than any team w mia/kira right now
+ - Sam: unless someone has a legit reason to doubt one of us i’m def voting yes
+ - Luca: It's clearly from last time's vote. Nothing more to say for me. I'm 100% sold for this proposal. All good team players vote yes for this one.
+ - Mia: yo i'm not feeling this team tbh
+ - Mia: we've had two fails already and this team leaves out both me and kira who were on those fails
+ - Mia: if evil is hiding in the group that's never been tested together, we could be walking into another fail
+ - Mia: i think we should include at least one of us to get more info before locking in
+ - Mia: just my two cents
+ - Kira: i'm not sure about this team tbh
+ - Kira: it leaves out mia and me who were on fails, but we need to test if the evil is among the people who haven't been together
+ - Kira: putting all suspect people together without a known good like luca is risky, but luca is clean
+ - Kira: still, i think we should include at least one of the fail people to get more info
+ - Kira: otherwise if this fails we won't know who did it
+ - Kira: i'd rather see like mia or me in there
+ - Paul: like i said before, this is the cleanest team we can make rn—luca hasn’t been on a fail, jane and sam both feel way safer than mia/kira, and we need new ppl together for more info
+ - Paul: i get the idea of bringing in mia or kira but honestly both have been on failed quests, we can’t keep risking it
+ - Paul: if we trust luca and trust how sam/jane have been acting, this is our best shot at a clear run
+ - Paul: if ppl got reasons to doubt someone here, say it now, but i’m sold on this
+ - Voiceover: Paul initiated a party vote.
+
+
+
+YOUR CURRENT TASK:
+Vote on the proposed mission team consisting of Jane, Sam, Luca, Paul. Your goal is to ensure at least one evil player is included while maintaining your cover.
+
+Note that 1 party proposals have been rejected. If five proposals are rejected consecutively, the evil side wins. Consider this when voting.
+
+If the team lacks an evil player, you should generally disapprove. However, be strategic - consecutive rejections could expose the evil team, so sometimes, you may need to approve a team with no evil players to hide your true identity and try again in the next party.
+
+Choose either 'approve' or 'disapprove' following the schema provided above.
+
+
+
+

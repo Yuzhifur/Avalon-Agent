@@ -2,7 +2,7 @@ name: emnlp
 channels:
   - conda-forge
 dependencies:
-  - python
+  - python=3.10
   - pip
   - bzip2
   - ca-certificates
@@ -22,67 +22,8 @@ dependencies:
   - packaging
   - pcre2
   - pillow
-  - pip:
-    - absl-py
-    - accelerate
-    - aiohttp
-    - aiosignal
-    - anyio
-    - apricot-select
-    - beautifulsoup4
-    - dataclasses-json
-    - easydict
-    - fastapi
-    - fastapi-utils
-    - hashids
-    - httpcore
-    - httpx
-    - huggingface
-    - huggingface-hub
-    - importlib-metadata
-    - importlib-resources
-    - joblib
-    - jsonschema
-    - jsonschema-specifications
-    - kiwisolver
-    - langchain
-    - lightning-utilities
-    - lxml
-    - matplotlib
-    - openai
-    - openapi-schema-pydantic
-    - pandas
-    - protobuf
-    - pydantic
-    - pydeck
-    - pygments
-    - pyjwt
-    - pyparsing
-    - pyspellchecker
-    - python-dateutil
-    - python-engineio
-    - python-socketio
-    - pytorch-lightning
-    - pyyaml
-    - regex
-    - safetensors
-    - scikit-learn
-    - scipy
-    - seaborn
-    - shortuuid
-    - six
-    - socketio
-    - tiktoken
-    - tinydb
-    - tokenizers
-    - toml
-    - tomli
-    - toolz
-    - torch
-    - torchaudio
-    - torchmetrics
-    - torchvision
-    - tqdm
-    - transformers
-    - uvicorn
-    - zipp
+  - pytorch
+  - pytorch-lightning
+  - torchaudio
+  - torchmetrics
+  - torchvision

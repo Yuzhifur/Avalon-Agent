@@ -1,0 +1,5092 @@
+{
+  "logs": [
+    {
+      "timestamp": "2026-05-31T06:05:44.366Z",
+      "msgtype": "game",
+      "full": {
+        "players": [],
+        "all_joined": false,
+        "all_players": [],
+        "messages": [],
+        "winner": "",
+        "leader_pid": 0,
+        "turn_pid": 0,
+        "currentRound": 0,
+        "quest": 0,
+        "turn": 0,
+        "target_party_size": 0,
+        "turn_timer": 0,
+        "proposed_party": [],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:17:50.923Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Sam"
+        ],
+        "all_joined": false,
+        "all_players": [
+          {
+            "name": "Sam",
+            "id": 6,
+            "role": "Servant-2",
+            "userId": "LA4XGgjCXgQ6",
+            "active": true,
+            "sessionId": "LA4XGgjCXgQ6",
+            "knowledge": {}
+          }
+        ],
+        "messages": [],
+        "winner": "",
+        "leader_pid": 0,
+        "turn_pid": 0,
+        "currentRound": 0,
+        "quest": 0,
+        "turn": 0,
+        "target_party_size": 0,
+        "turn_timer": 0,
+        "proposed_party": [],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:17:51.087Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Sam",
+          "Jane"
+        ],
+        "all_joined": false,
+        "all_players": [
+          {
+            "name": "Sam",
+            "id": 6,
+            "role": "Servant-2",
+            "userId": "LA4XGgjCXgQ6",
+            "active": true,
+            "sessionId": "LA4XGgjCXgQ6",
+            "knowledge": {}
+          },
+          {
+            "name": "Jane",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "XY4jP6yIXD4p",
+            "active": true,
+            "sessionId": "XY4jP6yIXD4p",
+            "knowledge": {}
+          }
+        ],
+        "messages": [],
+        "winner": "",
+        "leader_pid": 0,
+        "turn_pid": 0,
+        "currentRound": 0,
+        "quest": 0,
+        "turn": 0,
+        "target_party_size": 0,
+        "turn_timer": 0,
+        "proposed_party": [],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:17:51.135Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Sam",
+          "Jane",
+          "Kira"
+        ],
+        "all_joined": false,
+        "all_players": [
+          {
+            "name": "Sam",
+            "id": 6,
+            "role": "Servant-2",
+            "userId": "LA4XGgjCXgQ6",
+            "active": true,
+            "sessionId": "LA4XGgjCXgQ6",
+            "knowledge": {}
+          },
+          {
+            "name": "Jane",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "XY4jP6yIXD4p",
+            "active": true,
+            "sessionId": "XY4jP6yIXD4p",
+            "knowledge": {}
+          },
+          {
+            "name": "Kira",
+            "id": 2,
+            "role": "Servant-4",
+            "userId": "5AYqM8mFZWwD",
+            "active": true,
+            "sessionId": "5AYqM8mFZWwD",
+            "knowledge": {}
+          }
+        ],
+        "messages": [],
+        "winner": "",
+        "leader_pid": 0,
+        "turn_pid": 0,
+        "currentRound": 0,
+        "quest": 0,
+        "turn": 0,
+        "target_party_size": 0,
+        "turn_timer": 0,
+        "proposed_party": [],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:17:51.187Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Sam",
+          "Jane",
+          "Kira",
+          "Mia"
+        ],
+        "all_joined": false,
+        "all_players": [
+          {
+            "name": "Sam",
+            "id": 6,
+            "role": "Servant-2",
+            "userId": "LA4XGgjCXgQ6",
+            "active": true,
+            "sessionId": "LA4XGgjCXgQ6",
+            "knowledge": {}
+          },
+          {
+            "name": "Jane",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "XY4jP6yIXD4p",
+            "active": true,
+            "sessionId": "XY4jP6yIXD4p",
+            "knowledge": {}
+          },
+          {
+            "name": "Kira",
+            "id": 2,
+            "role": "Servant-4",
+            "userId": "5AYqM8mFZWwD",
+            "active": true,
+            "sessionId": "5AYqM8mFZWwD",
+            "knowledge": {}
+          },
+          {
+            "name": "Mia",
+            "id": 5,
+            "role": "Minion-1",
+            "userId": "4WXp28li0xMw",
+            "active": true,
+            "sessionId": "4WXp28li0xMw",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          }
+        ],
+        "messages": [],
+        "winner": "",
+        "leader_pid": 0,
+        "turn_pid": 0,
+        "currentRound": 0,
+        "quest": 0,
+        "turn": 0,
+        "target_party_size": 0,
+        "turn_timer": 0,
+        "proposed_party": [],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:17:51.248Z",
+      "msgtype": "player",
+      "name": "Jane",
+      "role": "Servant-3",
+      "pid": 1,
+      "knowledge": {},
+      "type": "random",
+      "player": "agent"
+    },
+    {
+      "timestamp": "2026-05-31T06:17:51.250Z",
+      "msgtype": "player",
+      "name": "Kira",
+      "role": "Servant-4",
+      "pid": 2,
+      "knowledge": {},
+      "type": "random",
+      "player": "agent"
+    },
+    {
+      "timestamp": "2026-05-31T06:17:51.251Z",
+      "msgtype": "player",
+      "name": "Luca",
+      "role": "Minion-2",
+      "pid": 3,
+      "knowledge": {
+        "3": "evil",
+        "5": "evil"
+      },
+      "type": "random",
+      "player": "agent"
+    },
+    {
+      "timestamp": "2026-05-31T06:17:51.252Z",
+      "msgtype": "player",
+      "name": "Paul",
+      "role": "Servant-1",
+      "pid": 4,
+      "knowledge": {},
+      "type": "human",
+      "player": "human"
+    },
+    {
+      "timestamp": "2026-05-31T06:17:51.254Z",
+      "msgtype": "player",
+      "name": "Mia",
+      "role": "Minion-1",
+      "pid": 5,
+      "knowledge": {
+        "3": "evil",
+        "5": "evil"
+      },
+      "type": "random",
+      "player": "agent"
+    },
+    {
+      "timestamp": "2026-05-31T06:17:51.255Z",
+      "msgtype": "player",
+      "name": "Sam",
+      "role": "Servant-2",
+      "pid": 6,
+      "knowledge": {},
+      "type": "random",
+      "player": "agent"
+    },
+    {
+      "timestamp": "2026-05-31T06:17:51.289Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Jane",
+          "Kira",
+          "Luca",
+          "Paul",
+          "Mia",
+          "Sam"
+        ],
+        "all_joined": true,
+        "all_players": [
+          {
+            "name": "Jane",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "XY4jP6yIXD4p",
+            "active": true,
+            "sessionId": "XY4jP6yIXD4p",
+            "knowledge": {}
+          },
+          {
+            "name": "Kira",
+            "id": 2,
+            "role": "Servant-4",
+            "userId": "5AYqM8mFZWwD",
+            "active": true,
+            "sessionId": "5AYqM8mFZWwD",
+            "knowledge": {}
+          },
+          {
+            "name": "Luca",
+            "id": 3,
+            "role": "Minion-2",
+            "userId": "oALNmYMF2NQM",
+            "active": true,
+            "sessionId": "oALNmYMF2NQM",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Paul",
+            "id": 4,
+            "role": "Servant-1",
+            "userId": "OKd07Olfbk",
+            "active": true,
+            "sessionId": "QKGTRtKYf",
+            "knowledge": {}
+          },
+          {
+            "name": "Mia",
+            "id": 5,
+            "role": "Minion-1",
+            "userId": "4WXp28li0xMw",
+            "active": true,
+            "sessionId": "4WXp28li0xMw",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Sam",
+            "id": 6,
+            "role": "Servant-2",
+            "userId": "LA4XGgjCXgQ6",
+            "active": true,
+            "sessionId": "LA4XGgjCXgQ6",
+            "knowledge": {}
+          }
+        ],
+        "messages": [],
+        "winner": "",
+        "leader_pid": 0,
+        "turn_pid": 0,
+        "currentRound": 0,
+        "quest": 0,
+        "turn": 0,
+        "target_party_size": 0,
+        "turn_timer": 0,
+        "proposed_party": [],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:17:53.323Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Jane",
+          "Kira",
+          "Luca",
+          "Paul",
+          "Mia",
+          "Sam"
+        ],
+        "all_joined": true,
+        "all_players": [
+          {
+            "name": "Jane",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "XY4jP6yIXD4p",
+            "active": true,
+            "sessionId": "XY4jP6yIXD4p",
+            "knowledge": {}
+          },
+          {
+            "name": "Kira",
+            "id": 2,
+            "role": "Servant-4",
+            "userId": "5AYqM8mFZWwD",
+            "active": true,
+            "sessionId": "5AYqM8mFZWwD",
+            "knowledge": {}
+          },
+          {
+            "name": "Luca",
+            "id": 3,
+            "role": "Minion-2",
+            "userId": "oALNmYMF2NQM",
+            "active": true,
+            "sessionId": "oALNmYMF2NQM",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Paul",
+            "id": 4,
+            "role": "Servant-1",
+            "userId": "OKd07Olfbk",
+            "active": true,
+            "sessionId": "QKGTRtKYf",
+            "knowledge": {}
+          },
+          {
+            "name": "Mia",
+            "id": 5,
+            "role": "Minion-1",
+            "userId": "4WXp28li0xMw",
+            "active": true,
+            "sessionId": "4WXp28li0xMw",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Sam",
+            "id": 6,
+            "role": "Servant-2",
+            "userId": "LA4XGgjCXgQ6",
+            "active": true,
+            "sessionId": "LA4XGgjCXgQ6",
+            "knowledge": {}
+          }
+        ],
+        "messages": [
+          {
+            "quest": 0,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "All players have joined. The game is starting!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_0",
+            "failed_party_votes": 0
+          }
+        ],
+        "winner": "",
+        "leader_pid": 1,
+        "turn_pid": 1,
+        "currentRound": 1,
+        "quest": 1,
+        "turn": 0,
+        "target_party_size": 2,
+        "turn_timer": 0,
+        "proposed_party": [],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:17:55.071Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Jane",
+          "Kira",
+          "Luca",
+          "Paul",
+          "Mia",
+          "Sam"
+        ],
+        "all_joined": true,
+        "all_players": [
+          {
+            "name": "Jane",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "XY4jP6yIXD4p",
+            "active": true,
+            "sessionId": "XY4jP6yIXD4p",
+            "knowledge": {}
+          },
+          {
+            "name": "Kira",
+            "id": 2,
+            "role": "Servant-4",
+            "userId": "5AYqM8mFZWwD",
+            "active": true,
+            "sessionId": "5AYqM8mFZWwD",
+            "knowledge": {}
+          },
+          {
+            "name": "Luca",
+            "id": 3,
+            "role": "Minion-2",
+            "userId": "oALNmYMF2NQM",
+            "active": true,
+            "sessionId": "oALNmYMF2NQM",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Paul",
+            "id": 4,
+            "role": "Servant-1",
+            "userId": "OKd07Olfbk",
+            "active": true,
+            "sessionId": "QKGTRtKYf",
+            "knowledge": {}
+          },
+          {
+            "name": "Mia",
+            "id": 5,
+            "role": "Minion-1",
+            "userId": "4WXp28li0xMw",
+            "active": true,
+            "sessionId": "4WXp28li0xMw",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Sam",
+            "id": 6,
+            "role": "Servant-2",
+            "userId": "LA4XGgjCXgQ6",
+            "active": true,
+            "sessionId": "LA4XGgjCXgQ6",
+            "knowledge": {}
+          }
+        ],
+        "messages": [
+          {
+            "quest": 0,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "All players have joined. The game is starting!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_0",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Jane proposed a party: Mia, Luca",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_1",
+            "failed_party_votes": 0
+          }
+        ],
+        "winner": "",
+        "leader_pid": 1,
+        "turn_pid": 1,
+        "currentRound": 1,
+        "quest": 1,
+        "turn": 0,
+        "target_party_size": 2,
+        "turn_timer": 0,
+        "proposed_party": [
+          5,
+          3
+        ],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:17:57.024Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Jane",
+          "Kira",
+          "Luca",
+          "Paul",
+          "Mia",
+          "Sam"
+        ],
+        "all_joined": true,
+        "all_players": [
+          {
+            "name": "Jane",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "XY4jP6yIXD4p",
+            "active": true,
+            "sessionId": "XY4jP6yIXD4p",
+            "knowledge": {}
+          },
+          {
+            "name": "Kira",
+            "id": 2,
+            "role": "Servant-4",
+            "userId": "5AYqM8mFZWwD",
+            "active": true,
+            "sessionId": "5AYqM8mFZWwD",
+            "knowledge": {}
+          },
+          {
+            "name": "Luca",
+            "id": 3,
+            "role": "Minion-2",
+            "userId": "oALNmYMF2NQM",
+            "active": true,
+            "sessionId": "oALNmYMF2NQM",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Paul",
+            "id": 4,
+            "role": "Servant-1",
+            "userId": "OKd07Olfbk",
+            "active": true,
+            "sessionId": "QKGTRtKYf",
+            "knowledge": {}
+          },
+          {
+            "name": "Mia",
+            "id": 5,
+            "role": "Minion-1",
+            "userId": "4WXp28li0xMw",
+            "active": true,
+            "sessionId": "4WXp28li0xMw",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Sam",
+            "id": 6,
+            "role": "Servant-2",
+            "userId": "LA4XGgjCXgQ6",
+            "active": true,
+            "sessionId": "LA4XGgjCXgQ6",
+            "knowledge": {}
+          }
+        ],
+        "messages": [
+          {
+            "quest": 0,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "All players have joined. The game is starting!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_0",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Jane proposed a party: Mia, Luca",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_1",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "Jane",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 1,
+            "mid": "msg_2",
+            "failed_party_votes": 0
+          }
+        ],
+        "winner": "",
+        "leader_pid": 1,
+        "turn_pid": 1,
+        "currentRound": 1,
+        "quest": 1,
+        "turn": 0,
+        "target_party_size": 2,
+        "turn_timer": 0,
+        "proposed_party": [
+          5,
+          3
+        ],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:17:58.555Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Jane",
+          "Kira",
+          "Luca",
+          "Paul",
+          "Mia",
+          "Sam"
+        ],
+        "all_joined": true,
+        "all_players": [
+          {
+            "name": "Jane",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "XY4jP6yIXD4p",
+            "active": true,
+            "sessionId": "XY4jP6yIXD4p",
+            "knowledge": {}
+          },
+          {
+            "name": "Kira",
+            "id": 2,
+            "role": "Servant-4",
+            "userId": "5AYqM8mFZWwD",
+            "active": true,
+            "sessionId": "5AYqM8mFZWwD",
+            "knowledge": {}
+          },
+          {
+            "name": "Luca",
+            "id": 3,
+            "role": "Minion-2",
+            "userId": "oALNmYMF2NQM",
+            "active": true,
+            "sessionId": "oALNmYMF2NQM",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Paul",
+            "id": 4,
+            "role": "Servant-1",
+            "userId": "OKd07Olfbk",
+            "active": true,
+            "sessionId": "QKGTRtKYf",
+            "knowledge": {}
+          },
+          {
+            "name": "Mia",
+            "id": 5,
+            "role": "Minion-1",
+            "userId": "4WXp28li0xMw",
+            "active": true,
+            "sessionId": "4WXp28li0xMw",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Sam",
+            "id": 6,
+            "role": "Servant-2",
+            "userId": "LA4XGgjCXgQ6",
+            "active": true,
+            "sessionId": "LA4XGgjCXgQ6",
+            "knowledge": {}
+          }
+        ],
+        "messages": [
+          {
+            "quest": 0,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "All players have joined. The game is starting!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_0",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Jane proposed a party: Mia, Luca",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_1",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "Jane",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 1,
+            "mid": "msg_2",
+            "failed_party_votes": 0
+          }
+        ],
+        "winner": "",
+        "leader_pid": 1,
+        "turn_pid": 2,
+        "currentRound": 1,
+        "quest": 1,
+        "turn": 1,
+        "target_party_size": 2,
+        "turn_timer": 0,
+        "proposed_party": [
+          5,
+          3
+        ],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:18:00.942Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Jane",
+          "Kira",
+          "Luca",
+          "Paul",
+          "Mia",
+          "Sam"
+        ],
+        "all_joined": true,
+        "all_players": [
+          {
+            "name": "Jane",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "XY4jP6yIXD4p",
+            "active": true,
+            "sessionId": "XY4jP6yIXD4p",
+            "knowledge": {}
+          },
+          {
+            "name": "Kira",
+            "id": 2,
+            "role": "Servant-4",
+            "userId": "5AYqM8mFZWwD",
+            "active": true,
+            "sessionId": "5AYqM8mFZWwD",
+            "knowledge": {}
+          },
+          {
+            "name": "Luca",
+            "id": 3,
+            "role": "Minion-2",
+            "userId": "oALNmYMF2NQM",
+            "active": true,
+            "sessionId": "oALNmYMF2NQM",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Paul",
+            "id": 4,
+            "role": "Servant-1",
+            "userId": "OKd07Olfbk",
+            "active": true,
+            "sessionId": "QKGTRtKYf",
+            "knowledge": {}
+          },
+          {
+            "name": "Mia",
+            "id": 5,
+            "role": "Minion-1",
+            "userId": "4WXp28li0xMw",
+            "active": true,
+            "sessionId": "4WXp28li0xMw",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Sam",
+            "id": 6,
+            "role": "Servant-2",
+            "userId": "LA4XGgjCXgQ6",
+            "active": true,
+            "sessionId": "LA4XGgjCXgQ6",
+            "knowledge": {}
+          }
+        ],
+        "messages": [
+          {
+            "quest": 0,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "All players have joined. The game is starting!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_0",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Jane proposed a party: Mia, Luca",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_1",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "Jane",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 1,
+            "mid": "msg_2",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 1,
+            "room": "HKRD",
+            "player": "Kira",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 2,
+            "mid": "msg_3",
+            "failed_party_votes": 0
+          }
+        ],
+        "winner": "",
+        "leader_pid": 1,
+        "turn_pid": 2,
+        "currentRound": 1,
+        "quest": 1,
+        "turn": 1,
+        "target_party_size": 2,
+        "turn_timer": 0,
+        "proposed_party": [
+          5,
+          3
+        ],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:18:03.003Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Jane",
+          "Kira",
+          "Luca",
+          "Paul",
+          "Mia",
+          "Sam"
+        ],
+        "all_joined": true,
+        "all_players": [
+          {
+            "name": "Jane",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "XY4jP6yIXD4p",
+            "active": true,
+            "sessionId": "XY4jP6yIXD4p",
+            "knowledge": {}
+          },
+          {
+            "name": "Kira",
+            "id": 2,
+            "role": "Servant-4",
+            "userId": "5AYqM8mFZWwD",
+            "active": true,
+            "sessionId": "5AYqM8mFZWwD",
+            "knowledge": {}
+          },
+          {
+            "name": "Luca",
+            "id": 3,
+            "role": "Minion-2",
+            "userId": "oALNmYMF2NQM",
+            "active": true,
+            "sessionId": "oALNmYMF2NQM",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Paul",
+            "id": 4,
+            "role": "Servant-1",
+            "userId": "OKd07Olfbk",
+            "active": true,
+            "sessionId": "QKGTRtKYf",
+            "knowledge": {}
+          },
+          {
+            "name": "Mia",
+            "id": 5,
+            "role": "Minion-1",
+            "userId": "4WXp28li0xMw",
+            "active": true,
+            "sessionId": "4WXp28li0xMw",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Sam",
+            "id": 6,
+            "role": "Servant-2",
+            "userId": "LA4XGgjCXgQ6",
+            "active": true,
+            "sessionId": "LA4XGgjCXgQ6",
+            "knowledge": {}
+          }
+        ],
+        "messages": [
+          {
+            "quest": 0,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "All players have joined. The game is starting!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_0",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Jane proposed a party: Mia, Luca",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_1",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "Jane",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 1,
+            "mid": "msg_2",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 1,
+            "room": "HKRD",
+            "player": "Kira",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 2,
+            "mid": "msg_3",
+            "failed_party_votes": 0
+          }
+        ],
+        "winner": "",
+        "leader_pid": 1,
+        "turn_pid": 3,
+        "currentRound": 1,
+        "quest": 1,
+        "turn": 2,
+        "target_party_size": 2,
+        "turn_timer": 0,
+        "proposed_party": [
+          5,
+          3
+        ],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:18:04.749Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Jane",
+          "Kira",
+          "Luca",
+          "Paul",
+          "Mia",
+          "Sam"
+        ],
+        "all_joined": true,
+        "all_players": [
+          {
+            "name": "Jane",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "XY4jP6yIXD4p",
+            "active": true,
+            "sessionId": "XY4jP6yIXD4p",
+            "knowledge": {}
+          },
+          {
+            "name": "Kira",
+            "id": 2,
+            "role": "Servant-4",
+            "userId": "5AYqM8mFZWwD",
+            "active": true,
+            "sessionId": "5AYqM8mFZWwD",
+            "knowledge": {}
+          },
+          {
+            "name": "Luca",
+            "id": 3,
+            "role": "Minion-2",
+            "userId": "oALNmYMF2NQM",
+            "active": true,
+            "sessionId": "oALNmYMF2NQM",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Paul",
+            "id": 4,
+            "role": "Servant-1",
+            "userId": "OKd07Olfbk",
+            "active": true,
+            "sessionId": "QKGTRtKYf",
+            "knowledge": {}
+          },
+          {
+            "name": "Mia",
+            "id": 5,
+            "role": "Minion-1",
+            "userId": "4WXp28li0xMw",
+            "active": true,
+            "sessionId": "4WXp28li0xMw",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Sam",
+            "id": 6,
+            "role": "Servant-2",
+            "userId": "LA4XGgjCXgQ6",
+            "active": true,
+            "sessionId": "LA4XGgjCXgQ6",
+            "knowledge": {}
+          }
+        ],
+        "messages": [
+          {
+            "quest": 0,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "All players have joined. The game is starting!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_0",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Jane proposed a party: Mia, Luca",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_1",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "Jane",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 1,
+            "mid": "msg_2",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 1,
+            "room": "HKRD",
+            "player": "Kira",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 2,
+            "mid": "msg_3",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 2,
+            "room": "HKRD",
+            "player": "Luca",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 3,
+            "mid": "msg_4",
+            "failed_party_votes": 0
+          }
+        ],
+        "winner": "",
+        "leader_pid": 1,
+        "turn_pid": 3,
+        "currentRound": 1,
+        "quest": 1,
+        "turn": 2,
+        "target_party_size": 2,
+        "turn_timer": 0,
+        "proposed_party": [
+          5,
+          3
+        ],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:18:07.163Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Jane",
+          "Kira",
+          "Luca",
+          "Paul",
+          "Mia",
+          "Sam"
+        ],
+        "all_joined": true,
+        "all_players": [
+          {
+            "name": "Jane",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "XY4jP6yIXD4p",
+            "active": true,
+            "sessionId": "XY4jP6yIXD4p",
+            "knowledge": {}
+          },
+          {
+            "name": "Kira",
+            "id": 2,
+            "role": "Servant-4",
+            "userId": "5AYqM8mFZWwD",
+            "active": true,
+            "sessionId": "5AYqM8mFZWwD",
+            "knowledge": {}
+          },
+          {
+            "name": "Luca",
+            "id": 3,
+            "role": "Minion-2",
+            "userId": "oALNmYMF2NQM",
+            "active": true,
+            "sessionId": "oALNmYMF2NQM",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Paul",
+            "id": 4,
+            "role": "Servant-1",
+            "userId": "OKd07Olfbk",
+            "active": true,
+            "sessionId": "QKGTRtKYf",
+            "knowledge": {}
+          },
+          {
+            "name": "Mia",
+            "id": 5,
+            "role": "Minion-1",
+            "userId": "4WXp28li0xMw",
+            "active": true,
+            "sessionId": "4WXp28li0xMw",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Sam",
+            "id": 6,
+            "role": "Servant-2",
+            "userId": "LA4XGgjCXgQ6",
+            "active": true,
+            "sessionId": "LA4XGgjCXgQ6",
+            "knowledge": {}
+          }
+        ],
+        "messages": [
+          {
+            "quest": 0,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "All players have joined. The game is starting!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_0",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Jane proposed a party: Mia, Luca",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_1",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "Jane",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 1,
+            "mid": "msg_2",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 1,
+            "room": "HKRD",
+            "player": "Kira",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 2,
+            "mid": "msg_3",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 2,
+            "room": "HKRD",
+            "player": "Luca",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 3,
+            "mid": "msg_4",
+            "failed_party_votes": 0
+          }
+        ],
+        "winner": "",
+        "leader_pid": 1,
+        "turn_pid": 4,
+        "currentRound": 1,
+        "quest": 1,
+        "turn": 3,
+        "target_party_size": 2,
+        "turn_timer": 0,
+        "proposed_party": [
+          5,
+          3
+        ],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:23:39.485Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Jane",
+          "Kira",
+          "Luca",
+          "Paul",
+          "Mia",
+          "Sam"
+        ],
+        "all_joined": true,
+        "all_players": [
+          {
+            "name": "Jane",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "XY4jP6yIXD4p",
+            "active": true,
+            "sessionId": "XY4jP6yIXD4p",
+            "knowledge": {}
+          },
+          {
+            "name": "Kira",
+            "id": 2,
+            "role": "Servant-4",
+            "userId": "5AYqM8mFZWwD",
+            "active": true,
+            "sessionId": "5AYqM8mFZWwD",
+            "knowledge": {}
+          },
+          {
+            "name": "Luca",
+            "id": 3,
+            "role": "Minion-2",
+            "userId": "oALNmYMF2NQM",
+            "active": true,
+            "sessionId": "oALNmYMF2NQM",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Paul",
+            "id": 4,
+            "role": "Servant-1",
+            "userId": "OKd07Olfbk",
+            "active": true,
+            "sessionId": "QKGTRtKYf",
+            "knowledge": {}
+          },
+          {
+            "name": "Mia",
+            "id": 5,
+            "role": "Minion-1",
+            "userId": "4WXp28li0xMw",
+            "active": true,
+            "sessionId": "4WXp28li0xMw",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Sam",
+            "id": 6,
+            "role": "Servant-2",
+            "userId": "LA4XGgjCXgQ6",
+            "active": true,
+            "sessionId": "LA4XGgjCXgQ6",
+            "knowledge": {}
+          }
+        ],
+        "messages": [
+          {
+            "quest": 0,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "All players have joined. The game is starting!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_0",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Jane proposed a party: Mia, Luca",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_1",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "Jane",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 1,
+            "mid": "msg_2",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 1,
+            "room": "HKRD",
+            "player": "Kira",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 2,
+            "mid": "msg_3",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 2,
+            "room": "HKRD",
+            "player": "Luca",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 3,
+            "mid": "msg_4",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 3,
+            "room": "HKRD",
+            "player": "Paul",
+            "msg": "I'm a servant. Idk about Mia and Luca rn. Jane is a little sus for not including herself in the party.",
+            "strategy": [],
+            "pid": 4,
+            "mid": "msg_5",
+            "failed_party_votes": 0
+          }
+        ],
+        "winner": "",
+        "leader_pid": 1,
+        "turn_pid": 4,
+        "currentRound": 1,
+        "quest": 1,
+        "turn": 3,
+        "target_party_size": 2,
+        "turn_timer": 0,
+        "proposed_party": [
+          5,
+          3
+        ],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:23:46.227Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Jane",
+          "Kira",
+          "Luca",
+          "Paul",
+          "Mia",
+          "Sam"
+        ],
+        "all_joined": true,
+        "all_players": [
+          {
+            "name": "Jane",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "XY4jP6yIXD4p",
+            "active": true,
+            "sessionId": "XY4jP6yIXD4p",
+            "knowledge": {}
+          },
+          {
+            "name": "Kira",
+            "id": 2,
+            "role": "Servant-4",
+            "userId": "5AYqM8mFZWwD",
+            "active": true,
+            "sessionId": "5AYqM8mFZWwD",
+            "knowledge": {}
+          },
+          {
+            "name": "Luca",
+            "id": 3,
+            "role": "Minion-2",
+            "userId": "oALNmYMF2NQM",
+            "active": true,
+            "sessionId": "oALNmYMF2NQM",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Paul",
+            "id": 4,
+            "role": "Servant-1",
+            "userId": "OKd07Olfbk",
+            "active": true,
+            "sessionId": "QKGTRtKYf",
+            "knowledge": {}
+          },
+          {
+            "name": "Mia",
+            "id": 5,
+            "role": "Minion-1",
+            "userId": "4WXp28li0xMw",
+            "active": true,
+            "sessionId": "4WXp28li0xMw",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Sam",
+            "id": 6,
+            "role": "Servant-2",
+            "userId": "LA4XGgjCXgQ6",
+            "active": true,
+            "sessionId": "LA4XGgjCXgQ6",
+            "knowledge": {}
+          }
+        ],
+        "messages": [
+          {
+            "quest": 0,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "All players have joined. The game is starting!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_0",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Jane proposed a party: Mia, Luca",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_1",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "Jane",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 1,
+            "mid": "msg_2",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 1,
+            "room": "HKRD",
+            "player": "Kira",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 2,
+            "mid": "msg_3",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 2,
+            "room": "HKRD",
+            "player": "Luca",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 3,
+            "mid": "msg_4",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 3,
+            "room": "HKRD",
+            "player": "Paul",
+            "msg": "I'm a servant. Idk about Mia and Luca rn. Jane is a little sus for not including herself in the party.",
+            "strategy": [],
+            "pid": 4,
+            "mid": "msg_5",
+            "failed_party_votes": 0
+          }
+        ],
+        "winner": "",
+        "leader_pid": 1,
+        "turn_pid": 5,
+        "currentRound": 1,
+        "quest": 1,
+        "turn": 4,
+        "target_party_size": 2,
+        "turn_timer": 0,
+        "proposed_party": [
+          5,
+          3
+        ],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:23:48.689Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Jane",
+          "Kira",
+          "Luca",
+          "Paul",
+          "Mia",
+          "Sam"
+        ],
+        "all_joined": true,
+        "all_players": [
+          {
+            "name": "Jane",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "XY4jP6yIXD4p",
+            "active": true,
+            "sessionId": "XY4jP6yIXD4p",
+            "knowledge": {}
+          },
+          {
+            "name": "Kira",
+            "id": 2,
+            "role": "Servant-4",
+            "userId": "5AYqM8mFZWwD",
+            "active": true,
+            "sessionId": "5AYqM8mFZWwD",
+            "knowledge": {}
+          },
+          {
+            "name": "Luca",
+            "id": 3,
+            "role": "Minion-2",
+            "userId": "oALNmYMF2NQM",
+            "active": true,
+            "sessionId": "oALNmYMF2NQM",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Paul",
+            "id": 4,
+            "role": "Servant-1",
+            "userId": "OKd07Olfbk",
+            "active": true,
+            "sessionId": "QKGTRtKYf",
+            "knowledge": {}
+          },
+          {
+            "name": "Mia",
+            "id": 5,
+            "role": "Minion-1",
+            "userId": "4WXp28li0xMw",
+            "active": true,
+            "sessionId": "4WXp28li0xMw",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Sam",
+            "id": 6,
+            "role": "Servant-2",
+            "userId": "LA4XGgjCXgQ6",
+            "active": true,
+            "sessionId": "LA4XGgjCXgQ6",
+            "knowledge": {}
+          }
+        ],
+        "messages": [
+          {
+            "quest": 0,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "All players have joined. The game is starting!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_0",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Jane proposed a party: Mia, Luca",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_1",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "Jane",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 1,
+            "mid": "msg_2",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 1,
+            "room": "HKRD",
+            "player": "Kira",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 2,
+            "mid": "msg_3",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 2,
+            "room": "HKRD",
+            "player": "Luca",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 3,
+            "mid": "msg_4",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 3,
+            "room": "HKRD",
+            "player": "Paul",
+            "msg": "I'm a servant. Idk about Mia and Luca rn. Jane is a little sus for not including herself in the party.",
+            "strategy": [],
+            "pid": 4,
+            "mid": "msg_5",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 4,
+            "room": "HKRD",
+            "player": "Mia",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 5,
+            "mid": "msg_6",
+            "failed_party_votes": 0
+          }
+        ],
+        "winner": "",
+        "leader_pid": 1,
+        "turn_pid": 5,
+        "currentRound": 1,
+        "quest": 1,
+        "turn": 4,
+        "target_party_size": 2,
+        "turn_timer": 0,
+        "proposed_party": [
+          5,
+          3
+        ],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:23:50.109Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Jane",
+          "Kira",
+          "Luca",
+          "Paul",
+          "Mia",
+          "Sam"
+        ],
+        "all_joined": true,
+        "all_players": [
+          {
+            "name": "Jane",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "XY4jP6yIXD4p",
+            "active": true,
+            "sessionId": "XY4jP6yIXD4p",
+            "knowledge": {}
+          },
+          {
+            "name": "Kira",
+            "id": 2,
+            "role": "Servant-4",
+            "userId": "5AYqM8mFZWwD",
+            "active": true,
+            "sessionId": "5AYqM8mFZWwD",
+            "knowledge": {}
+          },
+          {
+            "name": "Luca",
+            "id": 3,
+            "role": "Minion-2",
+            "userId": "oALNmYMF2NQM",
+            "active": true,
+            "sessionId": "oALNmYMF2NQM",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Paul",
+            "id": 4,
+            "role": "Servant-1",
+            "userId": "OKd07Olfbk",
+            "active": true,
+            "sessionId": "QKGTRtKYf",
+            "knowledge": {}
+          },
+          {
+            "name": "Mia",
+            "id": 5,
+            "role": "Minion-1",
+            "userId": "4WXp28li0xMw",
+            "active": true,
+            "sessionId": "4WXp28li0xMw",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Sam",
+            "id": 6,
+            "role": "Servant-2",
+            "userId": "LA4XGgjCXgQ6",
+            "active": true,
+            "sessionId": "LA4XGgjCXgQ6",
+            "knowledge": {}
+          }
+        ],
+        "messages": [
+          {
+            "quest": 0,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "All players have joined. The game is starting!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_0",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Jane proposed a party: Mia, Luca",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_1",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "Jane",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 1,
+            "mid": "msg_2",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 1,
+            "room": "HKRD",
+            "player": "Kira",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 2,
+            "mid": "msg_3",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 2,
+            "room": "HKRD",
+            "player": "Luca",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 3,
+            "mid": "msg_4",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 3,
+            "room": "HKRD",
+            "player": "Paul",
+            "msg": "I'm a servant. Idk about Mia and Luca rn. Jane is a little sus for not including herself in the party.",
+            "strategy": [],
+            "pid": 4,
+            "mid": "msg_5",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 4,
+            "room": "HKRD",
+            "player": "Mia",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 5,
+            "mid": "msg_6",
+            "failed_party_votes": 0
+          }
+        ],
+        "winner": "",
+        "leader_pid": 1,
+        "turn_pid": 6,
+        "currentRound": 1,
+        "quest": 1,
+        "turn": 5,
+        "target_party_size": 2,
+        "turn_timer": 0,
+        "proposed_party": [
+          5,
+          3
+        ],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:23:52.109Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Jane",
+          "Kira",
+          "Luca",
+          "Paul",
+          "Mia",
+          "Sam"
+        ],
+        "all_joined": true,
+        "all_players": [
+          {
+            "name": "Jane",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "XY4jP6yIXD4p",
+            "active": true,
+            "sessionId": "XY4jP6yIXD4p",
+            "knowledge": {}
+          },
+          {
+            "name": "Kira",
+            "id": 2,
+            "role": "Servant-4",
+            "userId": "5AYqM8mFZWwD",
+            "active": true,
+            "sessionId": "5AYqM8mFZWwD",
+            "knowledge": {}
+          },
+          {
+            "name": "Luca",
+            "id": 3,
+            "role": "Minion-2",
+            "userId": "oALNmYMF2NQM",
+            "active": true,
+            "sessionId": "oALNmYMF2NQM",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Paul",
+            "id": 4,
+            "role": "Servant-1",
+            "userId": "OKd07Olfbk",
+            "active": true,
+            "sessionId": "QKGTRtKYf",
+            "knowledge": {}
+          },
+          {
+            "name": "Mia",
+            "id": 5,
+            "role": "Minion-1",
+            "userId": "4WXp28li0xMw",
+            "active": true,
+            "sessionId": "4WXp28li0xMw",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Sam",
+            "id": 6,
+            "role": "Servant-2",
+            "userId": "LA4XGgjCXgQ6",
+            "active": true,
+            "sessionId": "LA4XGgjCXgQ6",
+            "knowledge": {}
+          }
+        ],
+        "messages": [
+          {
+            "quest": 0,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "All players have joined. The game is starting!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_0",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Jane proposed a party: Mia, Luca",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_1",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "Jane",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 1,
+            "mid": "msg_2",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 1,
+            "room": "HKRD",
+            "player": "Kira",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 2,
+            "mid": "msg_3",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 2,
+            "room": "HKRD",
+            "player": "Luca",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 3,
+            "mid": "msg_4",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 3,
+            "room": "HKRD",
+            "player": "Paul",
+            "msg": "I'm a servant. Idk about Mia and Luca rn. Jane is a little sus for not including herself in the party.",
+            "strategy": [],
+            "pid": 4,
+            "mid": "msg_5",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 4,
+            "room": "HKRD",
+            "player": "Mia",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 5,
+            "mid": "msg_6",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 5,
+            "room": "HKRD",
+            "player": "Sam",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 6,
+            "mid": "msg_7",
+            "failed_party_votes": 0
+          }
+        ],
+        "winner": "",
+        "leader_pid": 1,
+        "turn_pid": 6,
+        "currentRound": 1,
+        "quest": 1,
+        "turn": 5,
+        "target_party_size": 2,
+        "turn_timer": 0,
+        "proposed_party": [
+          5,
+          3
+        ],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:23:54.337Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Jane",
+          "Kira",
+          "Luca",
+          "Paul",
+          "Mia",
+          "Sam"
+        ],
+        "all_joined": true,
+        "all_players": [
+          {
+            "name": "Jane",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "XY4jP6yIXD4p",
+            "active": true,
+            "sessionId": "XY4jP6yIXD4p",
+            "knowledge": {}
+          },
+          {
+            "name": "Kira",
+            "id": 2,
+            "role": "Servant-4",
+            "userId": "5AYqM8mFZWwD",
+            "active": true,
+            "sessionId": "5AYqM8mFZWwD",
+            "knowledge": {}
+          },
+          {
+            "name": "Luca",
+            "id": 3,
+            "role": "Minion-2",
+            "userId": "oALNmYMF2NQM",
+            "active": true,
+            "sessionId": "oALNmYMF2NQM",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Paul",
+            "id": 4,
+            "role": "Servant-1",
+            "userId": "OKd07Olfbk",
+            "active": true,
+            "sessionId": "QKGTRtKYf",
+            "knowledge": {}
+          },
+          {
+            "name": "Mia",
+            "id": 5,
+            "role": "Minion-1",
+            "userId": "4WXp28li0xMw",
+            "active": true,
+            "sessionId": "4WXp28li0xMw",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Sam",
+            "id": 6,
+            "role": "Servant-2",
+            "userId": "LA4XGgjCXgQ6",
+            "active": true,
+            "sessionId": "LA4XGgjCXgQ6",
+            "knowledge": {}
+          }
+        ],
+        "messages": [
+          {
+            "quest": 0,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "All players have joined. The game is starting!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_0",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Jane proposed a party: Mia, Luca",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_1",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "Jane",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 1,
+            "mid": "msg_2",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 1,
+            "room": "HKRD",
+            "player": "Kira",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 2,
+            "mid": "msg_3",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 2,
+            "room": "HKRD",
+            "player": "Luca",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 3,
+            "mid": "msg_4",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 3,
+            "room": "HKRD",
+            "player": "Paul",
+            "msg": "I'm a servant. Idk about Mia and Luca rn. Jane is a little sus for not including herself in the party.",
+            "strategy": [],
+            "pid": 4,
+            "mid": "msg_5",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 4,
+            "room": "HKRD",
+            "player": "Mia",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 5,
+            "mid": "msg_6",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 5,
+            "room": "HKRD",
+            "player": "Sam",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 6,
+            "mid": "msg_7",
+            "failed_party_votes": 0
+          }
+        ],
+        "winner": "",
+        "leader_pid": 1,
+        "turn_pid": 1,
+        "currentRound": 1,
+        "quest": 1,
+        "turn": 6,
+        "target_party_size": 2,
+        "turn_timer": 0,
+        "proposed_party": [
+          5,
+          3
+        ],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:23:56.931Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Jane",
+          "Kira",
+          "Luca",
+          "Paul",
+          "Mia",
+          "Sam"
+        ],
+        "all_joined": true,
+        "all_players": [
+          {
+            "name": "Jane",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "XY4jP6yIXD4p",
+            "active": true,
+            "sessionId": "XY4jP6yIXD4p",
+            "knowledge": {}
+          },
+          {
+            "name": "Kira",
+            "id": 2,
+            "role": "Servant-4",
+            "userId": "5AYqM8mFZWwD",
+            "active": true,
+            "sessionId": "5AYqM8mFZWwD",
+            "knowledge": {}
+          },
+          {
+            "name": "Luca",
+            "id": 3,
+            "role": "Minion-2",
+            "userId": "oALNmYMF2NQM",
+            "active": true,
+            "sessionId": "oALNmYMF2NQM",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Paul",
+            "id": 4,
+            "role": "Servant-1",
+            "userId": "OKd07Olfbk",
+            "active": true,
+            "sessionId": "QKGTRtKYf",
+            "knowledge": {}
+          },
+          {
+            "name": "Mia",
+            "id": 5,
+            "role": "Minion-1",
+            "userId": "4WXp28li0xMw",
+            "active": true,
+            "sessionId": "4WXp28li0xMw",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Sam",
+            "id": 6,
+            "role": "Servant-2",
+            "userId": "LA4XGgjCXgQ6",
+            "active": true,
+            "sessionId": "LA4XGgjCXgQ6",
+            "knowledge": {}
+          }
+        ],
+        "messages": [
+          {
+            "quest": 0,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "All players have joined. The game is starting!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_0",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Jane proposed a party: Mia, Luca",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_1",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "Jane",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 1,
+            "mid": "msg_2",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 1,
+            "room": "HKRD",
+            "player": "Kira",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 2,
+            "mid": "msg_3",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 2,
+            "room": "HKRD",
+            "player": "Luca",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 3,
+            "mid": "msg_4",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 3,
+            "room": "HKRD",
+            "player": "Paul",
+            "msg": "I'm a servant. Idk about Mia and Luca rn. Jane is a little sus for not including herself in the party.",
+            "strategy": [],
+            "pid": 4,
+            "mid": "msg_5",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 4,
+            "room": "HKRD",
+            "player": "Mia",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 5,
+            "mid": "msg_6",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 5,
+            "room": "HKRD",
+            "player": "Sam",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 6,
+            "mid": "msg_7",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Jane proposed a party: Kira, Luca",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_8",
+            "failed_party_votes": 0
+          }
+        ],
+        "winner": "",
+        "leader_pid": 1,
+        "turn_pid": 1,
+        "currentRound": 1,
+        "quest": 1,
+        "turn": 6,
+        "target_party_size": 2,
+        "turn_timer": 0,
+        "proposed_party": [
+          2,
+          3
+        ],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:23:59.787Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Jane",
+          "Kira",
+          "Luca",
+          "Paul",
+          "Mia",
+          "Sam"
+        ],
+        "all_joined": true,
+        "all_players": [
+          {
+            "name": "Jane",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "XY4jP6yIXD4p",
+            "active": true,
+            "sessionId": "XY4jP6yIXD4p",
+            "knowledge": {}
+          },
+          {
+            "name": "Kira",
+            "id": 2,
+            "role": "Servant-4",
+            "userId": "5AYqM8mFZWwD",
+            "active": true,
+            "sessionId": "5AYqM8mFZWwD",
+            "knowledge": {}
+          },
+          {
+            "name": "Luca",
+            "id": 3,
+            "role": "Minion-2",
+            "userId": "oALNmYMF2NQM",
+            "active": true,
+            "sessionId": "oALNmYMF2NQM",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Paul",
+            "id": 4,
+            "role": "Servant-1",
+            "userId": "OKd07Olfbk",
+            "active": true,
+            "sessionId": "QKGTRtKYf",
+            "knowledge": {}
+          },
+          {
+            "name": "Mia",
+            "id": 5,
+            "role": "Minion-1",
+            "userId": "4WXp28li0xMw",
+            "active": true,
+            "sessionId": "4WXp28li0xMw",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Sam",
+            "id": 6,
+            "role": "Servant-2",
+            "userId": "LA4XGgjCXgQ6",
+            "active": true,
+            "sessionId": "LA4XGgjCXgQ6",
+            "knowledge": {}
+          }
+        ],
+        "messages": [
+          {
+            "quest": 0,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "All players have joined. The game is starting!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_0",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Jane proposed a party: Mia, Luca",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_1",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "Jane",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 1,
+            "mid": "msg_2",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 1,
+            "room": "HKRD",
+            "player": "Kira",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 2,
+            "mid": "msg_3",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 2,
+            "room": "HKRD",
+            "player": "Luca",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 3,
+            "mid": "msg_4",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 3,
+            "room": "HKRD",
+            "player": "Paul",
+            "msg": "I'm a servant. Idk about Mia and Luca rn. Jane is a little sus for not including herself in the party.",
+            "strategy": [],
+            "pid": 4,
+            "mid": "msg_5",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 4,
+            "room": "HKRD",
+            "player": "Mia",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 5,
+            "mid": "msg_6",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 5,
+            "room": "HKRD",
+            "player": "Sam",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 6,
+            "mid": "msg_7",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Jane proposed a party: Kira, Luca",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_8",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "Jane",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 1,
+            "mid": "msg_9",
+            "failed_party_votes": 0
+          }
+        ],
+        "winner": "",
+        "leader_pid": 1,
+        "turn_pid": 1,
+        "currentRound": 1,
+        "quest": 1,
+        "turn": 6,
+        "target_party_size": 2,
+        "turn_timer": 0,
+        "proposed_party": [
+          2,
+          3
+        ],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:24:02.439Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Jane",
+          "Kira",
+          "Luca",
+          "Paul",
+          "Mia",
+          "Sam"
+        ],
+        "all_joined": true,
+        "all_players": [
+          {
+            "name": "Jane",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "XY4jP6yIXD4p",
+            "active": true,
+            "sessionId": "XY4jP6yIXD4p",
+            "knowledge": {}
+          },
+          {
+            "name": "Kira",
+            "id": 2,
+            "role": "Servant-4",
+            "userId": "5AYqM8mFZWwD",
+            "active": true,
+            "sessionId": "5AYqM8mFZWwD",
+            "knowledge": {}
+          },
+          {
+            "name": "Luca",
+            "id": 3,
+            "role": "Minion-2",
+            "userId": "oALNmYMF2NQM",
+            "active": true,
+            "sessionId": "oALNmYMF2NQM",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Paul",
+            "id": 4,
+            "role": "Servant-1",
+            "userId": "OKd07Olfbk",
+            "active": true,
+            "sessionId": "QKGTRtKYf",
+            "knowledge": {}
+          },
+          {
+            "name": "Mia",
+            "id": 5,
+            "role": "Minion-1",
+            "userId": "4WXp28li0xMw",
+            "active": true,
+            "sessionId": "4WXp28li0xMw",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Sam",
+            "id": 6,
+            "role": "Servant-2",
+            "userId": "LA4XGgjCXgQ6",
+            "active": true,
+            "sessionId": "LA4XGgjCXgQ6",
+            "knowledge": {}
+          }
+        ],
+        "messages": [
+          {
+            "quest": 0,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "All players have joined. The game is starting!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_0",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Jane proposed a party: Mia, Luca",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_1",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "Jane",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 1,
+            "mid": "msg_2",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 1,
+            "room": "HKRD",
+            "player": "Kira",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 2,
+            "mid": "msg_3",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 2,
+            "room": "HKRD",
+            "player": "Luca",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 3,
+            "mid": "msg_4",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 3,
+            "room": "HKRD",
+            "player": "Paul",
+            "msg": "I'm a servant. Idk about Mia and Luca rn. Jane is a little sus for not including herself in the party.",
+            "strategy": [],
+            "pid": 4,
+            "mid": "msg_5",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 4,
+            "room": "HKRD",
+            "player": "Mia",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 5,
+            "mid": "msg_6",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 5,
+            "room": "HKRD",
+            "player": "Sam",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 6,
+            "mid": "msg_7",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Jane proposed a party: Kira, Luca",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_8",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "Jane",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 1,
+            "mid": "msg_9",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Jane initiated a party vote.",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_10",
+            "failed_party_votes": 0
+          }
+        ],
+        "winner": "",
+        "leader_pid": 1,
+        "turn_pid": 1,
+        "currentRound": 1,
+        "quest": 1,
+        "turn": 6,
+        "target_party_size": 2,
+        "turn_timer": 0,
+        "proposed_party": [
+          2,
+          3
+        ],
+        "vote_party": true,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:24:07.086Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Jane",
+          "Kira",
+          "Luca",
+          "Paul",
+          "Mia",
+          "Sam"
+        ],
+        "all_joined": true,
+        "all_players": [
+          {
+            "name": "Jane",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "XY4jP6yIXD4p",
+            "active": true,
+            "sessionId": "XY4jP6yIXD4p",
+            "knowledge": {}
+          },
+          {
+            "name": "Kira",
+            "id": 2,
+            "role": "Servant-4",
+            "userId": "5AYqM8mFZWwD",
+            "active": true,
+            "sessionId": "5AYqM8mFZWwD",
+            "knowledge": {}
+          },
+          {
+            "name": "Luca",
+            "id": 3,
+            "role": "Minion-2",
+            "userId": "oALNmYMF2NQM",
+            "active": true,
+            "sessionId": "oALNmYMF2NQM",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Paul",
+            "id": 4,
+            "role": "Servant-1",
+            "userId": "OKd07Olfbk",
+            "active": true,
+            "sessionId": "QKGTRtKYf",
+            "knowledge": {}
+          },
+          {
+            "name": "Mia",
+            "id": 5,
+            "role": "Minion-1",
+            "userId": "4WXp28li0xMw",
+            "active": true,
+            "sessionId": "4WXp28li0xMw",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Sam",
+            "id": 6,
+            "role": "Servant-2",
+            "userId": "LA4XGgjCXgQ6",
+            "active": true,
+            "sessionId": "LA4XGgjCXgQ6",
+            "knowledge": {}
+          }
+        ],
+        "messages": [
+          {
+            "quest": 0,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "All players have joined. The game is starting!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_0",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Jane proposed a party: Mia, Luca",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_1",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "Jane",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 1,
+            "mid": "msg_2",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 1,
+            "room": "HKRD",
+            "player": "Kira",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 2,
+            "mid": "msg_3",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 2,
+            "room": "HKRD",
+            "player": "Luca",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 3,
+            "mid": "msg_4",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 3,
+            "room": "HKRD",
+            "player": "Paul",
+            "msg": "I'm a servant. Idk about Mia and Luca rn. Jane is a little sus for not including herself in the party.",
+            "strategy": [],
+            "pid": 4,
+            "mid": "msg_5",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 4,
+            "room": "HKRD",
+            "player": "Mia",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 5,
+            "mid": "msg_6",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 5,
+            "room": "HKRD",
+            "player": "Sam",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 6,
+            "mid": "msg_7",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Jane proposed a party: Kira, Luca",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_8",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "Jane",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 1,
+            "mid": "msg_9",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Jane initiated a party vote.",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_10",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Party vote summary: Jane: yes, Luca: yes, Mia: yes, Kira: yes, Sam: yes, Paul: no",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_11",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "The party has been approved!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_12",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Voting for the quest has started...",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_13",
+            "failed_party_votes": 0
+          }
+        ],
+        "winner": "",
+        "leader_pid": 1,
+        "turn_pid": 1,
+        "currentRound": 1,
+        "quest": 1,
+        "turn": 6,
+        "target_party_size": 2,
+        "turn_timer": 0,
+        "proposed_party": [
+          2,
+          3
+        ],
+        "vote_party": false,
+        "vote_quest": true,
+        "failed_party_votes": 0,
+        "quest_results": [],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:24:10.004Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Jane",
+          "Kira",
+          "Luca",
+          "Paul",
+          "Mia",
+          "Sam"
+        ],
+        "all_joined": true,
+        "all_players": [
+          {
+            "name": "Jane",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "XY4jP6yIXD4p",
+            "active": true,
+            "sessionId": "XY4jP6yIXD4p",
+            "knowledge": {}
+          },
+          {
+            "name": "Kira",
+            "id": 2,
+            "role": "Servant-4",
+            "userId": "5AYqM8mFZWwD",
+            "active": true,
+            "sessionId": "5AYqM8mFZWwD",
+            "knowledge": {}
+          },
+          {
+            "name": "Luca",
+            "id": 3,
+            "role": "Minion-2",
+            "userId": "oALNmYMF2NQM",
+            "active": true,
+            "sessionId": "oALNmYMF2NQM",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Paul",
+            "id": 4,
+            "role": "Servant-1",
+            "userId": "OKd07Olfbk",
+            "active": true,
+            "sessionId": "QKGTRtKYf",
+            "knowledge": {}
+          },
+          {
+            "name": "Mia",
+            "id": 5,
+            "role": "Minion-1",
+            "userId": "4WXp28li0xMw",
+            "active": true,
+            "sessionId": "4WXp28li0xMw",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Sam",
+            "id": 6,
+            "role": "Servant-2",
+            "userId": "LA4XGgjCXgQ6",
+            "active": true,
+            "sessionId": "LA4XGgjCXgQ6",
+            "knowledge": {}
+          }
+        ],
+        "messages": [
+          {
+            "quest": 0,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "All players have joined. The game is starting!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_0",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Jane proposed a party: Mia, Luca",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_1",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "Jane",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 1,
+            "mid": "msg_2",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 1,
+            "room": "HKRD",
+            "player": "Kira",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 2,
+            "mid": "msg_3",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 2,
+            "room": "HKRD",
+            "player": "Luca",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 3,
+            "mid": "msg_4",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 3,
+            "room": "HKRD",
+            "player": "Paul",
+            "msg": "I'm a servant. Idk about Mia and Luca rn. Jane is a little sus for not including herself in the party.",
+            "strategy": [],
+            "pid": 4,
+            "mid": "msg_5",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 4,
+            "room": "HKRD",
+            "player": "Mia",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 5,
+            "mid": "msg_6",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 5,
+            "room": "HKRD",
+            "player": "Sam",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 6,
+            "mid": "msg_7",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Jane proposed a party: Kira, Luca",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_8",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "Jane",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 1,
+            "mid": "msg_9",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Jane initiated a party vote.",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_10",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Party vote summary: Jane: yes, Luca: yes, Mia: yes, Kira: yes, Sam: yes, Paul: no",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_11",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "The party has been approved!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_12",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Voting for the quest has started...",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_13",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "The quest has failed!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_14",
+            "failed_party_votes": 0
+          }
+        ],
+        "winner": "",
+        "leader_pid": 2,
+        "turn_pid": 2,
+        "currentRound": 2,
+        "quest": 2,
+        "turn": 0,
+        "target_party_size": 3,
+        "turn_timer": 0,
+        "proposed_party": [],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [
+          "fail"
+        ],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:24:12.500Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Jane",
+          "Kira",
+          "Luca",
+          "Paul",
+          "Mia",
+          "Sam"
+        ],
+        "all_joined": true,
+        "all_players": [
+          {
+            "name": "Jane",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "XY4jP6yIXD4p",
+            "active": true,
+            "sessionId": "XY4jP6yIXD4p",
+            "knowledge": {}
+          },
+          {
+            "name": "Kira",
+            "id": 2,
+            "role": "Servant-4",
+            "userId": "5AYqM8mFZWwD",
+            "active": true,
+            "sessionId": "5AYqM8mFZWwD",
+            "knowledge": {}
+          },
+          {
+            "name": "Luca",
+            "id": 3,
+            "role": "Minion-2",
+            "userId": "oALNmYMF2NQM",
+            "active": true,
+            "sessionId": "oALNmYMF2NQM",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Paul",
+            "id": 4,
+            "role": "Servant-1",
+            "userId": "OKd07Olfbk",
+            "active": true,
+            "sessionId": "QKGTRtKYf",
+            "knowledge": {}
+          },
+          {
+            "name": "Mia",
+            "id": 5,
+            "role": "Minion-1",
+            "userId": "4WXp28li0xMw",
+            "active": true,
+            "sessionId": "4WXp28li0xMw",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Sam",
+            "id": 6,
+            "role": "Servant-2",
+            "userId": "LA4XGgjCXgQ6",
+            "active": true,
+            "sessionId": "LA4XGgjCXgQ6",
+            "knowledge": {}
+          }
+        ],
+        "messages": [
+          {
+            "quest": 0,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "All players have joined. The game is starting!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_0",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Jane proposed a party: Mia, Luca",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_1",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "Jane",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 1,
+            "mid": "msg_2",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 1,
+            "room": "HKRD",
+            "player": "Kira",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 2,
+            "mid": "msg_3",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 2,
+            "room": "HKRD",
+            "player": "Luca",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 3,
+            "mid": "msg_4",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 3,
+            "room": "HKRD",
+            "player": "Paul",
+            "msg": "I'm a servant. Idk about Mia and Luca rn. Jane is a little sus for not including herself in the party.",
+            "strategy": [],
+            "pid": 4,
+            "mid": "msg_5",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 4,
+            "room": "HKRD",
+            "player": "Mia",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 5,
+            "mid": "msg_6",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 5,
+            "room": "HKRD",
+            "player": "Sam",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 6,
+            "mid": "msg_7",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Jane proposed a party: Kira, Luca",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_8",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "Jane",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 1,
+            "mid": "msg_9",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Jane initiated a party vote.",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_10",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Party vote summary: Jane: yes, Luca: yes, Mia: yes, Kira: yes, Sam: yes, Paul: no",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_11",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "The party has been approved!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_12",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Voting for the quest has started...",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_13",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "The quest has failed!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_14",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 2,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Kira proposed a party: Luca, Kira, Paul",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_15",
+            "failed_party_votes": 0
+          }
+        ],
+        "winner": "",
+        "leader_pid": 2,
+        "turn_pid": 2,
+        "currentRound": 2,
+        "quest": 2,
+        "turn": 0,
+        "target_party_size": 3,
+        "turn_timer": 0,
+        "proposed_party": [
+          3,
+          2,
+          4
+        ],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [
+          "fail"
+        ],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:24:14.940Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Jane",
+          "Kira",
+          "Luca",
+          "Paul",
+          "Mia",
+          "Sam"
+        ],
+        "all_joined": true,
+        "all_players": [
+          {
+            "name": "Jane",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "XY4jP6yIXD4p",
+            "active": true,
+            "sessionId": "XY4jP6yIXD4p",
+            "knowledge": {}
+          },
+          {
+            "name": "Kira",
+            "id": 2,
+            "role": "Servant-4",
+            "userId": "5AYqM8mFZWwD",
+            "active": true,
+            "sessionId": "5AYqM8mFZWwD",
+            "knowledge": {}
+          },
+          {
+            "name": "Luca",
+            "id": 3,
+            "role": "Minion-2",
+            "userId": "oALNmYMF2NQM",
+            "active": true,
+            "sessionId": "oALNmYMF2NQM",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Paul",
+            "id": 4,
+            "role": "Servant-1",
+            "userId": "OKd07Olfbk",
+            "active": true,
+            "sessionId": "QKGTRtKYf",
+            "knowledge": {}
+          },
+          {
+            "name": "Mia",
+            "id": 5,
+            "role": "Minion-1",
+            "userId": "4WXp28li0xMw",
+            "active": true,
+            "sessionId": "4WXp28li0xMw",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Sam",
+            "id": 6,
+            "role": "Servant-2",
+            "userId": "LA4XGgjCXgQ6",
+            "active": true,
+            "sessionId": "LA4XGgjCXgQ6",
+            "knowledge": {}
+          }
+        ],
+        "messages": [
+          {
+            "quest": 0,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "All players have joined. The game is starting!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_0",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Jane proposed a party: Mia, Luca",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_1",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "Jane",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 1,
+            "mid": "msg_2",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 1,
+            "room": "HKRD",
+            "player": "Kira",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 2,
+            "mid": "msg_3",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 2,
+            "room": "HKRD",
+            "player": "Luca",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 3,
+            "mid": "msg_4",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 3,
+            "room": "HKRD",
+            "player": "Paul",
+            "msg": "I'm a servant. Idk about Mia and Luca rn. Jane is a little sus for not including herself in the party.",
+            "strategy": [],
+            "pid": 4,
+            "mid": "msg_5",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 4,
+            "room": "HKRD",
+            "player": "Mia",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 5,
+            "mid": "msg_6",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 5,
+            "room": "HKRD",
+            "player": "Sam",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 6,
+            "mid": "msg_7",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Jane proposed a party: Kira, Luca",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_8",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "Jane",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 1,
+            "mid": "msg_9",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Jane initiated a party vote.",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_10",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Party vote summary: Jane: yes, Luca: yes, Mia: yes, Kira: yes, Sam: yes, Paul: no",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_11",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "The party has been approved!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_12",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Voting for the quest has started...",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_13",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "The quest has failed!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_14",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 2,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Kira proposed a party: Luca, Kira, Paul",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_15",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 2,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "Kira",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 2,
+            "mid": "msg_16",
+            "failed_party_votes": 0
+          }
+        ],
+        "winner": "",
+        "leader_pid": 2,
+        "turn_pid": 2,
+        "currentRound": 2,
+        "quest": 2,
+        "turn": 0,
+        "target_party_size": 3,
+        "turn_timer": 0,
+        "proposed_party": [
+          3,
+          2,
+          4
+        ],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [
+          "fail"
+        ],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:24:16.395Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Jane",
+          "Kira",
+          "Luca",
+          "Paul",
+          "Mia",
+          "Sam"
+        ],
+        "all_joined": true,
+        "all_players": [
+          {
+            "name": "Jane",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "XY4jP6yIXD4p",
+            "active": true,
+            "sessionId": "XY4jP6yIXD4p",
+            "knowledge": {}
+          },
+          {
+            "name": "Kira",
+            "id": 2,
+            "role": "Servant-4",
+            "userId": "5AYqM8mFZWwD",
+            "active": true,
+            "sessionId": "5AYqM8mFZWwD",
+            "knowledge": {}
+          },
+          {
+            "name": "Luca",
+            "id": 3,
+            "role": "Minion-2",
+            "userId": "oALNmYMF2NQM",
+            "active": true,
+            "sessionId": "oALNmYMF2NQM",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Paul",
+            "id": 4,
+            "role": "Servant-1",
+            "userId": "OKd07Olfbk",
+            "active": true,
+            "sessionId": "QKGTRtKYf",
+            "knowledge": {}
+          },
+          {
+            "name": "Mia",
+            "id": 5,
+            "role": "Minion-1",
+            "userId": "4WXp28li0xMw",
+            "active": true,
+            "sessionId": "4WXp28li0xMw",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Sam",
+            "id": 6,
+            "role": "Servant-2",
+            "userId": "LA4XGgjCXgQ6",
+            "active": true,
+            "sessionId": "LA4XGgjCXgQ6",
+            "knowledge": {}
+          }
+        ],
+        "messages": [
+          {
+            "quest": 0,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "All players have joined. The game is starting!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_0",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Jane proposed a party: Mia, Luca",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_1",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "Jane",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 1,
+            "mid": "msg_2",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 1,
+            "room": "HKRD",
+            "player": "Kira",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 2,
+            "mid": "msg_3",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 2,
+            "room": "HKRD",
+            "player": "Luca",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 3,
+            "mid": "msg_4",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 3,
+            "room": "HKRD",
+            "player": "Paul",
+            "msg": "I'm a servant. Idk about Mia and Luca rn. Jane is a little sus for not including herself in the party.",
+            "strategy": [],
+            "pid": 4,
+            "mid": "msg_5",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 4,
+            "room": "HKRD",
+            "player": "Mia",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 5,
+            "mid": "msg_6",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 5,
+            "room": "HKRD",
+            "player": "Sam",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 6,
+            "mid": "msg_7",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Jane proposed a party: Kira, Luca",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_8",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "Jane",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 1,
+            "mid": "msg_9",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Jane initiated a party vote.",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_10",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Party vote summary: Jane: yes, Luca: yes, Mia: yes, Kira: yes, Sam: yes, Paul: no",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_11",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "The party has been approved!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_12",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Voting for the quest has started...",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_13",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "The quest has failed!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_14",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 2,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Kira proposed a party: Luca, Kira, Paul",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_15",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 2,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "Kira",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 2,
+            "mid": "msg_16",
+            "failed_party_votes": 0
+          }
+        ],
+        "winner": "",
+        "leader_pid": 2,
+        "turn_pid": 3,
+        "currentRound": 2,
+        "quest": 2,
+        "turn": 1,
+        "target_party_size": 3,
+        "turn_timer": 0,
+        "proposed_party": [
+          3,
+          2,
+          4
+        ],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [
+          "fail"
+        ],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:24:19.190Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Jane",
+          "Kira",
+          "Luca",
+          "Paul",
+          "Mia",
+          "Sam"
+        ],
+        "all_joined": true,
+        "all_players": [
+          {
+            "name": "Jane",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "XY4jP6yIXD4p",
+            "active": true,
+            "sessionId": "XY4jP6yIXD4p",
+            "knowledge": {}
+          },
+          {
+            "name": "Kira",
+            "id": 2,
+            "role": "Servant-4",
+            "userId": "5AYqM8mFZWwD",
+            "active": true,
+            "sessionId": "5AYqM8mFZWwD",
+            "knowledge": {}
+          },
+          {
+            "name": "Luca",
+            "id": 3,
+            "role": "Minion-2",
+            "userId": "oALNmYMF2NQM",
+            "active": true,
+            "sessionId": "oALNmYMF2NQM",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Paul",
+            "id": 4,
+            "role": "Servant-1",
+            "userId": "OKd07Olfbk",
+            "active": true,
+            "sessionId": "QKGTRtKYf",
+            "knowledge": {}
+          },
+          {
+            "name": "Mia",
+            "id": 5,
+            "role": "Minion-1",
+            "userId": "4WXp28li0xMw",
+            "active": true,
+            "sessionId": "4WXp28li0xMw",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Sam",
+            "id": 6,
+            "role": "Servant-2",
+            "userId": "LA4XGgjCXgQ6",
+            "active": true,
+            "sessionId": "LA4XGgjCXgQ6",
+            "knowledge": {}
+          }
+        ],
+        "messages": [
+          {
+            "quest": 0,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "All players have joined. The game is starting!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_0",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Jane proposed a party: Mia, Luca",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_1",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "Jane",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 1,
+            "mid": "msg_2",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 1,
+            "room": "HKRD",
+            "player": "Kira",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 2,
+            "mid": "msg_3",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 2,
+            "room": "HKRD",
+            "player": "Luca",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 3,
+            "mid": "msg_4",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 3,
+            "room": "HKRD",
+            "player": "Paul",
+            "msg": "I'm a servant. Idk about Mia and Luca rn. Jane is a little sus for not including herself in the party.",
+            "strategy": [],
+            "pid": 4,
+            "mid": "msg_5",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 4,
+            "room": "HKRD",
+            "player": "Mia",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 5,
+            "mid": "msg_6",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 5,
+            "room": "HKRD",
+            "player": "Sam",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 6,
+            "mid": "msg_7",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Jane proposed a party: Kira, Luca",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_8",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "Jane",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 1,
+            "mid": "msg_9",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Jane initiated a party vote.",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_10",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Party vote summary: Jane: yes, Luca: yes, Mia: yes, Kira: yes, Sam: yes, Paul: no",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_11",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "The party has been approved!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_12",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Voting for the quest has started...",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_13",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "The quest has failed!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_14",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 2,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Kira proposed a party: Luca, Kira, Paul",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_15",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 2,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "Kira",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 2,
+            "mid": "msg_16",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 2,
+            "turn": 1,
+            "room": "HKRD",
+            "player": "Luca",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 3,
+            "mid": "msg_17",
+            "failed_party_votes": 0
+          }
+        ],
+        "winner": "",
+        "leader_pid": 2,
+        "turn_pid": 3,
+        "currentRound": 2,
+        "quest": 2,
+        "turn": 1,
+        "target_party_size": 3,
+        "turn_timer": 0,
+        "proposed_party": [
+          3,
+          2,
+          4
+        ],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [
+          "fail"
+        ],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:24:21.760Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Jane",
+          "Kira",
+          "Luca",
+          "Paul",
+          "Mia",
+          "Sam"
+        ],
+        "all_joined": true,
+        "all_players": [
+          {
+            "name": "Jane",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "XY4jP6yIXD4p",
+            "active": true,
+            "sessionId": "XY4jP6yIXD4p",
+            "knowledge": {}
+          },
+          {
+            "name": "Kira",
+            "id": 2,
+            "role": "Servant-4",
+            "userId": "5AYqM8mFZWwD",
+            "active": true,
+            "sessionId": "5AYqM8mFZWwD",
+            "knowledge": {}
+          },
+          {
+            "name": "Luca",
+            "id": 3,
+            "role": "Minion-2",
+            "userId": "oALNmYMF2NQM",
+            "active": true,
+            "sessionId": "oALNmYMF2NQM",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Paul",
+            "id": 4,
+            "role": "Servant-1",
+            "userId": "OKd07Olfbk",
+            "active": true,
+            "sessionId": "QKGTRtKYf",
+            "knowledge": {}
+          },
+          {
+            "name": "Mia",
+            "id": 5,
+            "role": "Minion-1",
+            "userId": "4WXp28li0xMw",
+            "active": true,
+            "sessionId": "4WXp28li0xMw",
+            "knowledge": {
+              "3": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Sam",
+            "id": 6,
+            "role": "Servant-2",
+            "userId": "LA4XGgjCXgQ6",
+            "active": true,
+            "sessionId": "LA4XGgjCXgQ6",
+            "knowledge": {}
+          }
+        ],
+        "messages": [
+          {
+            "quest": 0,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "All players have joined. The game is starting!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_0",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Jane proposed a party: Mia, Luca",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_1",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "Jane",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 1,
+            "mid": "msg_2",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 1,
+            "room": "HKRD",
+            "player": "Kira",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 2,
+            "mid": "msg_3",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 2,
+            "room": "HKRD",
+            "player": "Luca",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 3,
+            "mid": "msg_4",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 3,
+            "room": "HKRD",
+            "player": "Paul",
+            "msg": "I'm a servant. Idk about Mia and Luca rn. Jane is a little sus for not including herself in the party.",
+            "strategy": [],
+            "pid": 4,
+            "mid": "msg_5",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 4,
+            "room": "HKRD",
+            "player": "Mia",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 5,
+            "mid": "msg_6",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 5,
+            "room": "HKRD",
+            "player": "Sam",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 6,
+            "mid": "msg_7",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Jane proposed a party: Kira, Luca",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_8",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "Jane",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 1,
+            "mid": "msg_9",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Jane initiated a party vote.",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_10",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Party vote summary: Jane: yes, Luca: yes, Mia: yes, Kira: yes, Sam: yes, Paul: no",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_11",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "The party has been approved!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_12",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Voting for the quest has started...",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_13",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 6,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "The quest has failed!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_14",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 2,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "system",
+            "msg": "Kira proposed a party: Luca, Kira, Paul",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_15",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 2,
+            "turn": 0,
+            "room": "HKRD",
+            "player": "Kira",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 2,
+            "mid": "msg_16",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 2,
+            "turn": 1,
+            "room": "HKRD",
+            "player": "Luca",
+            "msg": "Idk rn tbh",
+            "strategy": [],
+            "pid": 3,
+            "mid": "msg_17",
+            "failed_party_votes": 0
+          }
+        ],
+        "winner": "",
+        "leader_pid": 2,
+        "turn_pid": 4,
+        "currentRound": 2,
+        "quest": 2,
+        "turn": 2,
+        "target_party_size": 3,
+        "turn_timer": 0,
+        "proposed_party": [
+          3,
+          2,
+          4
+        ],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [
+          "fail"
+        ],
+        "party": [],
+        "vote_assassin": false
+      }
+    }
+  ]
+}

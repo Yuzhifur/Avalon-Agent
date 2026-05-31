@@ -14,6 +14,8 @@ The subdirectory includes: core game logic for social deduction mechanics, pre-t
 
 See `code/README.md` for full documentation on code structure, agent training, and game configuration [here](code/README.md).
 
+For a beginner-friendly explanation of GRAIL's factor graph, neural factor functions, action heuristic, and training data, see [docs/grail_beginner_guide.md](docs/grail_beginner_guide.md).
+
 ## Human Experiment Data
 
 The `data/` directory contains logs from human-vs-agent experiments. These are the same games from the [human experiment dataset](https://huggingface.co/datasets/shahabrahimirad/bayesian-social-deduction/tree/main/human_experiments), but they have been specifically formatted to be replayable within the Avalon Game Client.

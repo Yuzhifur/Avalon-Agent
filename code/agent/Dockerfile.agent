@@ -13,18 +13,18 @@ RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
     && apt-get install -y nodejs \
     && npm install -g typescript
     
-# Install Miniconda - detect architecture and download appropriate version
+# Install Miniforge - detect architecture and download appropriate version
 RUN arch=$(uname -m) && \
     if [ "$arch" = "x86_64" ]; then \
-        wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh; \
+        wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh -O miniforge.sh; \
     elif [ "$arch" = "aarch64" ] || [ "$arch" = "arm64" ]; then \
-        wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh -O miniconda.sh; \
+        wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-aarch64.sh -O miniforge.sh; \
     else \
         echo "Unsupported architecture: $arch"; \
         exit 1; \
     fi && \
-    bash miniconda.sh -b -p /opt/conda && \
-    rm miniconda.sh
+    bash miniforge.sh -b -p /opt/conda && \
+    rm miniforge.sh
 
 # Add conda to path
 ENV PATH=/opt/conda/bin:$PATH
@@ -36,17 +36,17 @@ RUN conda init bash && \
 
 # Configure conda
 RUN conda config --set channel_priority strict \
-    && conda config --add channels conda-forge \
     && conda config --set solver libmamba
 
 WORKDIR /app
 
 # Copy only the environment file
-COPY environment.yml ./
+COPY environment.yml requirements.txt ./
 # Copy the config file
 
 # Create conda environment
 RUN conda env create -f environment.yml && \
+    conda run -n emnlp --no-capture-output python -m pip install --no-cache-dir --progress-bar off -r requirements.txt && \
     echo "conda activate emnlp" >> ~/.bashrc
 
 # Set Python to run unbuffered

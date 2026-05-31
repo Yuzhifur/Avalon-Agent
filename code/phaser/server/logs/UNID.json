@@ -1,0 +1,2143 @@
+{
+  "logs": [
+    {
+      "timestamp": "2026-05-31T06:28:03.071Z",
+      "msgtype": "game",
+      "full": {
+        "players": [],
+        "all_joined": false,
+        "all_players": [],
+        "messages": [],
+        "winner": "",
+        "leader_pid": 0,
+        "turn_pid": 0,
+        "currentRound": 0,
+        "quest": 0,
+        "turn": 0,
+        "target_party_size": 0,
+        "turn_timer": 0,
+        "proposed_party": [],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:30:09.169Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Mia"
+        ],
+        "all_joined": false,
+        "all_players": [
+          {
+            "name": "Mia",
+            "id": 2,
+            "role": "Servant-2",
+            "userId": "7D4vM7KiVLRB",
+            "active": true,
+            "sessionId": "7D4vM7KiVLRB",
+            "knowledge": {}
+          }
+        ],
+        "messages": [],
+        "winner": "",
+        "leader_pid": 0,
+        "turn_pid": 0,
+        "currentRound": 0,
+        "quest": 0,
+        "turn": 0,
+        "target_party_size": 0,
+        "turn_timer": 0,
+        "proposed_party": [],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:30:09.269Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Mia",
+          "Paul"
+        ],
+        "all_joined": false,
+        "all_players": [
+          {
+            "name": "Mia",
+            "id": 2,
+            "role": "Servant-2",
+            "userId": "7D4vM7KiVLRB",
+            "active": true,
+            "sessionId": "7D4vM7KiVLRB",
+            "knowledge": {}
+          },
+          {
+            "name": "Paul",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "4WXp2D0iyY2L",
+            "active": true,
+            "sessionId": "4WXp2D0iyY2L",
+            "knowledge": {}
+          }
+        ],
+        "messages": [],
+        "winner": "",
+        "leader_pid": 0,
+        "turn_pid": 0,
+        "currentRound": 0,
+        "quest": 0,
+        "turn": 0,
+        "target_party_size": 0,
+        "turn_timer": 0,
+        "proposed_party": [],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:30:09.321Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Mia",
+          "Paul",
+          "Jane"
+        ],
+        "all_joined": false,
+        "all_players": [
+          {
+            "name": "Mia",
+            "id": 2,
+            "role": "Servant-2",
+            "userId": "7D4vM7KiVLRB",
+            "active": true,
+            "sessionId": "7D4vM7KiVLRB",
+            "knowledge": {}
+          },
+          {
+            "name": "Paul",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "4WXp2D0iyY2L",
+            "active": true,
+            "sessionId": "4WXp2D0iyY2L",
+            "knowledge": {}
+          },
+          {
+            "name": "Jane",
+            "id": 3,
+            "role": "Servant-4",
+            "userId": "VJ68WyMHoDJr",
+            "active": true,
+            "sessionId": "VJ68WyMHoDJr",
+            "knowledge": {}
+          }
+        ],
+        "messages": [],
+        "winner": "",
+        "leader_pid": 0,
+        "turn_pid": 0,
+        "currentRound": 0,
+        "quest": 0,
+        "turn": 0,
+        "target_party_size": 0,
+        "turn_timer": 0,
+        "proposed_party": [],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:30:09.423Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Mia",
+          "Paul",
+          "Jane",
+          "Sam"
+        ],
+        "all_joined": false,
+        "all_players": [
+          {
+            "name": "Mia",
+            "id": 2,
+            "role": "Servant-2",
+            "userId": "7D4vM7KiVLRB",
+            "active": true,
+            "sessionId": "7D4vM7KiVLRB",
+            "knowledge": {}
+          },
+          {
+            "name": "Paul",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "4WXp2D0iyY2L",
+            "active": true,
+            "sessionId": "4WXp2D0iyY2L",
+            "knowledge": {}
+          },
+          {
+            "name": "Jane",
+            "id": 3,
+            "role": "Servant-4",
+            "userId": "VJ68WyMHoDJr",
+            "active": true,
+            "sessionId": "VJ68WyMHoDJr",
+            "knowledge": {}
+          },
+          {
+            "name": "Sam",
+            "id": 4,
+            "role": "Minion-1",
+            "userId": "rgOQpN4C88W1k",
+            "active": true,
+            "sessionId": "rgOQpN4C88W1k",
+            "knowledge": {
+              "4": "evil",
+              "5": "evil"
+            }
+          }
+        ],
+        "messages": [],
+        "winner": "",
+        "leader_pid": 0,
+        "turn_pid": 0,
+        "currentRound": 0,
+        "quest": 0,
+        "turn": 0,
+        "target_party_size": 0,
+        "turn_timer": 0,
+        "proposed_party": [],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:30:09.520Z",
+      "msgtype": "player",
+      "name": "Paul",
+      "role": "Servant-3",
+      "pid": 1,
+      "knowledge": {},
+      "type": "reason_openai",
+      "player": "agent"
+    },
+    {
+      "timestamp": "2026-05-31T06:30:09.521Z",
+      "msgtype": "player",
+      "name": "Mia",
+      "role": "Servant-2",
+      "pid": 2,
+      "knowledge": {},
+      "type": "reason_openai",
+      "player": "agent"
+    },
+    {
+      "timestamp": "2026-05-31T06:30:09.523Z",
+      "msgtype": "player",
+      "name": "Jane",
+      "role": "Servant-4",
+      "pid": 3,
+      "knowledge": {},
+      "type": "reason_openai",
+      "player": "agent"
+    },
+    {
+      "timestamp": "2026-05-31T06:30:09.524Z",
+      "msgtype": "player",
+      "name": "Sam",
+      "role": "Minion-1",
+      "pid": 4,
+      "knowledge": {
+        "4": "evil",
+        "5": "evil"
+      },
+      "type": "reason_openai",
+      "player": "agent"
+    },
+    {
+      "timestamp": "2026-05-31T06:30:09.525Z",
+      "msgtype": "player",
+      "name": "Luca",
+      "role": "Minion-2",
+      "pid": 5,
+      "knowledge": {
+        "4": "evil",
+        "5": "evil"
+      },
+      "type": "reason_openai",
+      "player": "agent"
+    },
+    {
+      "timestamp": "2026-05-31T06:30:09.525Z",
+      "msgtype": "player",
+      "name": "Kira",
+      "role": "Servant-1",
+      "pid": 6,
+      "knowledge": {},
+      "type": "human",
+      "player": "human"
+    },
+    {
+      "timestamp": "2026-05-31T06:30:09.529Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Paul",
+          "Mia",
+          "Jane",
+          "Sam",
+          "Luca",
+          "Kira"
+        ],
+        "all_joined": true,
+        "all_players": [
+          {
+            "name": "Paul",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "4WXp2D0iyY2L",
+            "active": true,
+            "sessionId": "4WXp2D0iyY2L",
+            "knowledge": {}
+          },
+          {
+            "name": "Mia",
+            "id": 2,
+            "role": "Servant-2",
+            "userId": "7D4vM7KiVLRB",
+            "active": true,
+            "sessionId": "7D4vM7KiVLRB",
+            "knowledge": {}
+          },
+          {
+            "name": "Jane",
+            "id": 3,
+            "role": "Servant-4",
+            "userId": "VJ68WyMHoDJr",
+            "active": true,
+            "sessionId": "VJ68WyMHoDJr",
+            "knowledge": {}
+          },
+          {
+            "name": "Sam",
+            "id": 4,
+            "role": "Minion-1",
+            "userId": "rgOQpN4C88W1k",
+            "active": true,
+            "sessionId": "rgOQpN4C88W1k",
+            "knowledge": {
+              "4": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Luca",
+            "id": 5,
+            "role": "Minion-2",
+            "userId": "934xj7Mck855X",
+            "active": true,
+            "sessionId": "934xj7Mck855X",
+            "knowledge": {
+              "4": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Kira",
+            "id": 6,
+            "role": "Servant-1",
+            "userId": "OKd07Olfbk",
+            "active": true,
+            "sessionId": "TfkSg_MQb",
+            "knowledge": {}
+          }
+        ],
+        "messages": [],
+        "winner": "",
+        "leader_pid": 0,
+        "turn_pid": 0,
+        "currentRound": 0,
+        "quest": 0,
+        "turn": 0,
+        "target_party_size": 0,
+        "turn_timer": 0,
+        "proposed_party": [],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:30:11.587Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Paul",
+          "Mia",
+          "Jane",
+          "Sam",
+          "Luca",
+          "Kira"
+        ],
+        "all_joined": true,
+        "all_players": [
+          {
+            "name": "Paul",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "4WXp2D0iyY2L",
+            "active": true,
+            "sessionId": "4WXp2D0iyY2L",
+            "knowledge": {}
+          },
+          {
+            "name": "Mia",
+            "id": 2,
+            "role": "Servant-2",
+            "userId": "7D4vM7KiVLRB",
+            "active": true,
+            "sessionId": "7D4vM7KiVLRB",
+            "knowledge": {}
+          },
+          {
+            "name": "Jane",
+            "id": 3,
+            "role": "Servant-4",
+            "userId": "VJ68WyMHoDJr",
+            "active": true,
+            "sessionId": "VJ68WyMHoDJr",
+            "knowledge": {}
+          },
+          {
+            "name": "Sam",
+            "id": 4,
+            "role": "Minion-1",
+            "userId": "rgOQpN4C88W1k",
+            "active": true,
+            "sessionId": "rgOQpN4C88W1k",
+            "knowledge": {
+              "4": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Luca",
+            "id": 5,
+            "role": "Minion-2",
+            "userId": "934xj7Mck855X",
+            "active": true,
+            "sessionId": "934xj7Mck855X",
+            "knowledge": {
+              "4": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Kira",
+            "id": 6,
+            "role": "Servant-1",
+            "userId": "OKd07Olfbk",
+            "active": true,
+            "sessionId": "TfkSg_MQb",
+            "knowledge": {}
+          }
+        ],
+        "messages": [
+          {
+            "quest": 0,
+            "turn": 0,
+            "room": "UNID",
+            "player": "system",
+            "msg": "All players have joined. The game is starting!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_0",
+            "failed_party_votes": 0
+          }
+        ],
+        "winner": "",
+        "leader_pid": 1,
+        "turn_pid": 1,
+        "currentRound": 1,
+        "quest": 1,
+        "turn": 0,
+        "target_party_size": 2,
+        "turn_timer": 0,
+        "proposed_party": [],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:30:16.588Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Paul",
+          "Mia",
+          "Jane",
+          "Sam",
+          "Luca",
+          "Kira"
+        ],
+        "all_joined": true,
+        "all_players": [
+          {
+            "name": "Paul",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "4WXp2D0iyY2L",
+            "active": true,
+            "sessionId": "4WXp2D0iyY2L",
+            "knowledge": {}
+          },
+          {
+            "name": "Mia",
+            "id": 2,
+            "role": "Servant-2",
+            "userId": "7D4vM7KiVLRB",
+            "active": true,
+            "sessionId": "7D4vM7KiVLRB",
+            "knowledge": {}
+          },
+          {
+            "name": "Jane",
+            "id": 3,
+            "role": "Servant-4",
+            "userId": "VJ68WyMHoDJr",
+            "active": true,
+            "sessionId": "VJ68WyMHoDJr",
+            "knowledge": {}
+          },
+          {
+            "name": "Sam",
+            "id": 4,
+            "role": "Minion-1",
+            "userId": "rgOQpN4C88W1k",
+            "active": true,
+            "sessionId": "rgOQpN4C88W1k",
+            "knowledge": {
+              "4": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Luca",
+            "id": 5,
+            "role": "Minion-2",
+            "userId": "934xj7Mck855X",
+            "active": true,
+            "sessionId": "934xj7Mck855X",
+            "knowledge": {
+              "4": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Kira",
+            "id": 6,
+            "role": "Servant-1",
+            "userId": "OKd07Olfbk",
+            "active": true,
+            "sessionId": "TfkSg_MQb",
+            "knowledge": {}
+          }
+        ],
+        "messages": [
+          {
+            "quest": 0,
+            "turn": 0,
+            "room": "UNID",
+            "player": "system",
+            "msg": "All players have joined. The game is starting!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_0",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "UNID",
+            "player": "system",
+            "msg": "Paul proposed a party: Paul, Kira",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_1",
+            "failed_party_votes": 0
+          }
+        ],
+        "winner": "",
+        "leader_pid": 1,
+        "turn_pid": 1,
+        "currentRound": 1,
+        "quest": 1,
+        "turn": 0,
+        "target_party_size": 2,
+        "turn_timer": 0,
+        "proposed_party": [
+          1,
+          6
+        ],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:30:18.051Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Paul",
+          "Mia",
+          "Jane",
+          "Sam",
+          "Luca",
+          "Kira"
+        ],
+        "all_joined": true,
+        "all_players": [
+          {
+            "name": "Paul",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "4WXp2D0iyY2L",
+            "active": true,
+            "sessionId": "4WXp2D0iyY2L",
+            "knowledge": {}
+          },
+          {
+            "name": "Mia",
+            "id": 2,
+            "role": "Servant-2",
+            "userId": "7D4vM7KiVLRB",
+            "active": true,
+            "sessionId": "7D4vM7KiVLRB",
+            "knowledge": {}
+          },
+          {
+            "name": "Jane",
+            "id": 3,
+            "role": "Servant-4",
+            "userId": "VJ68WyMHoDJr",
+            "active": true,
+            "sessionId": "VJ68WyMHoDJr",
+            "knowledge": {}
+          },
+          {
+            "name": "Sam",
+            "id": 4,
+            "role": "Minion-1",
+            "userId": "rgOQpN4C88W1k",
+            "active": true,
+            "sessionId": "rgOQpN4C88W1k",
+            "knowledge": {
+              "4": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Luca",
+            "id": 5,
+            "role": "Minion-2",
+            "userId": "934xj7Mck855X",
+            "active": true,
+            "sessionId": "934xj7Mck855X",
+            "knowledge": {
+              "4": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Kira",
+            "id": 6,
+            "role": "Servant-1",
+            "userId": "OKd07Olfbk",
+            "active": true,
+            "sessionId": "TfkSg_MQb",
+            "knowledge": {}
+          }
+        ],
+        "messages": [
+          {
+            "quest": 0,
+            "turn": 0,
+            "room": "UNID",
+            "player": "system",
+            "msg": "All players have joined. The game is starting!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_0",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "UNID",
+            "player": "system",
+            "msg": "Paul proposed a party: Paul, Kira",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_1",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "UNID",
+            "player": "Paul",
+            "msg": "I propose a team consisting of Paul, Kira",
+            "strategy": [],
+            "pid": 1,
+            "mid": "msg_2",
+            "failed_party_votes": 0
+          }
+        ],
+        "winner": "",
+        "leader_pid": 1,
+        "turn_pid": 1,
+        "currentRound": 1,
+        "quest": 1,
+        "turn": 0,
+        "target_party_size": 2,
+        "turn_timer": 0,
+        "proposed_party": [
+          1,
+          6
+        ],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:30:19.188Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Paul",
+          "Mia",
+          "Jane",
+          "Sam",
+          "Luca",
+          "Kira"
+        ],
+        "all_joined": true,
+        "all_players": [
+          {
+            "name": "Paul",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "4WXp2D0iyY2L",
+            "active": true,
+            "sessionId": "4WXp2D0iyY2L",
+            "knowledge": {}
+          },
+          {
+            "name": "Mia",
+            "id": 2,
+            "role": "Servant-2",
+            "userId": "7D4vM7KiVLRB",
+            "active": true,
+            "sessionId": "7D4vM7KiVLRB",
+            "knowledge": {}
+          },
+          {
+            "name": "Jane",
+            "id": 3,
+            "role": "Servant-4",
+            "userId": "VJ68WyMHoDJr",
+            "active": true,
+            "sessionId": "VJ68WyMHoDJr",
+            "knowledge": {}
+          },
+          {
+            "name": "Sam",
+            "id": 4,
+            "role": "Minion-1",
+            "userId": "rgOQpN4C88W1k",
+            "active": true,
+            "sessionId": "rgOQpN4C88W1k",
+            "knowledge": {
+              "4": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Luca",
+            "id": 5,
+            "role": "Minion-2",
+            "userId": "934xj7Mck855X",
+            "active": true,
+            "sessionId": "934xj7Mck855X",
+            "knowledge": {
+              "4": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Kira",
+            "id": 6,
+            "role": "Servant-1",
+            "userId": "OKd07Olfbk",
+            "active": true,
+            "sessionId": "TfkSg_MQb",
+            "knowledge": {}
+          }
+        ],
+        "messages": [
+          {
+            "quest": 0,
+            "turn": 0,
+            "room": "UNID",
+            "player": "system",
+            "msg": "All players have joined. The game is starting!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_0",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "UNID",
+            "player": "system",
+            "msg": "Paul proposed a party: Paul, Kira",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_1",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "UNID",
+            "player": "Paul",
+            "msg": "I propose a team consisting of Paul, Kira",
+            "strategy": [],
+            "pid": 1,
+            "mid": "msg_2",
+            "failed_party_votes": 0
+          }
+        ],
+        "winner": "",
+        "leader_pid": 1,
+        "turn_pid": 2,
+        "currentRound": 1,
+        "quest": 1,
+        "turn": 1,
+        "target_party_size": 2,
+        "turn_timer": 0,
+        "proposed_party": [
+          1,
+          6
+        ],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:30:23.506Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Paul",
+          "Mia",
+          "Jane",
+          "Sam",
+          "Luca",
+          "Kira"
+        ],
+        "all_joined": true,
+        "all_players": [
+          {
+            "name": "Paul",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "4WXp2D0iyY2L",
+            "active": true,
+            "sessionId": "4WXp2D0iyY2L",
+            "knowledge": {}
+          },
+          {
+            "name": "Mia",
+            "id": 2,
+            "role": "Servant-2",
+            "userId": "7D4vM7KiVLRB",
+            "active": true,
+            "sessionId": "7D4vM7KiVLRB",
+            "knowledge": {}
+          },
+          {
+            "name": "Jane",
+            "id": 3,
+            "role": "Servant-4",
+            "userId": "VJ68WyMHoDJr",
+            "active": true,
+            "sessionId": "VJ68WyMHoDJr",
+            "knowledge": {}
+          },
+          {
+            "name": "Sam",
+            "id": 4,
+            "role": "Minion-1",
+            "userId": "rgOQpN4C88W1k",
+            "active": true,
+            "sessionId": "rgOQpN4C88W1k",
+            "knowledge": {
+              "4": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Luca",
+            "id": 5,
+            "role": "Minion-2",
+            "userId": "934xj7Mck855X",
+            "active": true,
+            "sessionId": "934xj7Mck855X",
+            "knowledge": {
+              "4": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Kira",
+            "id": 6,
+            "role": "Servant-1",
+            "userId": "OKd07Olfbk",
+            "active": true,
+            "sessionId": "TfkSg_MQb",
+            "knowledge": {}
+          }
+        ],
+        "messages": [
+          {
+            "quest": 0,
+            "turn": 0,
+            "room": "UNID",
+            "player": "system",
+            "msg": "All players have joined. The game is starting!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_0",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "UNID",
+            "player": "system",
+            "msg": "Paul proposed a party: Paul, Kira",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_1",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "UNID",
+            "player": "Paul",
+            "msg": "I propose a team consisting of Paul, Kira",
+            "strategy": [],
+            "pid": 1,
+            "mid": "msg_2",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 1,
+            "room": "UNID",
+            "player": "Mia",
+            "msg": "I'm thinking about the current situation",
+            "strategy": [],
+            "pid": 2,
+            "mid": "msg_3",
+            "failed_party_votes": 0
+          }
+        ],
+        "winner": "",
+        "leader_pid": 1,
+        "turn_pid": 2,
+        "currentRound": 1,
+        "quest": 1,
+        "turn": 1,
+        "target_party_size": 2,
+        "turn_timer": 0,
+        "proposed_party": [
+          1,
+          6
+        ],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:30:25.948Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Paul",
+          "Mia",
+          "Jane",
+          "Sam",
+          "Luca",
+          "Kira"
+        ],
+        "all_joined": true,
+        "all_players": [
+          {
+            "name": "Paul",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "4WXp2D0iyY2L",
+            "active": true,
+            "sessionId": "4WXp2D0iyY2L",
+            "knowledge": {}
+          },
+          {
+            "name": "Mia",
+            "id": 2,
+            "role": "Servant-2",
+            "userId": "7D4vM7KiVLRB",
+            "active": true,
+            "sessionId": "7D4vM7KiVLRB",
+            "knowledge": {}
+          },
+          {
+            "name": "Jane",
+            "id": 3,
+            "role": "Servant-4",
+            "userId": "VJ68WyMHoDJr",
+            "active": true,
+            "sessionId": "VJ68WyMHoDJr",
+            "knowledge": {}
+          },
+          {
+            "name": "Sam",
+            "id": 4,
+            "role": "Minion-1",
+            "userId": "rgOQpN4C88W1k",
+            "active": true,
+            "sessionId": "rgOQpN4C88W1k",
+            "knowledge": {
+              "4": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Luca",
+            "id": 5,
+            "role": "Minion-2",
+            "userId": "934xj7Mck855X",
+            "active": true,
+            "sessionId": "934xj7Mck855X",
+            "knowledge": {
+              "4": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Kira",
+            "id": 6,
+            "role": "Servant-1",
+            "userId": "OKd07Olfbk",
+            "active": true,
+            "sessionId": "TfkSg_MQb",
+            "knowledge": {}
+          }
+        ],
+        "messages": [
+          {
+            "quest": 0,
+            "turn": 0,
+            "room": "UNID",
+            "player": "system",
+            "msg": "All players have joined. The game is starting!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_0",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "UNID",
+            "player": "system",
+            "msg": "Paul proposed a party: Paul, Kira",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_1",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "UNID",
+            "player": "Paul",
+            "msg": "I propose a team consisting of Paul, Kira",
+            "strategy": [],
+            "pid": 1,
+            "mid": "msg_2",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 1,
+            "room": "UNID",
+            "player": "Mia",
+            "msg": "I'm thinking about the current situation",
+            "strategy": [],
+            "pid": 2,
+            "mid": "msg_3",
+            "failed_party_votes": 0
+          }
+        ],
+        "winner": "",
+        "leader_pid": 1,
+        "turn_pid": 3,
+        "currentRound": 1,
+        "quest": 1,
+        "turn": 2,
+        "target_party_size": 2,
+        "turn_timer": 0,
+        "proposed_party": [
+          1,
+          6
+        ],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:30:29.380Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Paul",
+          "Mia",
+          "Jane",
+          "Sam",
+          "Luca",
+          "Kira"
+        ],
+        "all_joined": true,
+        "all_players": [
+          {
+            "name": "Paul",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "4WXp2D0iyY2L",
+            "active": true,
+            "sessionId": "4WXp2D0iyY2L",
+            "knowledge": {}
+          },
+          {
+            "name": "Mia",
+            "id": 2,
+            "role": "Servant-2",
+            "userId": "7D4vM7KiVLRB",
+            "active": true,
+            "sessionId": "7D4vM7KiVLRB",
+            "knowledge": {}
+          },
+          {
+            "name": "Jane",
+            "id": 3,
+            "role": "Servant-4",
+            "userId": "VJ68WyMHoDJr",
+            "active": true,
+            "sessionId": "VJ68WyMHoDJr",
+            "knowledge": {}
+          },
+          {
+            "name": "Sam",
+            "id": 4,
+            "role": "Minion-1",
+            "userId": "rgOQpN4C88W1k",
+            "active": true,
+            "sessionId": "rgOQpN4C88W1k",
+            "knowledge": {
+              "4": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Luca",
+            "id": 5,
+            "role": "Minion-2",
+            "userId": "934xj7Mck855X",
+            "active": true,
+            "sessionId": "934xj7Mck855X",
+            "knowledge": {
+              "4": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Kira",
+            "id": 6,
+            "role": "Servant-1",
+            "userId": "OKd07Olfbk",
+            "active": true,
+            "sessionId": "TfkSg_MQb",
+            "knowledge": {}
+          }
+        ],
+        "messages": [
+          {
+            "quest": 0,
+            "turn": 0,
+            "room": "UNID",
+            "player": "system",
+            "msg": "All players have joined. The game is starting!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_0",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "UNID",
+            "player": "system",
+            "msg": "Paul proposed a party: Paul, Kira",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_1",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "UNID",
+            "player": "Paul",
+            "msg": "I propose a team consisting of Paul, Kira",
+            "strategy": [],
+            "pid": 1,
+            "mid": "msg_2",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 1,
+            "room": "UNID",
+            "player": "Mia",
+            "msg": "I'm thinking about the current situation",
+            "strategy": [],
+            "pid": 2,
+            "mid": "msg_3",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 2,
+            "room": "UNID",
+            "player": "Jane",
+            "msg": "I'm thinking about the current situation",
+            "strategy": [],
+            "pid": 3,
+            "mid": "msg_4",
+            "failed_party_votes": 0
+          }
+        ],
+        "winner": "",
+        "leader_pid": 1,
+        "turn_pid": 3,
+        "currentRound": 1,
+        "quest": 1,
+        "turn": 2,
+        "target_party_size": 2,
+        "turn_timer": 0,
+        "proposed_party": [
+          1,
+          6
+        ],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:30:30.693Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Paul",
+          "Mia",
+          "Jane",
+          "Sam",
+          "Luca",
+          "Kira"
+        ],
+        "all_joined": true,
+        "all_players": [
+          {
+            "name": "Paul",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "4WXp2D0iyY2L",
+            "active": true,
+            "sessionId": "4WXp2D0iyY2L",
+            "knowledge": {}
+          },
+          {
+            "name": "Mia",
+            "id": 2,
+            "role": "Servant-2",
+            "userId": "7D4vM7KiVLRB",
+            "active": true,
+            "sessionId": "7D4vM7KiVLRB",
+            "knowledge": {}
+          },
+          {
+            "name": "Jane",
+            "id": 3,
+            "role": "Servant-4",
+            "userId": "VJ68WyMHoDJr",
+            "active": true,
+            "sessionId": "VJ68WyMHoDJr",
+            "knowledge": {}
+          },
+          {
+            "name": "Sam",
+            "id": 4,
+            "role": "Minion-1",
+            "userId": "rgOQpN4C88W1k",
+            "active": true,
+            "sessionId": "rgOQpN4C88W1k",
+            "knowledge": {
+              "4": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Luca",
+            "id": 5,
+            "role": "Minion-2",
+            "userId": "934xj7Mck855X",
+            "active": true,
+            "sessionId": "934xj7Mck855X",
+            "knowledge": {
+              "4": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Kira",
+            "id": 6,
+            "role": "Servant-1",
+            "userId": "OKd07Olfbk",
+            "active": true,
+            "sessionId": "TfkSg_MQb",
+            "knowledge": {}
+          }
+        ],
+        "messages": [
+          {
+            "quest": 0,
+            "turn": 0,
+            "room": "UNID",
+            "player": "system",
+            "msg": "All players have joined. The game is starting!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_0",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "UNID",
+            "player": "system",
+            "msg": "Paul proposed a party: Paul, Kira",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_1",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "UNID",
+            "player": "Paul",
+            "msg": "I propose a team consisting of Paul, Kira",
+            "strategy": [],
+            "pid": 1,
+            "mid": "msg_2",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 1,
+            "room": "UNID",
+            "player": "Mia",
+            "msg": "I'm thinking about the current situation",
+            "strategy": [],
+            "pid": 2,
+            "mid": "msg_3",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 2,
+            "room": "UNID",
+            "player": "Jane",
+            "msg": "I'm thinking about the current situation",
+            "strategy": [],
+            "pid": 3,
+            "mid": "msg_4",
+            "failed_party_votes": 0
+          }
+        ],
+        "winner": "",
+        "leader_pid": 1,
+        "turn_pid": 4,
+        "currentRound": 1,
+        "quest": 1,
+        "turn": 3,
+        "target_party_size": 2,
+        "turn_timer": 0,
+        "proposed_party": [
+          1,
+          6
+        ],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:30:34.039Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Paul",
+          "Mia",
+          "Jane",
+          "Sam",
+          "Luca",
+          "Kira"
+        ],
+        "all_joined": true,
+        "all_players": [
+          {
+            "name": "Paul",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "4WXp2D0iyY2L",
+            "active": true,
+            "sessionId": "4WXp2D0iyY2L",
+            "knowledge": {}
+          },
+          {
+            "name": "Mia",
+            "id": 2,
+            "role": "Servant-2",
+            "userId": "7D4vM7KiVLRB",
+            "active": true,
+            "sessionId": "7D4vM7KiVLRB",
+            "knowledge": {}
+          },
+          {
+            "name": "Jane",
+            "id": 3,
+            "role": "Servant-4",
+            "userId": "VJ68WyMHoDJr",
+            "active": true,
+            "sessionId": "VJ68WyMHoDJr",
+            "knowledge": {}
+          },
+          {
+            "name": "Sam",
+            "id": 4,
+            "role": "Minion-1",
+            "userId": "rgOQpN4C88W1k",
+            "active": true,
+            "sessionId": "rgOQpN4C88W1k",
+            "knowledge": {
+              "4": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Luca",
+            "id": 5,
+            "role": "Minion-2",
+            "userId": "934xj7Mck855X",
+            "active": true,
+            "sessionId": "934xj7Mck855X",
+            "knowledge": {
+              "4": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Kira",
+            "id": 6,
+            "role": "Servant-1",
+            "userId": "OKd07Olfbk",
+            "active": true,
+            "sessionId": "TfkSg_MQb",
+            "knowledge": {}
+          }
+        ],
+        "messages": [
+          {
+            "quest": 0,
+            "turn": 0,
+            "room": "UNID",
+            "player": "system",
+            "msg": "All players have joined. The game is starting!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_0",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "UNID",
+            "player": "system",
+            "msg": "Paul proposed a party: Paul, Kira",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_1",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "UNID",
+            "player": "Paul",
+            "msg": "I propose a team consisting of Paul, Kira",
+            "strategy": [],
+            "pid": 1,
+            "mid": "msg_2",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 1,
+            "room": "UNID",
+            "player": "Mia",
+            "msg": "I'm thinking about the current situation",
+            "strategy": [],
+            "pid": 2,
+            "mid": "msg_3",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 2,
+            "room": "UNID",
+            "player": "Jane",
+            "msg": "I'm thinking about the current situation",
+            "strategy": [],
+            "pid": 3,
+            "mid": "msg_4",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 3,
+            "room": "UNID",
+            "player": "Sam",
+            "msg": "I'm thinking about the current situation",
+            "strategy": [],
+            "pid": 4,
+            "mid": "msg_5",
+            "failed_party_votes": 0
+          }
+        ],
+        "winner": "",
+        "leader_pid": 1,
+        "turn_pid": 4,
+        "currentRound": 1,
+        "quest": 1,
+        "turn": 3,
+        "target_party_size": 2,
+        "turn_timer": 0,
+        "proposed_party": [
+          1,
+          6
+        ],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:30:36.495Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Paul",
+          "Mia",
+          "Jane",
+          "Sam",
+          "Luca",
+          "Kira"
+        ],
+        "all_joined": true,
+        "all_players": [
+          {
+            "name": "Paul",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "4WXp2D0iyY2L",
+            "active": true,
+            "sessionId": "4WXp2D0iyY2L",
+            "knowledge": {}
+          },
+          {
+            "name": "Mia",
+            "id": 2,
+            "role": "Servant-2",
+            "userId": "7D4vM7KiVLRB",
+            "active": true,
+            "sessionId": "7D4vM7KiVLRB",
+            "knowledge": {}
+          },
+          {
+            "name": "Jane",
+            "id": 3,
+            "role": "Servant-4",
+            "userId": "VJ68WyMHoDJr",
+            "active": true,
+            "sessionId": "VJ68WyMHoDJr",
+            "knowledge": {}
+          },
+          {
+            "name": "Sam",
+            "id": 4,
+            "role": "Minion-1",
+            "userId": "rgOQpN4C88W1k",
+            "active": true,
+            "sessionId": "rgOQpN4C88W1k",
+            "knowledge": {
+              "4": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Luca",
+            "id": 5,
+            "role": "Minion-2",
+            "userId": "934xj7Mck855X",
+            "active": true,
+            "sessionId": "934xj7Mck855X",
+            "knowledge": {
+              "4": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Kira",
+            "id": 6,
+            "role": "Servant-1",
+            "userId": "OKd07Olfbk",
+            "active": true,
+            "sessionId": "TfkSg_MQb",
+            "knowledge": {}
+          }
+        ],
+        "messages": [
+          {
+            "quest": 0,
+            "turn": 0,
+            "room": "UNID",
+            "player": "system",
+            "msg": "All players have joined. The game is starting!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_0",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "UNID",
+            "player": "system",
+            "msg": "Paul proposed a party: Paul, Kira",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_1",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "UNID",
+            "player": "Paul",
+            "msg": "I propose a team consisting of Paul, Kira",
+            "strategy": [],
+            "pid": 1,
+            "mid": "msg_2",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 1,
+            "room": "UNID",
+            "player": "Mia",
+            "msg": "I'm thinking about the current situation",
+            "strategy": [],
+            "pid": 2,
+            "mid": "msg_3",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 2,
+            "room": "UNID",
+            "player": "Jane",
+            "msg": "I'm thinking about the current situation",
+            "strategy": [],
+            "pid": 3,
+            "mid": "msg_4",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 3,
+            "room": "UNID",
+            "player": "Sam",
+            "msg": "I'm thinking about the current situation",
+            "strategy": [],
+            "pid": 4,
+            "mid": "msg_5",
+            "failed_party_votes": 0
+          }
+        ],
+        "winner": "",
+        "leader_pid": 1,
+        "turn_pid": 5,
+        "currentRound": 1,
+        "quest": 1,
+        "turn": 4,
+        "target_party_size": 2,
+        "turn_timer": 0,
+        "proposed_party": [
+          1,
+          6
+        ],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:30:41.607Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Paul",
+          "Mia",
+          "Jane",
+          "Sam",
+          "Luca",
+          "Kira"
+        ],
+        "all_joined": true,
+        "all_players": [
+          {
+            "name": "Paul",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "4WXp2D0iyY2L",
+            "active": true,
+            "sessionId": "4WXp2D0iyY2L",
+            "knowledge": {}
+          },
+          {
+            "name": "Mia",
+            "id": 2,
+            "role": "Servant-2",
+            "userId": "7D4vM7KiVLRB",
+            "active": true,
+            "sessionId": "7D4vM7KiVLRB",
+            "knowledge": {}
+          },
+          {
+            "name": "Jane",
+            "id": 3,
+            "role": "Servant-4",
+            "userId": "VJ68WyMHoDJr",
+            "active": true,
+            "sessionId": "VJ68WyMHoDJr",
+            "knowledge": {}
+          },
+          {
+            "name": "Sam",
+            "id": 4,
+            "role": "Minion-1",
+            "userId": "rgOQpN4C88W1k",
+            "active": true,
+            "sessionId": "rgOQpN4C88W1k",
+            "knowledge": {
+              "4": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Luca",
+            "id": 5,
+            "role": "Minion-2",
+            "userId": "934xj7Mck855X",
+            "active": true,
+            "sessionId": "934xj7Mck855X",
+            "knowledge": {
+              "4": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Kira",
+            "id": 6,
+            "role": "Servant-1",
+            "userId": "OKd07Olfbk",
+            "active": true,
+            "sessionId": "TfkSg_MQb",
+            "knowledge": {}
+          }
+        ],
+        "messages": [
+          {
+            "quest": 0,
+            "turn": 0,
+            "room": "UNID",
+            "player": "system",
+            "msg": "All players have joined. The game is starting!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_0",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "UNID",
+            "player": "system",
+            "msg": "Paul proposed a party: Paul, Kira",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_1",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "UNID",
+            "player": "Paul",
+            "msg": "I propose a team consisting of Paul, Kira",
+            "strategy": [],
+            "pid": 1,
+            "mid": "msg_2",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 1,
+            "room": "UNID",
+            "player": "Mia",
+            "msg": "I'm thinking about the current situation",
+            "strategy": [],
+            "pid": 2,
+            "mid": "msg_3",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 2,
+            "room": "UNID",
+            "player": "Jane",
+            "msg": "I'm thinking about the current situation",
+            "strategy": [],
+            "pid": 3,
+            "mid": "msg_4",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 3,
+            "room": "UNID",
+            "player": "Sam",
+            "msg": "I'm thinking about the current situation",
+            "strategy": [],
+            "pid": 4,
+            "mid": "msg_5",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 4,
+            "room": "UNID",
+            "player": "Luca",
+            "msg": "I'm thinking about the current situation",
+            "strategy": [],
+            "pid": 5,
+            "mid": "msg_6",
+            "failed_party_votes": 0
+          }
+        ],
+        "winner": "",
+        "leader_pid": 1,
+        "turn_pid": 5,
+        "currentRound": 1,
+        "quest": 1,
+        "turn": 4,
+        "target_party_size": 2,
+        "turn_timer": 0,
+        "proposed_party": [
+          1,
+          6
+        ],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [],
+        "party": [],
+        "vote_assassin": false
+      }
+    },
+    {
+      "timestamp": "2026-05-31T06:30:42.714Z",
+      "msgtype": "game",
+      "full": {
+        "players": [
+          "Paul",
+          "Mia",
+          "Jane",
+          "Sam",
+          "Luca",
+          "Kira"
+        ],
+        "all_joined": true,
+        "all_players": [
+          {
+            "name": "Paul",
+            "id": 1,
+            "role": "Servant-3",
+            "userId": "4WXp2D0iyY2L",
+            "active": true,
+            "sessionId": "4WXp2D0iyY2L",
+            "knowledge": {}
+          },
+          {
+            "name": "Mia",
+            "id": 2,
+            "role": "Servant-2",
+            "userId": "7D4vM7KiVLRB",
+            "active": true,
+            "sessionId": "7D4vM7KiVLRB",
+            "knowledge": {}
+          },
+          {
+            "name": "Jane",
+            "id": 3,
+            "role": "Servant-4",
+            "userId": "VJ68WyMHoDJr",
+            "active": true,
+            "sessionId": "VJ68WyMHoDJr",
+            "knowledge": {}
+          },
+          {
+            "name": "Sam",
+            "id": 4,
+            "role": "Minion-1",
+            "userId": "rgOQpN4C88W1k",
+            "active": true,
+            "sessionId": "rgOQpN4C88W1k",
+            "knowledge": {
+              "4": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Luca",
+            "id": 5,
+            "role": "Minion-2",
+            "userId": "934xj7Mck855X",
+            "active": true,
+            "sessionId": "934xj7Mck855X",
+            "knowledge": {
+              "4": "evil",
+              "5": "evil"
+            }
+          },
+          {
+            "name": "Kira",
+            "id": 6,
+            "role": "Servant-1",
+            "userId": "OKd07Olfbk",
+            "active": true,
+            "sessionId": "TfkSg_MQb",
+            "knowledge": {}
+          }
+        ],
+        "messages": [
+          {
+            "quest": 0,
+            "turn": 0,
+            "room": "UNID",
+            "player": "system",
+            "msg": "All players have joined. The game is starting!",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_0",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "UNID",
+            "player": "system",
+            "msg": "Paul proposed a party: Paul, Kira",
+            "strategy": [],
+            "pid": -1,
+            "mid": "msg_1",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 0,
+            "room": "UNID",
+            "player": "Paul",
+            "msg": "I propose a team consisting of Paul, Kira",
+            "strategy": [],
+            "pid": 1,
+            "mid": "msg_2",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 1,
+            "room": "UNID",
+            "player": "Mia",
+            "msg": "I'm thinking about the current situation",
+            "strategy": [],
+            "pid": 2,
+            "mid": "msg_3",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 2,
+            "room": "UNID",
+            "player": "Jane",
+            "msg": "I'm thinking about the current situation",
+            "strategy": [],
+            "pid": 3,
+            "mid": "msg_4",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 3,
+            "room": "UNID",
+            "player": "Sam",
+            "msg": "I'm thinking about the current situation",
+            "strategy": [],
+            "pid": 4,
+            "mid": "msg_5",
+            "failed_party_votes": 0
+          },
+          {
+            "quest": 1,
+            "turn": 4,
+            "room": "UNID",
+            "player": "Luca",
+            "msg": "I'm thinking about the current situation",
+            "strategy": [],
+            "pid": 5,
+            "mid": "msg_6",
+            "failed_party_votes": 0
+          }
+        ],
+        "winner": "",
+        "leader_pid": 1,
+        "turn_pid": 6,
+        "currentRound": 1,
+        "quest": 1,
+        "turn": 5,
+        "target_party_size": 2,
+        "turn_timer": 0,
+        "proposed_party": [
+          1,
+          6
+        ],
+        "vote_party": false,
+        "vote_quest": false,
+        "failed_party_votes": 0,
+        "quest_results": [],
+        "party": [],
+        "vote_assassin": false
+      }
+    }
+  ]
+}
