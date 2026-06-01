@@ -78,6 +78,12 @@ P2 = probs(sam=0.3, paul=0.85, luca=0.6, jane=0.1, kira=0.15, mia=0.25)
 o2 = make(quest=2)
 party2 = o2._evil_propose_party(3, P2)
 check("skips burned evil, includes cleaner evil (sam)", "sam" in party2 and "paul" not in party2)
+# If both evils are above EVIL_BURNED_THRESHOLD, still include the least-burned
+# evil. The threshold documents exposure; it must not create an all-good party.
+P3 = probs(sam=0.75, paul=0.85, luca=0.6, jane=0.1, kira=0.15, mia=0.25)
+o3 = make(quest=2)
+party3 = o3._evil_propose_party(3, P3)
+check("both evils burned: still includes least-burned evil", "sam" in party3 and "paul" not in party3)
 
 print("== vote_for_party (evil) ==")
 # Team containing a teammate -> approve
@@ -92,6 +98,9 @@ check("approves under reject pressure (failed>=3)", o.vote_for_party(["jane", "k
 # evil_wins==2: never let a clean team run
 o = make(quest=4, failed=0, evil_wins=2)
 check("blocks clean team when one fail from win", o.vote_for_party(["jane", "kira", "mia"], P) is False)
+# evil_wins==2 should override the cover-preserving failed>=3 approval.
+o = make(quest=4, failed=3, evil_wins=2)
+check("blocks clean team near reject limit when one fail from win", o.vote_for_party(["jane", "kira", "mia"], P) is False)
 
 print("== vote_for_quest (evil) ==")
 # Quest 1 -> pass to build trust (record party first)

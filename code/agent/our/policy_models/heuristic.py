@@ -24,7 +24,7 @@ import random
 
 # Tunables for evil play
 PASS_FIRST_QUEST = True       # if True, evil passes Quest 1 to build trust (party size is only 2)
-EVIL_BURNED_THRESHOLD = 0.7   # avoid proposing an evil whose P(evil) exceeds this, unless forced
+EVIL_BURNED_THRESHOLD = 0.7   # marks an evil as exposed; proposal still includes the least-exposed evil
 
 
 class HeuristicOracle(object):
@@ -103,6 +103,10 @@ class HeuristicOracle(object):
     def _evil_vote_for_party(self, party, probabilities):
         """Evil party vote: approve teams with an evil; reject too-clean teams only when safe."""
         n_evil = sum(1 for m in party if self._is_evil_name(m))
+        # Team is "too clean" (all good) when evil is one fail from winning:
+        # reject unless agent_acl's final-proposal override forces approval at >=4.
+        if n_evil == 0 and self.evil_wins == 2:
+            return False
         # Near the rejection limit: approve so we don't look like the lone blocker
         # (agent_acl also force-approves at >=4, but back off earlier for cover).
         if self.failed_party_votes >= 3:
@@ -111,8 +115,6 @@ class HeuristicOracle(object):
         if n_evil >= 1:
             return True
         # Team is "too clean" (all good):
-        if self.evil_wins == 2:
-            return False  # one more failed quest wins; never let a clean team run
         if self.failed_party_votes <= 1 and self.quest_number >= 2:
             return False  # early in the proposal cycle, safe to reject a clean team
         return True  # otherwise preserve cover
@@ -137,10 +139,10 @@ class HeuristicOracle(object):
         party = []
         if evils:
             # Prefer the evil who currently looks cleanest (lowest P(evil)).
+            # EVIL_BURNED_THRESHOLD documents when an evil is likely exposed, but
+            # Phase 1 policy still requires proposals to include a known evil.
             cand = min(evils, key=lambda n: probabilities[n]['evil'])
-            # Skip an evil whose cover is already blown, unless it's our only evil.
-            if probabilities[cand]['evil'] < EVIL_BURNED_THRESHOLD or len(evils) == 1:
-                party.append(cand)
+            party.append(cand)
         # Fill remaining slots with the most-trusted-looking goods (best cover).
         for n in goods:
             if len(party) >= party_size:

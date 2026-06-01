@@ -282,42 +282,88 @@ Those probabilities are beliefs, not ground truth.
 
 ## The Action Heuristic
 
-The action heuristic is a hand-written policy, not a trained model.
+The action heuristic is a hand-written policy, not a trained model. It lives in
+`code/agent/our/policy_models/heuristic.py` and is wired into the full GRAIL
+agent by `code/agent/agent_acl.py`.
 
-Its current logic is simple:
+The policy receives two kinds of information:
+
+- graph beliefs: each player's current `P(Good)` and `P(Evil)`;
+- private/runtime context: the agent's team, its own name, known evil teammate
+  names, failed party-vote count, quest number, and current score.
+
+Current Good-team behavior:
 
 - propose the players with the highest probability of being Good;
-- approve a party only if every member is more likely Good than Evil;
-- automatically approve first quest parties of size 2;
-- pass quests if Good;
-- fail quests if Evil.
+- for parties of size 2, choose the highest-`P(Good)` player plus one random
+  partner from the remaining ordered players;
+- approve parties of size 2 automatically;
+- otherwise reject a party if any member has `P(Evil) > P(Good)`;
+- always vote success on quests.
+
+Current Evil-team behavior:
+
+- store known evil identities from private data, including self and evil
+  teammate names, normalized to lowercase;
+- propose a party with exactly one known evil when possible, choosing the known
+  evil with the lowest `P(Evil)` as the least-exposed option;
+- fill the rest of the proposal with the most trusted-looking Good players for
+  cover;
+- use `EVIL_BURNED_THRESHOLD = 0.7` only as the documented cutoff for when an
+  evil player looks exposed. It does not allow the proposer to create an all-Good
+  team when a known evil can be included;
+- approve any party that contains a known evil;
+- reject all-Good parties on Quest 2 or later when the rejection count is still
+  low (`failed_party_votes <= 1`);
+- approve all-Good parties under moderate rejection pressure
+  (`failed_party_votes >= 3`) to preserve cover;
+- reject all-Good parties when Evil already has 2 failed quests, because one
+  more failed quest wins the game;
+- still obey the outer agent's final-proposal safeguard: at
+  `failed_party_votes >= 4`, `agent_acl.py` forces party approval to avoid the
+  five-rejection game-ending path;
+- vote success on Quest 1 when `PASS_FIRST_QUEST = True`, building trust on the
+  first size-2 quest;
+- when multiple known evil players are on the quest, only the lexicographically
+  smallest evil name votes fail, so a quest usually receives exactly one fail;
+- fail quests aggressively after Quest 1, when Evil has 2 failed quests, or when
+  Good has 2 successful quests.
 
 ```mermaid
 flowchart TD
     Beliefs["Beliefs from graph<br/>P(Good), P(Evil)"]
+    Context["Private/runtime context<br/>team, known evils, score, rejections"]
     Task{"Requested action"}
+    Team{"Agent team"}
 
     Beliefs --> Task
+    Context --> Task
+    Task --> Team
 
-    Task -->|propose party| Sort["Sort players by P(Good)"]
-    Sort --> Pick["Pick top k players<br/>special case: size 2 includes one random partner"]
-    Pick --> Proposal["Return party proposal"]
+    Team -->|Good propose| GoodProposal["Pick high-P(Good) players<br/>size 2 uses one random partner"]
+    Team -->|Evil propose| EvilProposal["Pick least-exposed known evil<br/>fill with trusted-looking Good cover"]
+    GoodProposal --> Proposal["Return party proposal"]
+    EvilProposal --> Proposal
 
-    Task -->|vote party| CheckSize{"Party size is 2?"}
-    CheckSize -->|yes| Approve["Approve"]
-    CheckSize -->|no| AnyEvil{"Any member has<br/>P(Evil) > P(Good)?"}
-    AnyEvil -->|yes| Reject["Reject"]
-    AnyEvil -->|no| Approve
+    Team -->|Good party vote| GoodPartyVote{"Size 2 or no likely evil?"}
+    GoodPartyVote -->|yes| Approve["Approve party"]
+    GoodPartyVote -->|no| Reject["Reject party"]
 
-    Task -->|vote quest| Team{"Agent team"}
-    Team -->|Good| Pass["Quest success vote"]
-    Team -->|Evil| Fail["Quest fail vote"]
+    Team -->|Evil party vote| EvilPartyVote{"Known evil on party?"}
+    EvilPartyVote -->|yes| Approve
+    EvilPartyVote -->|no, low pressure or evil at 2 fails| Reject
+    EvilPartyVote -->|no, cover pressure| Approve
+
+    Team -->|Good quest vote| Pass["Quest success vote"]
+    Team -->|Evil quest vote| EvilQuestVote{"Quest 1 trust pass<br/>or teammate designated to fail?"}
+    EvilQuestVote -->|yes| Pass
+    EvilQuestVote -->|no| Fail["Quest fail vote"]
 ```
 
-This explains a major limitation: the current policy is mostly written from the
-Good-team perspective. Although `vote_for_quest` can fail a quest when the agent
-is Evil, proposal and party-vote behavior still uses "avoid Evil players" logic.
-That is good for Servants but poor for Minions.
+The policy is intentionally conservative and explicit. It is useful for the
+simplified 6-player Servant/Minion setting, but it is not a learned deception
+strategy and should be revisited if richer Avalon roles or variable player
+counts are added.
 
 ## What Was Trained on the Dataset?
 
