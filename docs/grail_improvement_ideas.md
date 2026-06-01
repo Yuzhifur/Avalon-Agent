@@ -588,8 +588,8 @@ Do this first.
 2. Replace Good-oriented Minion behavior and build a real Evil/Minion action heuristic.
 3. Add quest-fail strategy for evil agents.
 4. Add Evil-specific prompts.
-6. Fix first-quest party behavior.
-7. Add simple evaluation: GRAIL Good vs GRAIL Evil, GRAIL Good vs DeepSeek Evil, etc.
+5. Fix first-quest party behavior.
+6. Add simple evaluation: GRAIL Good vs GRAIL Evil, GRAIL Good vs DeepSeek Evil, etc.
 
 This should be relatively cheap and directly addresses the biggest observed limitation.
 
