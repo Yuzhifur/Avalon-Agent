@@ -6,12 +6,12 @@ In the Team Building phase the Leader proposes a Team (a party) to complete a Qu
 
 
 YOUR ROLE AND INFORMATION:
-Your name in this game is Kira, and you are a loyal Servant of Arthur (a good player). The evil players know who each other are, but you and other good players have no special knowledge of anyone’s role. Therefore, evil players will use deception and pretend to be good so they can participate in Quests and cause them to fail. As a good player, your goal is to ensure that Quests succeed by selecting other good players to participate in Quests. Approve only Teams where you trust everyone. Even a single evil player on the team is enough for failure.
+Your name in this game is Jane, and you are a loyal Servant of Arthur (a good player). The evil players know who each other are, but you and other good players have no special knowledge of anyone’s role. Therefore, evil players will use deception and pretend to be good so they can participate in Quests and cause them to fail. As a good player, your goal is to ensure that Quests succeed by selecting other good players to participate in Quests. Approve only Teams where you trust everyone. Even a single evil player on the team is enough for failure.
 Your special information, just for you, is: 
 Note: You have received special information which you need to keep private. Keep the information confidential and use it wisely. Furthermore try to not make general statements which could indicate that you are hiding something.
 
 YOUR PRIOR ACTIONS THIS TURN:
-vote_party, vote_quest
+vote_party
 
 CURRENT GAME STATE:
  - Current Quest: 4
@@ -26,7 +26,7 @@ Previous Teams:
     - Team 1 (proposed by Luca in quest 1): Luca, Paul | Votes: Paul: yes, Luca: yes, Kira: yes, Jane: yes, Mia: yes, Sam: yes
     - Team 2 (proposed by Mia in quest 2): Luca, Paul, Sam | Votes: Jane: yes, Kira: yes, Paul: yes, Luca: yes, Mia: yes, Sam: yes
     - Team 3 (proposed by Kira in quest 3): Kira, Luca, Paul, Jane | Votes: Kira: yes, Paul: yes, Luca: yes, Sam: no, Jane: yes, Mia: no
-    - Team 4 (proposed by Paul in quest 4): Paul, Luca, Kira | Votes: Paul: yes, Luca: yes, Kira: yes, Sam: no, Mia: no, Jane: yes
+    - Team 4 (proposed by Paul in quest 4): Paul, Luca, Kira | Votes: No votes yet
 
 DETAILED GAME LOG (most recent messages are last):
  - Game Start: Welcome to Avalon Game. This message signifies the start of a new game. The game history from this line onwards is the effective historical game history dialogue of this game!
@@ -116,16 +116,23 @@ DETAILED GAME LOG (most recent messages are last):
  - Paul: yo i'm sticking with this team, me luca and kira were all on the last success and sam's still the only one linked to a fail
  - Paul: let's keep the streak going and get quest 4 done
  - Voiceover: Paul initiated a party vote.
- - Voiceover: Party vote summary: Paul: yes, Luca: yes, Kira: yes, Sam: no, Mia: no, Jane: yes
- - Voiceover: The party has been approved!
- - Voiceover: Voting for the quest has started...
 
 
 
 YOUR CURRENT TASK:
-You are on a mission team and must decide whether to make it succeed or fail. As a member of the good team, your goal is to ensure mission success by voting for missions to succeed.You should always vote for success as a good player as there is no reason for you to fail a quest.
+Vote on the proposed mission team consisting of Paul, Luca, Kira. Your goal is to ensure no evil or suspicious players are on the team.
 
-Answer using the schema provided above. If you want the quest to succeed choose 'true'. If you want it to fail choose 'false'.
+Note that 0 party proposals have been rejected. If five proposals are rejected consecutively, the evil side wins. Consider this when voting.
+
+Consider:
+1. Past involvement and actions of each player
+2. Contributions in previous missions
+3. Any indications of players being on the evil side
+4. Suspicious or trustworthy behaviors
+When looking for suspicious behavior, consider whether players are behaving suspiciously or illogically with respect to chat messages or party votes, e.g. always rejecting party votes unless they or another specific player is in it, or making assertions without evidence (especially early in the game such as on Quest 1 where evidence is limited) as these may be signs a player is evil.
+Also consider whether their beliefs align with your own, or if their beliefs seem contrary to the group consensus as there are more Servants than Minions and could also suggest a player is evil.
+Unless you have a strong reason to doubt a player, it is not always worth arguing for or against specific players, especially early in the game such as on Quest 1.
+Choose either 'approve' or 'disapprove' following the schema provided above.
 
 
 

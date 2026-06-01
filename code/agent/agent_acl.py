@@ -82,7 +82,7 @@ class ACLAgent(BaseAgent):
 
         # Create logs directory if it doesn't exist
         os.makedirs("logs", exist_ok=True)
-        
+
         # Create a log file
         self._log_file = f"logs/LOG_({self._name})_{game_id}.log"
         self._debug_log_file = f"logs/DEBUG_({self._name})_{game_id}.log"
@@ -91,7 +91,7 @@ class ACLAgent(BaseAgent):
 
         self.debug(f"""Log file created for agent {self._name} with ID {self._id} in game {self._gid}
                  Agent role is: {agent_role_preference}\n\n\n""")
-        
+
         self.log(f"Agent {self._name} with ID {self._id} and type ACL is starting...Agent role is: {agent_role_preference}\n")
 
         self._last_action = None
@@ -273,6 +273,16 @@ class ACLAgent(BaseAgent):
             evil_wins=evil_wins,
         )
 
+    def _policy_log_context(self):
+        """Compact context string for Docker/log review of handcrafted policy decisions."""
+        return (
+            f"team={self._team.name} quest={len(self.game.quest_results) + 1} "
+            f"score_good={self.policy_selector.good_wins} "
+            f"score_evil={self.policy_selector.evil_wins} "
+            f"failed_party_votes={self.policy_selector.failed_party_votes} "
+            f"known_evil={sorted(self.policy_selector._evil_set())}"
+        )
+
     def update_predictions(self, with_llm_prior=False):
         """Let's get the beliefs from the latest game state vector"""
         self.debug(f"-- The quest history for vector generation: {self.game.quest_proposals}\n")
@@ -312,9 +322,10 @@ class ACLAgent(BaseAgent):
             if self._team == ATEAM.GOOD and self.game.current_proposed_party and len( self.game.current_proposed_party) == 2:
                 party = self.game.current_proposed_party
             else:
-                self.debug(f"+=+= Agent is selecting a party composition")
+                self.debug("+=+= Agent is selecting a party composition\n")
                 party = self.policy_selector.propose_party(task.target_party_size, self.latest_probabilities)
 
+            self.debug(f"POLICY_DECISION propose_party {self._policy_log_context()} selected={party}\n")
             # Make sure the proposed party has the right length:
             party = party[:task.target_party_size]
             while len(party) < task.target_party_size:
@@ -365,6 +376,7 @@ class ACLAgent(BaseAgent):
             self._last_action.append("vote_party")
             self._update_policy_context()
             vote = self.policy_selector.vote_for_party(self.game.current_proposed_party, self.latest_probabilities)
+            self.debug(f"POLICY_DECISION vote_party {self._policy_log_context()} party={self.game.current_proposed_party} vote={vote}\n")
             self.debug(f"**** current party rejects: {self.state.failed_party_votes} === {self.game.current_party_rejects} ****\n")
 
             if self.state.failed_party_votes >= 4:
@@ -382,6 +394,7 @@ class ACLAgent(BaseAgent):
             print(" --> Voting for quest")
             self._update_policy_context()
             vote = self.policy_selector.vote_for_quest()
+            self.debug(f"POLICY_DECISION vote_quest {self._policy_log_context()} last_party={self.policy_selector._last_party} vote={vote}\n")
             self.debug(f"=+=+= Voting for quest: {vote}\n")
             return {"success": True, "action": "vote_quest", "data": {"vote": vote}}
         elif taken_action == "vote_assassin":
@@ -765,4 +778,3 @@ class ACLAgent(BaseAgent):
             log.write("\n")
             log.write("*****************************************************")
             log.write("\n")
-        
