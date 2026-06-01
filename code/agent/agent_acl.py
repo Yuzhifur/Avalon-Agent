@@ -98,8 +98,9 @@ class ACLAgent(BaseAgent):
         self._role = self._roleToEnum(agent_role_preference)
         self.role_string = agent_role_preference
         self._team = (
-            ATEAM.EVIL if self._role in [AROLE.MORGANA, AROLE.ASSASSIN] else ATEAM.GOOD # good is 1, evil is 2
+            ATEAM.EVIL if self._role in [AROLE.MORGANA, AROLE.ASSASSIN, AROLE.EVIL] else ATEAM.GOOD # good is 1, evil is 2
         )
+        self._evil_teammates = set() # populated from private data; lowercase names of known evil teammates
         self.graph_model = FactorGraphModelV2()
         self.graph_model.construct()
         self.graph_model.load_from_file()
@@ -245,8 +246,32 @@ class ACLAgent(BaseAgent):
         self.debug(f"player to index: {self.game.players_to_index}\n")
         self.debug(f"index to player: {self.game.index_to_players}\n")
 
+        # Extract known evil teammates (lowercase names) from private data and hand
+        # identity to the policy. Mirrors the special-knowledge read in agent_deepseek.py.
+        self._evil_teammates = set()
+        self_name = self._name.lower()
+        if getattr(self._private_data, "knowledge", None):
+            for pid, alignment in self._private_data.knowledge.items():
+                if str(alignment).lower() == "evil":
+                    nm = self._private_data.named_knowledge[pid].lower()
+                    if nm != self_name:
+                        self._evil_teammates.add(nm)
+        self.debug(f"Known evil teammates: {self._evil_teammates}\n")
+        self.policy_selector.set_identity(self_name, self._evil_teammates)
+
         return {}
     
+
+    def _update_policy_context(self):
+        """Push current game-pressure signals into the policy before it selects an action."""
+        good_wins = sum(1 for r in self.game.quest_results if r)
+        evil_wins = sum(1 for r in self.game.quest_results if not r)
+        self.policy_selector.update_context(
+            failed_party_votes=self.state.failed_party_votes,
+            quest_number=len(self.game.quest_results) + 1,
+            good_wins=good_wins,
+            evil_wins=evil_wins,
+        )
 
     def update_predictions(self, with_llm_prior=False):
         """Let's get the beliefs from the latest game state vector"""
@@ -281,9 +306,12 @@ class ACLAgent(BaseAgent):
         if (taken_action == "propose_party"):
             self.debug(f"------> selected action: propose party\n")
             self.update_predictions_based_on_chat(None) # TODO this will change from None if we want to filter and use chat
-            if  self.game.current_proposed_party and len( self.game.current_proposed_party) == 2:
+            self._update_policy_context()
+            # Good agents adopt an already-proposed size-2 party; evil runs its own
+            # size-2 logic so it can steer the first-quest composition.
+            if self._team == ATEAM.GOOD and self.game.current_proposed_party and len( self.game.current_proposed_party) == 2:
                 party = self.game.current_proposed_party
-            else: 
+            else:
                 self.debug(f"+=+= Agent is selecting a party composition")
                 party = self.policy_selector.propose_party(task.target_party_size, self.latest_probabilities)
 
@@ -335,10 +363,11 @@ class ACLAgent(BaseAgent):
             else:
                 self.debug(f" ### Already calculated beliefs and voted for party in this turn, using previous beliefs\n")
             self._last_action.append("vote_party")
+            self._update_policy_context()
             vote = self.policy_selector.vote_for_party(self.game.current_proposed_party, self.latest_probabilities)
             self.debug(f"**** current party rejects: {self.state.failed_party_votes} === {self.game.current_party_rejects} ****\n")
 
-            if self.state.failed_party_votes >= 4: 
+            if self.state.failed_party_votes >= 4:
                 self.debug(f"===== Changing {vote} into True due to last attempt\n")
                 vote = True
             self.debug(f"===== Voting for party: {self.game.current_proposed_party} with vote: {vote}\n")
@@ -351,15 +380,22 @@ class ACLAgent(BaseAgent):
             self.debug(f"------> selected action: vote_quest\n")
             self._last_action.append("vote_quest")
             print(" --> Voting for quest")
+            self._update_policy_context()
             vote = self.policy_selector.vote_for_quest()
             self.debug(f"=+=+= Voting for quest: {vote}\n")
             return {"success": True, "action": "vote_quest", "data": {"vote": vote}}
         elif taken_action == "vote_assassin":
+            # Not reachable in the 6p no-special-role config (both evils are Minions);
+            # guarded so a stray task cannot crash the agent.
             self.debug(f"------> selected action: vote_assassin\n")
             self._last_action.append("vote_assassin")
             print(" --> Voting for assassin")
             self.update_predictions_based_on_chat(None) # TODO this will change from None if we want to filter chat
-            vote = self.policy_selector.chose_assassin_target(self.latest_probabilities)
+            try:
+                vote = self.policy_selector.chose_assassin_target(self.latest_probabilities)
+            except Exception as e:
+                self.debug(f"assassin target selection failed: {e}\n")
+                vote = None
             print(f"assassin vote: {vote}")
             return {"success": True, "action": "vote_assassin", "data": vote}
         else:
@@ -580,6 +616,16 @@ class ACLAgent(BaseAgent):
 
         return probs
 
+    def _is_evil(self):
+        return self._team == ATEAM.EVIL
+
+    def make_prompt_secret_info(self):
+        """Teammate identity for evil prompts, carried only through {secret_info}."""
+        if not self._is_evil() or not self._evil_teammates:
+            return ""
+        mates = ", ".join(n.capitalize() for n in self._evil_teammates)
+        return self._prompt_hint.non_disclosure_evil + f" Your fellow evil player(s): {mates}."
+
     def make_prompt_probabilities(self):
         if self.latest_probabilities is None:
             return {player_name.capitalize(): 0.5 for player_name in self.game.index_to_players.values()}
@@ -610,7 +656,8 @@ class ACLAgent(BaseAgent):
         probabilities = self.make_prompt_probabilities()
         team_comp = self.make_prompt_team_comp()
         history = self.make_prompt_quest_history()
-        prompt = self._prompt_hint.generate_message_from_log_good.format(name=self._name, logs=logs, latest_probabilities=probabilities, role=self.role_string, team_comp=team_comp, party_leader=self.party_leader, quest_history=history, quest_num=self.state.quest, party_size=len(team_comp))
+        tmpl = self._prompt_hint.generate_message_from_log_evil if self._is_evil() else self._prompt_hint.generate_message_from_log_good
+        prompt = tmpl.format(name=self._name, logs=logs, latest_probabilities=probabilities, role=self.role_string, secret_info=self.make_prompt_secret_info(), team_comp=team_comp, party_leader=self.party_leader, quest_history=history, quest_num=self.state.quest, party_size=len(team_comp))
 
         try:
             result = json.loads(self.prompt_llm(prompt))
@@ -627,7 +674,8 @@ class ACLAgent(BaseAgent):
         probabilities = self.make_prompt_probabilities()
         team_comp = self.make_prompt_team_comp(team_comp)
         history = self.make_prompt_quest_history()
-        prompt = self._prompt_hint.generate_proposal_message_good.format(name=self._name, logs=logs, latest_probabilities=probabilities, role=self.role_string, team_comp=team_comp, quest_history=history, quest_num=self.state.quest, party_size=len(team_comp))
+        tmpl = self._prompt_hint.generate_proposal_message_evil if self._is_evil() else self._prompt_hint.generate_proposal_message_good
+        prompt = tmpl.format(name=self._name, logs=logs, latest_probabilities=probabilities, role=self.role_string, secret_info=self.make_prompt_secret_info(), team_comp=team_comp, quest_history=history, quest_num=self.state.quest, party_size=len(team_comp))
 
         try:
             result = json.loads(self.prompt_llm(prompt))
@@ -644,7 +692,8 @@ class ACLAgent(BaseAgent):
         probabilities = self.make_prompt_probabilities()
         team_comp = self.make_prompt_team_comp(team_comp)
         history = self.make_prompt_quest_history()
-        prompt = self._prompt_hint.confirm_proposal_message_good.format(name=self._name, logs=logs, latest_probabilities=probabilities, role=self.role_string, team_comp=team_comp, quest_history=history, quest_num=self.state.quest, party_size=len(team_comp))
+        tmpl = self._prompt_hint.confirm_proposal_message_evil if self._is_evil() else self._prompt_hint.confirm_proposal_message_good
+        prompt = tmpl.format(name=self._name, logs=logs, latest_probabilities=probabilities, role=self.role_string, secret_info=self.make_prompt_secret_info(), team_comp=team_comp, quest_history=history, quest_num=self.state.quest, party_size=len(team_comp))
 
         try:
             result = json.loads(self.prompt_llm(prompt))
