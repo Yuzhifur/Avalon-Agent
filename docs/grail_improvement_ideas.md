@@ -164,6 +164,62 @@ Before sending a message or action:
 
 ---
 
+### 8a. Add an Evil public-stance and deception-plan state
+Evil agents currently act from private teammate knowledge, but their public
+conversation is not driven by a persistent deception plan. This can make them
+sound locally plausible while failing to build a coherent alternative story
+about who the Evil team is.
+
+**Improvement:**
+
+Maintain an explicit per-agent social state:
+
+- public trust and suspicion stances for each player;
+- accusations the agent has made;
+- players the agent has defended;
+- the current fake Evil-team hypothesis the agent is selling;
+- planned distancing or defense of the known Evil teammate;
+- reasons for future votes that are compatible with prior messages.
+
+Use this state when generating messages and before choosing actions. For Evil,
+the goal is not just consistency, but a believable false worldview that can
+survive several turns.
+
+**Training cost:** none initially; low to medium if stance updates are learned.
+**Implementation cost:** medium.
+**Win-rate impact:** high for Evil, especially against human or chat-aware agents.
+**Quality impact:** high.
+
+---
+
+### 8b. Add Evil vote-theater and teammate-management policy
+Good Evil play sometimes requires voting against the immediate mechanical
+preference to preserve cover, distance from a teammate, or avoid forming an
+obvious voting bloc. Current Evil behavior is mechanically safer than before,
+but still too blunt.
+
+**Improvement:**
+
+Add an Evil-specific social action layer that decides:
+
+- when to approve a clean team for credibility;
+- when to reject a team containing the teammate to create distance;
+- when to split votes between Evil teammates;
+- when to defend the teammate and when to bus them;
+- when to sacrifice a likely exposed Evil player;
+- how much voting inconsistency is acceptable before it needs an explanation.
+
+This should sit above the current hard safety rules, so it never approves a
+clean team when Good is one success from winning or when Evil has a direct win
+available.
+
+**Training cost:** none initially; low if tuned through self-play.
+**Implementation cost:** medium.
+**Win-rate impact:** medium to high.
+**Quality impact:** medium to high.
+
+---
+
 ### 9. Use LLM priors more carefully
 Currently the LLM “vibes” can update priors, but this is risky if noisy.
 
@@ -598,6 +654,8 @@ This should be relatively cheap and directly addresses the biggest observed limi
 2. Add score-aware and quest-aware policy.
 3. Add proposal/vote behavior features.
 4. Add consistency checks between beliefs, actions, and messages.
+5. Add persistent Evil public-stance/deception-plan state.
+6. Add Evil vote-theater and teammate-management policy.
 
 This improves play quality while preserving the current model.
 

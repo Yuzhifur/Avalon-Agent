@@ -188,5 +188,9 @@ Thumbs.db
 # parcel
 .parcel-cache
 
-#USER DB
+# USER DB
 usersDB.json
+
+# Agentic Coding Tools
+.claude
+.codex
