@@ -585,10 +585,11 @@ Ranked by practicality:
 Do this first.
 
 1. Implement `GoodPolicy` and `EvilPolicy`.
-2. Replace Good-oriented Minion behavior.
-3. Add strategic sabotage.
+2. Replace Good-oriented Minion behavior and build a real Evil/Minion action heuristic.
+3. Add quest-fail strategy for evil agents.
 4. Add Evil-specific prompts.
-5. Add simple evaluation: GRAIL Good vs GRAIL Evil, GRAIL Good vs DeepSeek Evil, etc.
+6. Fix first-quest party behavior.
+7. Add simple evaluation: GRAIL Good vs GRAIL Evil, GRAIL Good vs DeepSeek Evil, etc.
 
 This should be relatively cheap and directly addresses the biggest observed limitation.
 
