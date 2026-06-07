@@ -1,0 +1,32 @@
+{
+  "candidates": [
+    {
+      "name": "evil_baseline",
+      "group": "evil_baseline",
+      "side": "evil",
+      "overrides": {}
+    },
+    {
+      "name": "evil_blend_moderate",
+      "group": "evil_blend_moderate",
+      "side": "evil",
+      "overrides": {
+        "evil": {
+          "clean_team_cover_approve_rate": 0.5,
+          "clean_team_reject_through_quest": 1
+        }
+      }
+    },
+    {
+      "name": "evil_blend_aggressive",
+      "group": "evil_blend_aggressive",
+      "side": "evil",
+      "overrides": {
+        "evil": {
+          "clean_team_cover_approve_rate": 0.8,
+          "clean_team_reject_through_quest": 0
+        }
+      }
+    }
+  ]
+}
