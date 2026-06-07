@@ -24,6 +24,40 @@
         "typechat_context_length": 8000,
         "delay_messages": false
     },
+    "policy": {
+        "common": {
+            "final_proposal_rejects": 4
+        },
+        "good": {
+            "include_self_in_proposals": true,
+            "reject_thresholds": {
+                "1": 0.65,
+                "2": 0.6,
+                "3": 0.6,
+                "4": 0.57,
+                "5": 0.55
+            },
+            "good_match_point_penalty": 0.08,
+            "evil_match_point_penalty": 0.05,
+            "failed_quest_member_penalty": 0.12,
+            "approved_failed_quest_penalty": 0.06,
+            "proposed_failed_quest_penalty": 0.08,
+            "rejected_successful_quest_penalty": 0.04,
+            "rejected_proposal_leader_penalty": 0.02,
+            "approved_rejected_proposal_penalty": 0.01
+        },
+        "evil": {
+            "pass_first_quest": true,
+            "burned_threshold": 0.7,
+            "clean_team_reject_through_quest": 3,
+            "clean_team_cover_approve_rate": 0.25,
+            "teammate_distance_rate": 0.35,
+            "teammate_distance_threshold": 0.65,
+            "teammate_soft_defense_threshold": 0.3,
+            "evil_vote_split_rate": 0.25,
+            "midgame_fail_rate": 1.0
+        }
+    },
     "game": {
         "use_real_names": false,
         "max_players": 6,

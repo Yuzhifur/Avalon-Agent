@@ -1,0 +1,38 @@
+{
+  "candidates": [
+    {
+      "name": "baseline_good",
+      "group": "baseline",
+      "side": "good",
+      "overrides": {}
+    },
+    {
+      "name": "baseline_evil",
+      "group": "baseline",
+      "side": "evil",
+      "overrides": {}
+    },
+    {
+      "name": "phase2_good",
+      "group": "phase2_candidate",
+      "side": "good",
+      "overrides": {
+        "good": {
+          "good_match_point_penalty": 0.12,
+          "evil_match_point_penalty": 0.08
+        }
+      }
+    },
+    {
+      "name": "phase2_evil",
+      "group": "phase2_candidate",
+      "side": "evil",
+      "overrides": {
+        "evil": {
+          "clean_team_cover_approve_rate": 0.35,
+          "teammate_distance_rate": 0.45
+        }
+      }
+    }
+  ]
+}

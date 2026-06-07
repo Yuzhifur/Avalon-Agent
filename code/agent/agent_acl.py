@@ -6,6 +6,7 @@ from itertools import combinations
 import time
 from our.model_reduced_categories import FactorGraphModelV2
 from our.policy_models.heuristic import HeuristicOracle
+from our.policy_models.consistency import MessageConsistencyChecker
 import os
 import csv
 from our.prompts import PromptHint
@@ -31,10 +32,17 @@ class GameInfo():
         self.quest_results = [] # True for success, False for fail
         self.current_party_rejects = []
     
-    def add_party_proposal(self, party_comp, party_votes, quest_number):
-        self.quest_proposals[quest_number].append({'comp': [name.lower() for name in party_comp],
-                                                   'votes': party_votes})
-        if sum(party_votes.values()) > 3: # the party has been accepted
+    def add_party_proposal(self, party_comp, party_votes, quest_number, leader=None):
+        accepted = sum(party_votes.values()) > len(party_votes) / 2
+        self.quest_proposals[quest_number].append({
+            'comp': [name.lower() for name in party_comp],
+            'votes': {name.lower(): vote for name, vote in party_votes.items()},
+            'leader': (leader or "").lower(),
+            'accepted': accepted,
+            'quest_outcome': None,
+        })
+        self.party_leader = None
+        if accepted:
             self.current_party_rejects = []
             print( f"Party {party_comp} has been accepted for quest {quest_number} with votes: {party_votes}")
         else:
@@ -43,6 +51,25 @@ class GameInfo():
     
     def add_quest_result(self, result):
         self.quest_results.append(result)
+        quest_number = len(self.quest_results)
+        for proposal in reversed(self.quest_proposals[quest_number]):
+            if proposal.get("accepted"):
+                proposal["quest_outcome"] = result
+                break
+
+    def policy_proposal_history(self):
+        history = []
+        for quest_number in sorted(self.quest_proposals):
+            for proposal in self.quest_proposals[quest_number]:
+                history.append({
+                    "quest": quest_number,
+                    "leader": proposal.get("leader", ""),
+                    "party": list(proposal.get("comp", [])),
+                    "votes": dict(proposal.get("votes", {})),
+                    "accepted": bool(proposal.get("accepted")),
+                    "quest_outcome": proposal.get("quest_outcome"),
+                })
+        return history
     
     def get_state_vector(self):
         """Turns the game state into a vector to be used by the graphical model"""
@@ -110,7 +137,11 @@ class ACLAgent(BaseAgent):
 
         self.latest_probabilities = None # {"name of player": {'good': 0.5, 'evil': 0.5}, ...}
         self.game = GameInfo()
-        self.policy_selector = HeuristicOracle(self._team)
+        self.policy_selector = HeuristicOracle(
+            self._team,
+            policy_config=(config or {}).get("policy", {}),
+        )
+        self.consistency_checker = MessageConsistencyChecker()
         self.quest_updated = False # a flag to know to update the beliefs after the quest is updated
 
         self._messages = []
@@ -141,7 +172,12 @@ class ACLAgent(BaseAgent):
                 elif vote.lower() == "no":
                     votes[name.lower()] = False
             print("*********  votes", votes)
-            self.game.add_party_proposal(self.game.current_proposed_party, votes, len(self.game.quest_results)+1)
+            self.game.add_party_proposal(
+                self.game.current_proposed_party,
+                votes,
+                len(self.game.quest_results) + 1,
+                leader=self.game.party_leader,
+            )
 
         return {}
     
@@ -199,7 +235,7 @@ class ACLAgent(BaseAgent):
             if len(self.state_diff['proposed_party']) > 0: # There is actually a party being proposed
                 self.debug(f"########### Proposed party updated: state diff:{self.state_diff['proposed_party']} --- state: {self.state.proposed_party}\n")
                 self.party_leader = self.state_diff["messages"][-1]["msg"].split()[0]
-                # self.game.party_leader = self.party_leader
+                self.game.party_leader = self.party_leader
 
                 plist = [
                     self._private_data.order_to_name[str(order_id)].lower()
@@ -271,6 +307,14 @@ class ACLAgent(BaseAgent):
             quest_number=len(self.game.quest_results) + 1,
             good_wins=good_wins,
             evil_wins=evil_wins,
+            party_size=(
+                len(self.game.current_proposed_party)
+                if self.game.current_proposed_party
+                else (self.state.target_party_size or 0)
+            ),
+            leader=self.party_leader,
+            proposal_history=self.game.policy_proposal_history(),
+            quest_history=self.quest_history,
         )
 
     def _policy_log_context(self):
@@ -282,6 +326,28 @@ class ACLAgent(BaseAgent):
             f"failed_party_votes={self.policy_selector.failed_party_votes} "
             f"known_evil={sorted(self.policy_selector._evil_set())}"
         )
+
+    def _log_policy_decision(self):
+        payload = self.policy_selector.decision_log_payload()
+        self.debug(f"POLICY_DECISION_DETAIL {json.dumps(payload, sort_keys=True)}\n")
+
+    def _repair_and_record_message(self, message, mode, party=None, planned_vote=None):
+        result = self.consistency_checker.repair(
+            message,
+            mode=mode,
+            party=party,
+            planned_vote=planned_vote,
+            quest_history=self.quest_history,
+            public_stances=self.policy_selector.public_stances(),
+        )
+        self.debug(
+            "CONSISTENCY_CHECK "
+            f"mode={mode} changed={result['changed']} "
+            f"conflicts={json.dumps(result['conflicts'])}\n"
+        )
+        player_names = list(self.game.players_to_index.keys())
+        self.policy_selector.record_public_message(result["message"], player_names)
+        return result["message"]
 
     def update_predictions(self, with_llm_prior=False):
         """Let's get the beliefs from the latest game state vector"""
@@ -317,15 +383,14 @@ class ACLAgent(BaseAgent):
             self.debug(f"------> selected action: propose party\n")
             self.update_predictions_based_on_chat(None) # TODO this will change from None if we want to filter and use chat
             self._update_policy_context()
-            # Good agents adopt an already-proposed size-2 party; evil runs its own
-            # size-2 logic so it can steer the first-quest composition.
-            if self._team == ATEAM.GOOD and self.game.current_proposed_party and len( self.game.current_proposed_party) == 2:
-                party = self.game.current_proposed_party
-            else:
-                self.debug("+=+= Agent is selecting a party composition\n")
-                party = self.policy_selector.propose_party(task.target_party_size, self.latest_probabilities)
+            self.debug("+=+= Agent is selecting a party composition\n")
+            party = self.policy_selector.propose_party(
+                task.target_party_size,
+                self.latest_probabilities,
+            )
 
             self.debug(f"POLICY_DECISION propose_party {self._policy_log_context()} selected={party}\n")
+            self._log_policy_decision()
             # Make sure the proposed party has the right length:
             party = party[:task.target_party_size]
             while len(party) < task.target_party_size:
@@ -335,6 +400,11 @@ class ACLAgent(BaseAgent):
                         break
             self.log(f"current proposed party: {self.game.current_proposed_party}  and party is {party}\n")
             message = self.make_prompt_propose_party(party)
+            message = self._repair_and_record_message(
+                message,
+                mode="proposal",
+                party=party,
+            )
             self._messages.append(message)
             self.self_proposed_party = party
             party = sorted([self.game.players_to_index[i] for i in party])
@@ -377,11 +447,8 @@ class ACLAgent(BaseAgent):
             self._update_policy_context()
             vote = self.policy_selector.vote_for_party(self.game.current_proposed_party, self.latest_probabilities)
             self.debug(f"POLICY_DECISION vote_party {self._policy_log_context()} party={self.game.current_proposed_party} vote={vote}\n")
+            self._log_policy_decision()
             self.debug(f"**** current party rejects: {self.state.failed_party_votes} === {self.game.current_party_rejects} ****\n")
-
-            if self.state.failed_party_votes >= 4:
-                self.debug(f"===== Changing {vote} into True due to last attempt\n")
-                vote = True
             self.debug(f"===== Voting for party: {self.game.current_proposed_party} with vote: {vote}\n")
 
             vote_str = "This is where any thought process would be, if there was any. But there is none."
@@ -395,6 +462,7 @@ class ACLAgent(BaseAgent):
             self._update_policy_context()
             vote = self.policy_selector.vote_for_quest()
             self.debug(f"POLICY_DECISION vote_quest {self._policy_log_context()} last_party={self.policy_selector._last_party} vote={vote}\n")
+            self._log_policy_decision()
             self.debug(f"=+=+= Voting for quest: {vote}\n")
             return {"success": True, "action": "vote_quest", "data": {"vote": vote}}
         elif taken_action == "vote_assassin":
@@ -538,9 +606,6 @@ class ACLAgent(BaseAgent):
             self._last_action.append("vote_party")
             vote = self.policy_selector.vote_for_party(self.game.current_proposed_party, self.latest_probabilities)
             self.debug(f"**** current party rejects: {self.state.failed_party_votes} === {self.game.current_party_rejects} ****\n")
-            if self.state.failed_party_votes >= 4:
-                self.debug(f"===== Changing {vote} into True due to last attempt\n")
-                vote = True
             self.debug(f"===== Voting for party: {self.game.current_proposed_party} with vote: {vote}\n")
             vote_str = "This is where any thought process would be, if there was any. But there is none."
             print(f"VOTE {self._id}: {vote} {vote_str}")
@@ -665,12 +730,17 @@ class ACLAgent(BaseAgent):
             return "No prior Quests; this is the first Round."
     
     def make_prompt_message(self):
+        self._update_policy_context()
         logs = '\n'.join([" : ".join(i) for i in self.game_log]) # make the game logs that we will use in the prompt
         probabilities = self.make_prompt_probabilities()
         team_comp = self.make_prompt_team_comp()
         history = self.make_prompt_quest_history()
+        planned_vote = self.policy_selector.preview_vote_for_party(
+            self.game.current_proposed_party,
+            self.latest_probabilities,
+        )
         tmpl = self._prompt_hint.generate_message_from_log_evil if self._is_evil() else self._prompt_hint.generate_message_from_log_good
-        prompt = tmpl.format(name=self._name, logs=logs, latest_probabilities=probabilities, role=self.role_string, secret_info=self.make_prompt_secret_info(), team_comp=team_comp, party_leader=self.party_leader, quest_history=history, quest_num=self.state.quest, party_size=len(team_comp))
+        prompt = tmpl.format(name=self._name, logs=logs, latest_probabilities=probabilities, role=self.role_string, secret_info=self.make_prompt_secret_info(), team_comp=team_comp, party_leader=self.party_leader, quest_history=history, quest_num=self.state.quest, party_size=len(team_comp), public_plan=self.policy_selector.public_plan_summary(), planned_vote="approve" if planned_vote else "reject")
 
         try:
             result = json.loads(self.prompt_llm(prompt))
@@ -680,7 +750,12 @@ class ACLAgent(BaseAgent):
             self.debug(f"Response: {self.prompt_llm(prompt)}")
             print(f"Error decoding JSON: {e} prompting again")
             return self.make_prompt_message()
-        return result["message"]
+        return self._repair_and_record_message(
+            result["message"],
+            mode="party_reaction",
+            party=self.game.current_proposed_party,
+            planned_vote=planned_vote,
+        )
     
     def make_prompt_propose_party(self, team_comp):
         logs = '\n'.join([" : ".join(i) for i in self.game_log]) # make the game logs that we will use in the prompt
@@ -688,7 +763,7 @@ class ACLAgent(BaseAgent):
         team_comp = self.make_prompt_team_comp(team_comp)
         history = self.make_prompt_quest_history()
         tmpl = self._prompt_hint.generate_proposal_message_evil if self._is_evil() else self._prompt_hint.generate_proposal_message_good
-        prompt = tmpl.format(name=self._name, logs=logs, latest_probabilities=probabilities, role=self.role_string, secret_info=self.make_prompt_secret_info(), team_comp=team_comp, quest_history=history, quest_num=self.state.quest, party_size=len(team_comp))
+        prompt = tmpl.format(name=self._name, logs=logs, latest_probabilities=probabilities, role=self.role_string, secret_info=self.make_prompt_secret_info(), team_comp=team_comp, quest_history=history, quest_num=self.state.quest, party_size=len(team_comp), public_plan=self.policy_selector.public_plan_summary(), planned_vote="approve")
 
         try:
             result = json.loads(self.prompt_llm(prompt))
@@ -706,7 +781,7 @@ class ACLAgent(BaseAgent):
         team_comp = self.make_prompt_team_comp(team_comp)
         history = self.make_prompt_quest_history()
         tmpl = self._prompt_hint.confirm_proposal_message_evil if self._is_evil() else self._prompt_hint.confirm_proposal_message_good
-        prompt = tmpl.format(name=self._name, logs=logs, latest_probabilities=probabilities, role=self.role_string, secret_info=self.make_prompt_secret_info(), team_comp=team_comp, quest_history=history, quest_num=self.state.quest, party_size=len(team_comp))
+        prompt = tmpl.format(name=self._name, logs=logs, latest_probabilities=probabilities, role=self.role_string, secret_info=self.make_prompt_secret_info(), team_comp=team_comp, quest_history=history, quest_num=self.state.quest, party_size=len(team_comp), public_plan=self.policy_selector.public_plan_summary(), planned_vote="approve")
 
         try:
             result = json.loads(self.prompt_llm(prompt))

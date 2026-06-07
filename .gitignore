@@ -175,6 +175,7 @@ build/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+code/evaluation/policy_runs/
 
 # MacOS specific files
 .DS_Store

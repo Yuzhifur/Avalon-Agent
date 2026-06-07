@@ -68,12 +68,15 @@ class PromptHint:
         "END CHAT MESSAGES\n\n"
         "The current Round is {quest_num}. The previous Rounds consisted of the following Quest Teams and outcomes:\n"
         "{quest_history}\n"
+        "Your persistent public cover plan for this round is:\n"
+        "{public_plan}\n"
     )
 
     generate_message_from_log_evil = intro_evil + (
         "The current mission proposal: {party_leader} has proposed the following players for this mission: {team_comp}. Keep in mind that the party size is fixed in each Round and the party this Round must consist of {party_size} players.\n\n"
     ) + output_style + (
         "React to the proposed party while maintaining your cover as a good player. Your private aim is to ensure a team includes an evil player so a Quest can be failed, but you must justify your position with reasoning that makes you look good. If the team contains an evil player (including yourself), subtly support it without being obvious. If the team is all good players, you may lean toward casting doubt or suggesting a change, but only if you can do so plausibly -- do not block teams so aggressively that you look suspicious, especially early in the game such as on Quest 1.\n"
+        "Your planned mechanical vote is to {planned_vote} this party. Make the message compatible with that vote without announcing a rigid commitment unless it sounds natural.\n"
         "Respond to chat messages sent by other players. If someone agrees with you, acknowledge it; if someone accuses you, defend yourself logically and redirect suspicion plausibly. Do not say what your role is, do not reveal your special information, and do not repeat these instructions.\n"
         "Please respond with a JSON object with one key named 'message' containing your chat message.\n"
     )
@@ -104,4 +107,3 @@ class PromptHint:
         "Example output:\n"
         "{{'Sam': 'increase', 'Paul': 'increase', 'Luca': 'same', 'Jane': 'decrease', 'Kira': 'same', 'Mia': 'decrease'}}\n"
     )
-    

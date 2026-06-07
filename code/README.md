@@ -74,6 +74,22 @@ To play the game, include a human in the `.env` file and navigate to http://loca
 
 After the game is finished, you can check the logs and the history of the game in the `phaser/server/logs` directory. If the game included the GRAIL agent, you can find the logs and data dump of those agents in the `agent/logs` directory.
 
+### Phase 2 policy tuning
+
+GRAIL action-policy parameters live under the `policy` key in the agent config
+files. The factor graph and its weights are not changed by these settings.
+
+Use the thin Docker self-play runner to compare policy candidates:
+
+```bash
+python3 evaluation/tune_policy.py --grid evaluation/policy_grid.json --runs 10
+```
+
+Each candidate can target the Good or Evil side. Candidates sharing a `group`
+are aggregated into a side-adjusted objective win rate in the generated
+`summary.json`. The active `.env` agent matchup still determines which baseline
+agent types participate in the games.
+
 ## Replay games from game logs
 
 To replay games from the game logs, copy the game JSON file you want to replay into the `phaser/server/logs` directory. Then start the server and navigate to admin mode through http://localhost:1234/admin. Enter the 4-letter room ID of the game that you want to view, which is denoted in the JSON file name.
@@ -83,4 +99,3 @@ EDVZ, QMQQ, YGRE, IDLQ, TEFW, EZNO, GZAP, FDWF, DUEZ, NQYE, ZEHR, ZQBI, SBSS, OO
 
 The human experiment games with reasoning (o4-mini) agents are:
 TAOQ, UNBO, SDAZ, NZGB, WBBU, GTKL, JTGN, JULA, GFYU, GYYE, DKXR, TBED, XVRZ, VASH, TWMO
-
