@@ -80,6 +80,9 @@ services:
     environment:
       ROLE: "minion-1"
       FASTAPI_PORT: "23005"
+      GRAIL_POLICY_OVERRIDES: "${GRAIL_POLICY_OVERRIDES:-}"
+      GRAIL_POLICY_OVERRIDES_GOOD: "${GRAIL_POLICY_OVERRIDES_GOOD:-}"
+      GRAIL_POLICY_OVERRIDES_EVIL: "${GRAIL_POLICY_OVERRIDES_EVIL:-}"
 
   minion-2:
     build:
@@ -103,6 +106,9 @@ services:
     environment:
       ROLE: "minion-2"
       FASTAPI_PORT: "23006"
+      GRAIL_POLICY_OVERRIDES: "${GRAIL_POLICY_OVERRIDES:-}"
+      GRAIL_POLICY_OVERRIDES_GOOD: "${GRAIL_POLICY_OVERRIDES_GOOD:-}"
+      GRAIL_POLICY_OVERRIDES_EVIL: "${GRAIL_POLICY_OVERRIDES_EVIL:-}"
 
   servant-4:
     build:
@@ -126,6 +132,9 @@ services:
     environment:
       ROLE: "servant-4"
       FASTAPI_PORT: "23007"
+      GRAIL_POLICY_OVERRIDES: "${GRAIL_POLICY_OVERRIDES:-}"
+      GRAIL_POLICY_OVERRIDES_GOOD: "${GRAIL_POLICY_OVERRIDES_GOOD:-}"
+      GRAIL_POLICY_OVERRIDES_EVIL: "${GRAIL_POLICY_OVERRIDES_EVIL:-}"
 
   servant-3:
     build:
@@ -149,6 +158,9 @@ services:
     environment:
       ROLE: "servant-3"
       FASTAPI_PORT: "23008"
+      GRAIL_POLICY_OVERRIDES: "${GRAIL_POLICY_OVERRIDES:-}"
+      GRAIL_POLICY_OVERRIDES_GOOD: "${GRAIL_POLICY_OVERRIDES_GOOD:-}"
+      GRAIL_POLICY_OVERRIDES_EVIL: "${GRAIL_POLICY_OVERRIDES_EVIL:-}"
 
   servant-1:
     build:
@@ -172,6 +184,9 @@ services:
     environment:
       ROLE: "servant-1"
       FASTAPI_PORT: "23009"
+      GRAIL_POLICY_OVERRIDES: "${GRAIL_POLICY_OVERRIDES:-}"
+      GRAIL_POLICY_OVERRIDES_GOOD: "${GRAIL_POLICY_OVERRIDES_GOOD:-}"
+      GRAIL_POLICY_OVERRIDES_EVIL: "${GRAIL_POLICY_OVERRIDES_EVIL:-}"
 
   servant-2:
     build:
@@ -194,6 +209,9 @@ services:
     environment:
       ROLE: "servant-2"
       FASTAPI_PORT: "23010"
+      GRAIL_POLICY_OVERRIDES: "${GRAIL_POLICY_OVERRIDES:-}"
+      GRAIL_POLICY_OVERRIDES_GOOD: "${GRAIL_POLICY_OVERRIDES_GOOD:-}"
+      GRAIL_POLICY_OVERRIDES_EVIL: "${GRAIL_POLICY_OVERRIDES_EVIL:-}"
 
 # for local testing
 #   ollama:
