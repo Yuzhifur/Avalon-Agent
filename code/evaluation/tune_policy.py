@@ -4,16 +4,21 @@ import argparse
 import csv
 from datetime import datetime, timezone
 import json
-import os
 from pathlib import Path
-import shutil
-import subprocess
+
+from parallel_games import (
+    GameTask,
+    build_images,
+    run_tasks,
+    validate_automated_roles,
+)
 
 
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--grid", default="evaluation/policy_grid.json")
     parser.add_argument("--runs", type=int, default=1)
+    parser.add_argument("--concurrency", type=int, default=1)
     parser.add_argument("--output", default="evaluation/policy_runs")
     parser.add_argument("--dry-run", action="store_true")
     return parser.parse_args()
@@ -31,36 +36,12 @@ def load_candidates(path):
     return candidates
 
 
-def existing_logs(log_dir):
-    return {path.resolve() for path in log_dir.glob("*.json")}
-
-
-def newest_game_log(log_dir, before):
-    new_logs = [
-        path for path in log_dir.glob("*.json")
-        if path.resolve() not in before
-    ]
-    if not new_logs:
-        raise RuntimeError("Docker run completed without producing a new server game log")
-    return max(new_logs, key=lambda path: path.stat().st_mtime)
-
-
-def read_winner(log_path):
-    with open(log_path, "r", encoding="utf-8") as handle:
-        payload = json.load(handle)
-    logs = payload.get("logs", [])
-    for entry in reversed(logs):
-        winner = entry.get("full", {}).get("winner")
-        if winner:
-            return winner.lower()
-    return "unknown"
-
-
 def candidate_environment(candidate):
-    environment = os.environ.copy()
-    environment["GRAIL_POLICY_OVERRIDES"] = ""
-    environment["GRAIL_POLICY_OVERRIDES_GOOD"] = ""
-    environment["GRAIL_POLICY_OVERRIDES_EVIL"] = ""
+    environment = {
+        "GRAIL_POLICY_OVERRIDES": "",
+        "GRAIL_POLICY_OVERRIDES_GOOD": "",
+        "GRAIL_POLICY_OVERRIDES_EVIL": "",
+    }
     encoded = json.dumps(candidate.get("overrides", {}), separators=(",", ":"))
     side = candidate.get("side", "both")
     if side == "both":
@@ -80,47 +61,22 @@ def target_side_won(side, winner):
     return None
 
 
-def run_candidate(root, output_root, log_dir, candidate, run_number, dry_run):
-    side = candidate.get("side", "both")
-    group = candidate.get("group", candidate["name"])
-    environment = candidate_environment(candidate)
-    before = existing_logs(log_dir)
-    command = ["docker", "compose", "up", "--abort-on-container-exit"]
-
-    print(
-        f"[{candidate['name']}] run {run_number}: side={side} "
-        f"overrides={candidate.get('overrides', {})}"
-    )
-    if dry_run:
-        return {
-            "candidate": candidate["name"],
-            "group": group,
-            "side": side,
-            "run": run_number,
-            "winner": "dry-run",
-            "target_side_win": "",
-            "log": "",
-        }
-
-    subprocess.run(["docker", "compose", "down"], cwd=root, env=environment, check=True)
-    subprocess.run(command, cwd=root, env=environment, check=True)
-    game_log = newest_game_log(log_dir, before)
-    winner = read_winner(game_log)
-
-    candidate_dir = output_root / candidate["name"]
-    candidate_dir.mkdir(parents=True, exist_ok=True)
-    saved_log = candidate_dir / f"run_{run_number:03d}_{game_log.name}"
-    shutil.copy2(game_log, saved_log)
-
-    target_win = target_side_won(side, winner)
+def policy_row(result):
+    side = result.metadata["side"]
+    target_win = target_side_won(side, result.winner)
     return {
-        "candidate": candidate["name"],
-        "group": group,
+        "candidate": result.metadata["candidate"],
+        "group": result.metadata["group"],
         "side": side,
-        "run": run_number,
-        "winner": winner,
-        "target_side_win": "" if target_win is None else int(target_win),
-        "log": str(saved_log),
+        "run": result.metadata["candidate_run"],
+        "status": result.status,
+        "winner": result.winner,
+        "target_side_win": (
+            "" if target_win is None or result.status != "completed" else int(target_win)
+        ),
+        "log": result.game_log,
+        "compose_log": result.compose_log,
+        "error": result.error,
     }
 
 
@@ -175,39 +131,54 @@ def write_results(output_root, candidates, rows):
 
 def main():
     args = parse_args()
+    if args.runs < 1:
+        raise ValueError("runs must be at least 1")
+    if args.concurrency < 1:
+        raise ValueError("concurrency must be at least 1")
     root = Path(__file__).resolve().parents[1]
     grid_path = (root / args.grid).resolve()
-    log_dir = root / "phaser" / "server" / "logs"
     timestamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     output_root = (root / args.output / timestamp).resolve()
     candidates = load_candidates(grid_path)
 
-    rows = []
-    try:
-        for candidate in candidates:
-            for run_number in range(1, args.runs + 1):
-                rows.append(
-                    run_candidate(
-                        root,
-                        output_root,
-                        log_dir,
-                        candidate,
-                        run_number,
-                        args.dry_run,
-                    )
+    tasks = []
+    task_number = 0
+    for candidate in candidates:
+        for run_number in range(1, args.runs + 1):
+            task_number += 1
+            tasks.append(
+                GameTask(
+                    task_id=(
+                        f"{timestamp.lower()}-{candidate['name']}-"
+                        f"{run_number:03d}"
+                    ),
+                    run_number=task_number,
+                    output_dir=(
+                        output_root
+                        / candidate["name"]
+                        / f"run_{run_number:03d}"
+                    ),
+                    environment=candidate_environment(candidate),
+                    metadata={
+                        "candidate": candidate["name"],
+                        "group": candidate.get("group", candidate["name"]),
+                        "side": candidate.get("side", "both"),
+                        "candidate_run": run_number,
+                    },
                 )
-    finally:
-        if not args.dry_run:
-            subprocess.run(["docker", "compose", "down"], cwd=root, check=False)
+            )
 
-    if args.dry_run:
-        print(json.dumps(rows, indent=2, sort_keys=True))
-        return
+    if not args.dry_run:
+        validate_automated_roles(root)
+        build_images(root)
+    results = run_tasks(root, tasks, args.concurrency, args.dry_run)
+    rows = [policy_row(result) for result in results]
 
     summary = write_results(output_root, candidates, rows)
     print(json.dumps(summary, indent=2, sort_keys=True))
     print(f"Results written to {output_root}")
+    return int(any(result.status == "failed" for result in results))
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
