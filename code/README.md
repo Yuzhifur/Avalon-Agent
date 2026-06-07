@@ -74,6 +74,26 @@ To play the game, include a human in the `.env` file and navigate to http://loca
 
 After the game is finished, you can check the logs and the history of the game in the `phaser/server/logs` directory. If the game included the GRAIL agent, you can find the logs and data dump of those agents in the `agent/logs` directory.
 
+### Parallel self-play
+
+Headless games can run concurrently in isolated Docker Compose projects:
+
+```bash
+python3 evaluation/run_parallel_games.py --games 3
+python3 evaluation/run_parallel_games.py --games 10 --concurrency 3
+```
+
+Concurrency defaults to the number of games. Each run receives separate agent
+and server workspaces, and results are written under a timestamped directory in
+`evaluation/parallel_runs/`. The directory contains per-game server logs, agent
+logs, Compose output, status metadata, plus aggregate `runs.csv` and
+`summary.json` files.
+
+All six role variables in `.env` must name automated agents and `UI_DRIVEN` is
+forced to `false` for these headless runs. Higher concurrency increases API
+traffic and cost and may encounter provider rate limits. Use `--dry-run` to
+inspect scheduling without invoking Docker.
+
 ### Phase 2 policy tuning
 
 GRAIL action-policy parameters live under the `policy` key in the agent config
@@ -83,12 +103,14 @@ Use the thin Docker self-play runner to compare policy candidates:
 
 ```bash
 python3 evaluation/tune_policy.py --grid evaluation/policy_grid.json --runs 10
+python3 evaluation/tune_policy.py --grid evaluation/policy_grid.json --runs 10 --concurrency 3
 ```
 
 Each candidate can target the Good or Evil side. Candidates sharing a `group`
 are aggregated into a side-adjusted objective win rate in the generated
 `summary.json`. The active `.env` agent matchup still determines which baseline
-agent types participate in the games.
+agent types participate in the games. Policy tuning remains sequential unless
+`--concurrency` is supplied.
 
 ## Replay games from game logs
 

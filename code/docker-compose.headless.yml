@@ -1,0 +1,49 @@
+services:
+  client:
+    profiles:
+      - interactive
+    ports: !reset []
+
+  server:
+    image: avalon-parallel-server
+    volumes:
+      - ${AVALON_SERVER_WORKSPACE:?Set AVALON_SERVER_WORKSPACE}:/app
+    ports: !reset []
+
+  agentmanager:
+    image: avalon-parallel-agentmanager
+    volumes:
+      - ${AVALON_AGENT_WORKSPACE:?Set AVALON_AGENT_WORKSPACE}:/app
+    ports: !reset []
+    environment:
+      UI_DRIVEN: "false"
+
+  minion-1:
+    volumes:
+      - ${AVALON_AGENT_WORKSPACE:?Set AVALON_AGENT_WORKSPACE}:/app
+    ports: !reset []
+
+  minion-2:
+    volumes:
+      - ${AVALON_AGENT_WORKSPACE:?Set AVALON_AGENT_WORKSPACE}:/app
+    ports: !reset []
+
+  servant-1:
+    volumes:
+      - ${AVALON_AGENT_WORKSPACE:?Set AVALON_AGENT_WORKSPACE}:/app
+    ports: !reset []
+
+  servant-2:
+    volumes:
+      - ${AVALON_AGENT_WORKSPACE:?Set AVALON_AGENT_WORKSPACE}:/app
+    ports: !reset []
+
+  servant-3:
+    volumes:
+      - ${AVALON_AGENT_WORKSPACE:?Set AVALON_AGENT_WORKSPACE}:/app
+    ports: !reset []
+
+  servant-4:
+    volumes:
+      - ${AVALON_AGENT_WORKSPACE:?Set AVALON_AGENT_WORKSPACE}:/app
+    ports: !reset []

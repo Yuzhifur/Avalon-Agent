@@ -176,6 +176,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 code/evaluation/policy_runs/
+code/evaluation/parallel_runs/
+code/evaluation/.parallel_workspaces/
 
 # MacOS specific files
 .DS_Store
