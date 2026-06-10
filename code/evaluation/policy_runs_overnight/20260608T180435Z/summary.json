@@ -1,0 +1,60 @@
+{
+  "candidates": [
+    {
+      "candidate": "evil_baseline",
+      "group": "evil_baseline",
+      "overrides": {},
+      "runs": 30,
+      "side": "evil",
+      "target_side_win_rate": 0.7692307692307693,
+      "target_side_wins": 20
+    },
+    {
+      "candidate": "evil_blend_aggressive",
+      "group": "evil_blend_aggressive",
+      "overrides": {
+        "evil": {
+          "clean_team_cover_approve_rate": 0.8,
+          "clean_team_reject_through_quest": 0
+        }
+      },
+      "runs": 30,
+      "side": "evil",
+      "target_side_win_rate": 0.7857142857142857,
+      "target_side_wins": 22
+    },
+    {
+      "candidate": "evil_fail_half",
+      "group": "evil_fail_half",
+      "overrides": {
+        "evil": {
+          "midgame_fail_rate": 0.5
+        }
+      },
+      "runs": 30,
+      "side": "evil",
+      "target_side_win_rate": 0.76,
+      "target_side_wins": 19
+    }
+  ],
+  "objective_groups": [
+    {
+      "group": "evil_baseline",
+      "scored_runs": 26,
+      "side_adjusted_win_rate": 0.7692307692307693,
+      "side_adjusted_wins": 20
+    },
+    {
+      "group": "evil_blend_aggressive",
+      "scored_runs": 28,
+      "side_adjusted_win_rate": 0.7857142857142857,
+      "side_adjusted_wins": 22
+    },
+    {
+      "group": "evil_fail_half",
+      "scored_runs": 25,
+      "side_adjusted_win_rate": 0.76,
+      "side_adjusted_wins": 19
+    }
+  ]
+}

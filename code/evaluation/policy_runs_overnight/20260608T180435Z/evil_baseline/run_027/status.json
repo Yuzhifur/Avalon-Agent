@@ -1,0 +1,19 @@
+{
+  "agent_logs": "E:\\Local\\Avalon-Agent\\code\\evaluation\\policy_runs_overnight\\20260608T180435Z\\evil_baseline\\run_027\\agent",
+  "compose_log": "E:\\Local\\Avalon-Agent\\code\\evaluation\\policy_runs_overnight\\20260608T180435Z\\evil_baseline\\run_027\\compose.log",
+  "duration_seconds": 2426.0,
+  "error": "",
+  "game_log": "E:\\Local\\Avalon-Agent\\code\\evaluation\\policy_runs_overnight\\20260608T180435Z\\evil_baseline\\run_027\\server\\KOJH.json",
+  "metadata": {
+    "candidate": "evil_baseline",
+    "candidate_run": 27,
+    "group": "evil_baseline",
+    "side": "evil"
+  },
+  "project": "avalon-20260608t180435z-evil_baseline-0-01c0bc65",
+  "return_code": 0,
+  "run": 27,
+  "status": "completed",
+  "task_id": "20260608t180435z-evil_baseline-027",
+  "winner": "good"
+}

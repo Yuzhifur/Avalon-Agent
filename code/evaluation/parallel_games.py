@@ -26,6 +26,12 @@ BACKEND_SERVICES = (
     "servant-4",
 )
 BUILD_SERVICES = ("server", "agentmanager", "minion-1")
+# Generous per-game wall-clock ceiling. A hung game (empty LLM reply, rate-limit
+# 500, frozen action endpoint) otherwise never exits, holds its concurrency slot
+# forever, and deadlocks the whole grid. On expiry we abandon the game and let
+# the finally-block `compose down` reclaim its containers. Override with the
+# AVALON_GAME_TIMEOUT env var (seconds).
+GAME_TIMEOUT_SECONDS = int(os.environ.get("AVALON_GAME_TIMEOUT", "3600"))
 ROLE_VARIABLES = (
     "SERVANT1",
     "SERVANT2",
@@ -251,6 +257,7 @@ def run_game(root: Path, task: GameTask, dry_run: bool = False) -> GameResult:
                 stdout=output,
                 stderr=subprocess.STDOUT,
                 check=False,
+                timeout=GAME_TIMEOUT_SECONDS,
             )
         return_code = completed.returncode
         game_log, agent_logs, winner = _copy_outputs(
@@ -264,6 +271,16 @@ def run_game(root: Path, task: GameTask, dry_run: bool = False) -> GameResult:
             error = "game completed without producing a server log"
         elif winner == "unknown":
             error = "server log did not contain a winner"
+    except subprocess.TimeoutExpired:
+        error = f"game exceeded {GAME_TIMEOUT_SECONDS}s timeout; abandoned"
+        try:
+            game_log, agent_logs, winner = _copy_outputs(
+                task,
+                agent_workspace,
+                server_workspace,
+            )
+        except Exception:
+            pass
     except Exception as exc:
         error = str(exc)
     finally:

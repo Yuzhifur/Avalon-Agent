@@ -1,0 +1,19 @@
+{
+  "agent_logs": "E:\\Local\\Avalon-Agent\\code\\evaluation\\policy_runs_overnight\\20260608T180435Z\\evil_baseline\\run_021\\agent",
+  "compose_log": "E:\\Local\\Avalon-Agent\\code\\evaluation\\policy_runs_overnight\\20260608T180435Z\\evil_baseline\\run_021\\compose.log",
+  "duration_seconds": 5405.438,
+  "error": "game exceeded 5400s timeout; abandoned",
+  "game_log": "E:\\Local\\Avalon-Agent\\code\\evaluation\\policy_runs_overnight\\20260608T180435Z\\evil_baseline\\run_021\\server\\WSOE.json",
+  "metadata": {
+    "candidate": "evil_baseline",
+    "candidate_run": 21,
+    "group": "evil_baseline",
+    "side": "evil"
+  },
+  "project": "avalon-20260608t180435z-evil_baseline-0-74f78f98",
+  "return_code": null,
+  "run": 21,
+  "status": "failed",
+  "task_id": "20260608t180435z-evil_baseline-021",
+  "winner": "unknown"
+}

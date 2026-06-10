@@ -60,6 +60,7 @@ class BaseAgent(object):
         self._llm_gpt = OpenAI(
             api_key=api_key,
             base_url=self._config["agent"]["openai_base_url"],
+            max_retries=8,
         )
         self._model_gpt = self._config["agent"]["model"]  # gpt-4-1106-preview, gpt-3.5-turbo-1106
 
@@ -67,6 +68,7 @@ class BaseAgent(object):
             api_key=api_key,
             # base_url="http://localhost:11434/api/generate",
             base_url = 'https://api.deepseek.com',
+            max_retries=8,
         )
         self._model_deepseek = self._config["agent"]["model"]
 
