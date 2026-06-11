@@ -179,6 +179,11 @@ code/evaluation/policy_runs/
 code/evaluation/parallel_runs/
 code/evaluation/.parallel_workspaces/
 
+# Phase-3 generated data (corpora/datasets are rebuilt from sources by
+# build_corpus.py; stats and splits ARE committed)
+data/corpora/*.jsonl
+data/datasets/
+
 # MacOS specific files
 .DS_Store
 

@@ -1,0 +1,64 @@
+{
+ "source": "avalonlogs",
+ "n_games": 1777,
+ "winner": {
+  "evil": 922,
+  "good": 855
+ },
+ "win_reason": {
+  "three_fails": 468,
+  "three_successes": 855,
+  "assassination": 428,
+  "hammer": 26
+ },
+ "variant_roles": {
+  "ASSASSIN+MERLIN+MORGANA+PERCIVAL": 1092,
+  "ASSASSIN": 6,
+  "vanilla": 273,
+  "ASSASSIN+MERLIN": 372,
+  "ASSASSIN+MERLIN+PERCIVAL": 19,
+  "ASSASSIN+MERLIN+MORGANA": 13,
+  "MORGANA+PERCIVAL": 2
+ },
+ "proposals_per_quest": {
+  "1": 1.616,
+  "2": 1.796,
+  "3": 2.015,
+  "4": 1.981,
+  "5": 2.18
+ },
+ "rejected_per_game": {
+  "0": 437,
+  "1": 318,
+  "2": 236,
+  "3": 152,
+  "4": 128,
+  "5": 90,
+  "6": 67,
+  "7": 56,
+  "8": 46,
+  "9": 35,
+  "10": 30,
+  "11": 38,
+  "12": 43,
+  "13": 18,
+  "14": 14,
+  "15": 19,
+  "16": 23,
+  "17": 9,
+  "18": 7,
+  "19": 6,
+  "20": 5
+ },
+ "proposal_depth": {
+  "1": 7401,
+  "2": 2843,
+  "3": 1708,
+  "4": 1154,
+  "5": 764
+ },
+ "voted_proposals_total": 13870,
+ "skipped": {
+  "variant_roles": 1540
+ }
+}
