@@ -60,6 +60,7 @@
     },
     "game": {
         "use_real_names": false,
+        "hammer_rule": "evil_win",
         "max_players": 6,
         "roles": [
             "servant-1",

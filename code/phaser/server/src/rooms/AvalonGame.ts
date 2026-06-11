@@ -69,6 +69,16 @@ export class AvalonGame extends Room<AvalonGameState> {
   configPath = path.resolve(__dirname, "./../../config.json");
   configData = JSON.parse(fs.readFileSync(this.configPath, "utf8"));
   delay_messages = this.configData.agent.delay_messages;
+  // Hammer-rule variant (phase 3, Workstream 5): what happens to the fifth
+  // proposal of a quest. "evil_win" (default): a fifth rejection ends the
+  // game for Evil. "forced_fifth": the fifth proposal skips the party vote
+  // and is approved unanimously (evaluation axis only — keep variant games
+  // out of training data).
+  hammer_rule: "evil_win" | "forced_fifth" = ((): "evil_win" | "forced_fifth" => {
+    const value =
+      process.env.AVALON_HAMMER_RULE || this.configData.game?.hammer_rule;
+    return value === "forced_fifth" ? "forced_fifth" : "evil_win";
+  })();
   roles: RoleType[] = (() => {
     try {
       const configRoles = this.configData.game.roles.map((role: string) => {
@@ -460,6 +470,27 @@ export class AvalonGame extends Room<AvalonGameState> {
     // Clear the timer
     this.clock.clear();
     this.state.turn_timer = 0;
+
+    // Forced-fifth hammer variant (Workstream 5): the fifth proposal skips
+    // the party vote entirely. The marker message goes out FIRST so agents
+    // and parsers can flag the synthetic unanimous summary that follows;
+    // the standard approval message keeps existing parsers compatible.
+    // Good's auto-approve and Evil's auto-reject-5th policy branches simply
+    // never fire — the vote is skipped.
+    if (
+      this.hammer_rule === "forced_fifth" &&
+      this.state.failed_party_votes === 4
+    ) {
+      this.addMessage("system", "The fifth proposal is forced through!");
+      const forced_summary = this.state.all_players
+        .map((p) => `${p.name}: yes`)
+        .join(", ");
+      this.addMessage("system", `Party vote summary: ${forced_summary}`);
+      this.addMessage("system", "The party has been approved!");
+      this.state.vote_party = false;
+      this.facilitateQuestVotes();
+      return;
+    }
 
     this.state.vote_party = true;
     this.state.vote_quest = false;

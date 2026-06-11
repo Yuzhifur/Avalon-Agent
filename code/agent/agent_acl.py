@@ -4,9 +4,10 @@ from messages import Message, AvalonGameStateUpdate, Task, AvalonGameState
 import random
 from itertools import combinations
 import time
-from our.model_reduced_categories import FactorGraphModelV2
+from our.model_factory import build_belief_model, vibes_disabled
 from our.policy_models.heuristic import HeuristicOracle
 from our.policy_models.consistency import MessageConsistencyChecker
+from our.proposal_cards import cards_from_history
 import os
 import csv
 from our.prompts import PromptHint
@@ -32,13 +33,16 @@ class GameInfo():
         self.quest_results = [] # True for success, False for fail
         self.current_party_rejects = []
     
-    def add_party_proposal(self, party_comp, party_votes, quest_number, leader=None):
-        accepted = sum(party_votes.values()) > len(party_votes) / 2
+    def add_party_proposal(self, party_comp, party_votes, quest_number, leader=None, forced=False):
+        # forced: the forced-fifth hammer variant skipped the party vote and
+        # the server recorded a unanimous synthetic approval
+        accepted = forced or sum(party_votes.values()) > len(party_votes) / 2
         self.quest_proposals[quest_number].append({
             'comp': [name.lower() for name in party_comp],
             'votes': {name.lower(): vote for name, vote in party_votes.items()},
             'leader': (leader or "").lower(),
             'accepted': accepted,
+            'forced': bool(forced),
             'quest_outcome': None,
         })
         self.party_leader = None
@@ -67,6 +71,7 @@ class GameInfo():
                     "party": list(proposal.get("comp", [])),
                     "votes": dict(proposal.get("votes", {})),
                     "accepted": bool(proposal.get("accepted")),
+                    "forced": bool(proposal.get("forced", False)),
                     "quest_outcome": proposal.get("quest_outcome"),
                 })
         return history
@@ -128,9 +133,10 @@ class ACLAgent(BaseAgent):
             ATEAM.EVIL if self._role in [AROLE.MORGANA, AROLE.ASSASSIN, AROLE.EVIL] else ATEAM.GOOD # good is 1, evil is 2
         )
         self._evil_teammates = set() # populated from private data; lowercase names of known evil teammates
-        self.graph_model = FactorGraphModelV2()
-        self.graph_model.construct()
-        self.graph_model.load_from_file()
+        # belief model selected per side via GRAIL_BELIEF_MODEL* env vars
+        # (Workstream 4); default factor_v2, the deployed phase-2 model
+        self.graph_model, self._belief_spec = build_belief_model(self._team)
+        self.debug(f"Belief model: {self._belief_spec}\n")
 
         # the party that is proposed and is being discussed
         self.self_proposed_party = None # this will hold the party that the agent proposed
@@ -151,6 +157,7 @@ class ACLAgent(BaseAgent):
         self.game_log = []
 
         self.vote_next = False # this is used to check if the agent has to vote for the party
+        self._forced_fifth_pending = False # forced-fifth hammer variant marker seen
 
         self.reset_logs_on_round = True  # True has the unwanted effect that the agent cannot retrieve previous info in the messages. for example it says person x was in a failed mission but it was not
         self.party_leader = None
@@ -159,6 +166,12 @@ class ACLAgent(BaseAgent):
     def addMessage(self, message: Message):
         # log the recieved message
         self.debug(f"-- Message recieved: {message}\n")
+
+        # forced-fifth hammer variant: the marker precedes the synthetic
+        # unanimous vote summary (see AvalonGame.facilitatePartyVotes)
+        if message.player == "system" and message.msg.startswith(
+                "The fifth proposal is forced through"):
+            self._forced_fifth_pending = True
 
         # save the vote for a party
         if message.player == "system" and message.msg.startswith("Party vote summary:"):
@@ -177,7 +190,9 @@ class ACLAgent(BaseAgent):
                 votes,
                 len(self.game.quest_results) + 1,
                 leader=self.game.party_leader,
+                forced=getattr(self, "_forced_fifth_pending", False),
             )
+            self._forced_fifth_pending = False
 
         return {}
     
@@ -350,13 +365,21 @@ class ACLAgent(BaseAgent):
         return result["message"]
 
     def update_predictions(self, with_llm_prior=False):
-        """Let's get the beliefs from the latest game state vector"""
+        """Let's get the beliefs from the latest game state"""
         self.debug(f"-- The quest history for vector generation: {self.game.quest_proposals}\n")
         self.debug(f"-- The outcome history for vector generation: {self.game.quest_results}\n")
-        state_vector = self.game.get_state_vector()
-        self.debug(f"-- Updating beliefs with state vector: {state_vector} \n")
         index = self.game.players_to_index[self._name.lower()] - 1
-        probabilities = self.graph_model.predict_probs(game_state=state_vector, self_role=self._team, self_index=index, algorithm="max")
+        if self._belief_spec["input"] == "cards":
+            # card-based models consume the full proposal history (rejected
+            # proposals included) through the shared featurizer
+            name_to_index0 = {n: i - 1 for n, i in self.game.players_to_index.items()}
+            game_state = cards_from_history(
+                self.game.policy_proposal_history(), name_to_index0)
+            self.debug(f"-- Updating beliefs with {len(game_state)} proposal cards\n")
+        else:
+            game_state = self.game.get_state_vector()
+            self.debug(f"-- Updating beliefs with state vector: {game_state} \n")
+        probabilities = self.graph_model.predict_probs(game_state=game_state, self_role=self._team, self_index=index, algorithm=self._belief_spec["algorithm"])
         self.latest_probabilities = {self.game.index_to_players[i+1]: probabilities[i+1] for i in range(6)}
         self.quest_updated = False
         self.debug(f"       -- BELIEF UPDATED: {self.latest_probabilities}\n")
@@ -636,6 +659,10 @@ class ACLAgent(BaseAgent):
 
 
     def update_predictions_based_on_chat(self, chat):
+        if vibes_disabled():
+            # GRAIL_DISABLE_VIBES (Workstream 4 ablation): pure model beliefs
+            self.update_predictions()
+            return
         probs = self.get_llm_vibes_agreement(chat)
         probs = {self.game.players_to_index[k]: v for k,v in probs.items()}
         self.log("             UPDATING PRIORS           \n")
