@@ -1,0 +1,29 @@
+{
+  "report": {
+    "root": "E:\\Local\\Avalon-Agent\\code\\evaluation\\policy_runs_overnight\\20260608T180435Z",
+    "games_completed": 79,
+    "good_loss_games": 61,
+    "evil_team_approvals": 893,
+    "buckets": {
+      "misidentified": 598,
+      "forced": 269,
+      "threshold": 26
+    },
+    "shares": {
+      "misidentified": 0.6697,
+      "forced": 0.3012,
+      "threshold": 0.0291
+    },
+    "mean_belief_true_evil": 0.5552,
+    "median_belief_true_evil": 0.5075,
+    "share_true_evil_rated_good": 0.4104,
+    "n_belief_samples": 2500,
+    "suspected_team_reject_ratio": 3.36,
+    "validation": {
+      "replayed_vote_mismatches": 0,
+      "csv_misalignments": 0,
+      "debug_risk_mismatches": 0
+    }
+  },
+  "gate_failures": []
+}

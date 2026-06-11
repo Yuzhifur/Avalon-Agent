@@ -1,0 +1,62 @@
+{
+  "beliefs": {
+    "n_samples": 14120,
+    "auc_pooled": 0.7203064519149232,
+    "brier": 0.2058340237347399,
+    "ece": 0.026142774830900314,
+    "nll": 0.59641950945924,
+    "auc_by_quest": {
+      "1": 0.5,
+      "2": 0.6126486688720857,
+      "3": 0.7696009349030472,
+      "4": 0.7490333157435652,
+      "5": 0.7523903802300219
+    },
+    "mean_p_evil_on_true_evil_by_quest": {
+      "1": 0.3999999999999999,
+      "2": 0.4374451768217445,
+      "3": 0.521375594180694,
+      "4": 0.5184649222504437,
+      "5": 0.558873361079818
+    },
+    "mean_p_evil_on_true_good_by_quest": {
+      "1": 0.4,
+      "2": 0.3750365487855037,
+      "3": 0.3190829372128707,
+      "4": 0.32102338516637086,
+      "5": 0.29408442594678796
+    },
+    "mean_p_evil_on_true_evil": 0.5001277752441136,
+    "median_p_evil_on_true_evil": 0.4701815092674011,
+    "share_true_evil_rated_good": 0.5499291784702549
+  },
+  "pairs": {
+    "n_states": 2824,
+    "pair_top1": 0.26416430594900847,
+    "pair_top3": 0.5878186968838527,
+    "pair_top1_by_quest": {
+      "1": 0.0949367088607595,
+      "2": 0.15217391304347827,
+      "3": 0.30526315789473685,
+      "4": 0.3193916349809886,
+      "5": 0.2804878048780488
+    }
+  },
+  "counterfactual": {
+    "approved_evil_teams": 708,
+    "evil_team_reject_flip_rate": 0.3319209039548023,
+    "approved_clean_teams": 350,
+    "clean_team_new_false_reject_rate": 0.1457142857142857
+  },
+  "n_decisions": 2824,
+  "config": {
+    "games": "E:\\Local\\Avalon-Agent\\code\\evaluation\\policy_runs_overnight\\20260608T180435Z",
+    "n_games": 79,
+    "model": "factor_v3",
+    "model_dir": null,
+    "algorithm": null,
+    "penalties": "default",
+    "vibes": "off",
+    "seconds": 5.9
+  }
+}
