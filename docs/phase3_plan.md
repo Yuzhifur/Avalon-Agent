@@ -40,7 +40,8 @@ Details:
 - Parse server logs with the message patterns already used by `code/evaluation/log_analyzer.py`; ground-truth roles from player entries.
 - Metrics per model and eval set: per-prefix ROC-AUC (pooled + by quest), evil-pair top-1/top-3 over the 15 pair hypotheses, mean P(evil) on true evil by quest, ECE (10 bins) + Brier, counterfactual GoodPolicy reject-flip rate on historically-approved evil teams + clean-team false-reject cost.
 - Eval sets: (a) self-play-90 (primary gate), (b) avalonlogs-142 test split, (c) ProAvalon 6p test split when available. Game-level splits, fixed seed, stored in `code/evaluation/offline/splits/`.
-- **Acceptance test:** the `factor_v2` adapter replayed over the 90 phase-2 games must reproduce ≈0.555 mean belief on true evil, 893 evil-team approvals, ≈67/30/3 loss attribution.
+- **Acceptance test:** the `factor_v2` adapter replayed over the 90 phase-2 games must reproduce the phase-2 diagnostics. Caveat (2026-06-11): the agent `DEBUG_*.log` files with the original `POLICY_DECISION` lines were not preserved for these games (`.gitignore` excludes `*.log`); only server JSONs and per-agent belief CSVs are committed. So the count-based targets (893 evil-team approvals, forced/threshold shares) must reproduce **exactly** from server logs, while the belief-based target (≈0.555 mean belief on true evil) is checked against the committed `CSV_(*)` live-belief traces — vibes-off replay will differ slightly since live beliefs included LLM vibes, and recorded-vibes replay is unavailable for these 90 games.
+- **Log retention rule going forward:** every future run (self-play campaign, smoke, eval cells) must archive the agent DEBUG/`POLICY_DECISION` logs — save copies with a non-`.log` suffix (e.g. `.txt`/`.jsonl`) or amend `.gitignore` for run directories — so diagnostics stay reproducible.
 
 ## Workstream 1 — Unified event schema + data pipeline
 
