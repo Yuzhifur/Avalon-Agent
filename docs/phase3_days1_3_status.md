@@ -84,12 +84,13 @@ the ProAvalon-trained models and no design decisions were made from them.**
 
 | selfplay-90 replay (vibes off) | factor_v2 (deployed arch) | Track A `factor_v3` | Track B `seq_v1` |
 |---|---|---|---|
-| pooled AUC | ~chance (live ≈ 0.55 incl. vibes/penalties) | **0.720** | 0.642 |
-| ECE | — | 0.026 | 0.028 |
-| evil-pair top-1 (10 hyps) | — | 0.264 | 0.239 |
-| counterfactual evil-team reject flip | — | 33.2% | 29.0% |
-| clean-team new false rejects | — | 14.6% | 15.7% |
-| eval wall-clock | ~90 s/game (loopy BP) | 5.9 s total | 7.7 s total |
+| pooled AUC | 0.598 | **0.720** | 0.642 |
+| mean P(evil) on true evil | 0.500 (exact chance) | 0.500 | 0.443 |
+| ECE | 0.088 | 0.026 | 0.028 |
+| evil-pair top-1 (10 hyps) | 0.112 | 0.264 | 0.239 |
+| counterfactual evil-team reject flip | 29.8% | 33.2% | 29.0% |
+| clean-team new false rejects | 18.6% | 14.6% | 15.7% |
+| eval wall-clock | 84 min (loopy BP) | 5.9 s | 7.7 s |
 
 - Track A: `ProposalSetDistribution` (8.5k params) + `FactorGraphModelV3`
   (closed-form enumeration over the 15 evil pairs — no pomegranate). Val
@@ -101,9 +102,11 @@ the ProAvalon-trained models and no design decisions were made from them.**
   top-1 0.336 vs 6.7% chance (plan's sanity bar passed). Overfits after
   ~10 epochs at 1.7k games — consistent with the plan's low-data note;
   the real comparison waits for ProAvalon.
-- factor_v2 full-replay baseline on selfplay-90 is running (slow BP); the
-  3-game smoke gave mean P(evil) on true evil ≈ 0.486 vibes-off (near
-  chance, as diagnosed).
+- The factor_v2 row quantifies phase 2's diagnosis in the replay frame:
+  the deployed detector's pure beliefs sit at exact chance on true evil
+  (the live 0.555 came from behavior-risk penalties + vibes on top). Even
+  the dev-trained Track A clears it by +12 AUC points on the very
+  distribution v2 was deployed against.
 - In-domain (avalonlogs test split, 268 games): Track A AUC 0.666 /
   ECE 0.046, Track B AUC 0.662 / ECE 0.023 — nearly tied on human data
   (and in the same ballpark as the prior card-model experiment's 0.64
