@@ -671,8 +671,13 @@ class ACLAgent(BaseAgent):
         prompt = self._prompt_hint.get_vibes_player_agreement.format(name=self._name, latest_probabilities=probabilities, logs=logs, quest_history=history, quest_num=self.state.quest)
 
         response = self.prompt_llm(prompt)
-        response = response.replace("'", '"')
-        new_probs = json.loads(response)
+        response = (response or "").replace("'", '"')
+        try:
+            new_probs = json.loads(response)
+        except json.JSONDecodeError as e:
+            self.debug(f"vibes JSON parse failed ({e}); using neutral priors. Response: {response!r}")
+            print(f"Error decoding vibes JSON: {e} -- falling back to neutral priors")
+            return probs
 
         self.log(f" ###  LLM vibes: {new_probs}\n")
 
@@ -836,7 +841,9 @@ class ACLAgent(BaseAgent):
 
 
     def prompt_llm(self, prompt):
-        result = self._llm_generate(message=prompt, model=LLM.GPT, temperature=1.0)
+        # deepseek-v4 models reason before answering; 512 tokens get consumed by
+        # reasoning and leave message.content empty. Give room for reasoning + answer.
+        result = self._llm_generate(message=prompt, model=LLM.GPT, temperature=1.0, max_tokens=4096)
         # result = self._llm_generate(message=prompt, model=LLM.DEEPSEEK, temperature=1.0)
 
 

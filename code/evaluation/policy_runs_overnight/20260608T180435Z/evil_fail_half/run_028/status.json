@@ -1,0 +1,19 @@
+{
+  "agent_logs": "E:\\Local\\Avalon-Agent\\code\\evaluation\\policy_runs_overnight\\20260608T180435Z\\evil_fail_half\\run_028\\agent",
+  "compose_log": "E:\\Local\\Avalon-Agent\\code\\evaluation\\policy_runs_overnight\\20260608T180435Z\\evil_fail_half\\run_028\\compose.log",
+  "duration_seconds": 3664.781,
+  "error": "",
+  "game_log": "E:\\Local\\Avalon-Agent\\code\\evaluation\\policy_runs_overnight\\20260608T180435Z\\evil_fail_half\\run_028\\server\\ZJNT.json",
+  "metadata": {
+    "candidate": "evil_fail_half",
+    "candidate_run": 28,
+    "group": "evil_fail_half",
+    "side": "evil"
+  },
+  "project": "avalon-20260608t180435z-evil_fail_half--1cf2af08",
+  "return_code": 0,
+  "run": 88,
+  "status": "completed",
+  "task_id": "20260608t180435z-evil_fail_half-028",
+  "winner": "evil"
+}

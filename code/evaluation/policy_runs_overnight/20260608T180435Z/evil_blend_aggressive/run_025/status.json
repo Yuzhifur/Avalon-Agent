@@ -1,0 +1,19 @@
+{
+  "agent_logs": "E:\\Local\\Avalon-Agent\\code\\evaluation\\policy_runs_overnight\\20260608T180435Z\\evil_blend_aggressive\\run_025\\agent",
+  "compose_log": "E:\\Local\\Avalon-Agent\\code\\evaluation\\policy_runs_overnight\\20260608T180435Z\\evil_blend_aggressive\\run_025\\compose.log",
+  "duration_seconds": 5404.812,
+  "error": "game exceeded 5400s timeout; abandoned",
+  "game_log": "E:\\Local\\Avalon-Agent\\code\\evaluation\\policy_runs_overnight\\20260608T180435Z\\evil_blend_aggressive\\run_025\\server\\RWEK.json",
+  "metadata": {
+    "candidate": "evil_blend_aggressive",
+    "candidate_run": 25,
+    "group": "evil_blend_aggressive",
+    "side": "evil"
+  },
+  "project": "avalon-20260608t180435z-evil_blend_aggr-14c05004",
+  "return_code": null,
+  "run": 55,
+  "status": "failed",
+  "task_id": "20260608t180435z-evil_blend_aggressive-025",
+  "winner": "unknown"
+}

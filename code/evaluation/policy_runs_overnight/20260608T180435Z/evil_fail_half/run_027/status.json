@@ -1,0 +1,19 @@
+{
+  "agent_logs": "E:\\Local\\Avalon-Agent\\code\\evaluation\\policy_runs_overnight\\20260608T180435Z\\evil_fail_half\\run_027\\agent",
+  "compose_log": "E:\\Local\\Avalon-Agent\\code\\evaluation\\policy_runs_overnight\\20260608T180435Z\\evil_fail_half\\run_027\\compose.log",
+  "duration_seconds": 5406.078,
+  "error": "game exceeded 5400s timeout; abandoned",
+  "game_log": "E:\\Local\\Avalon-Agent\\code\\evaluation\\policy_runs_overnight\\20260608T180435Z\\evil_fail_half\\run_027\\server\\CKEF.json",
+  "metadata": {
+    "candidate": "evil_fail_half",
+    "candidate_run": 27,
+    "group": "evil_fail_half",
+    "side": "evil"
+  },
+  "project": "avalon-20260608t180435z-evil_fail_half--b5ea3f8a",
+  "return_code": null,
+  "run": 87,
+  "status": "failed",
+  "task_id": "20260608t180435z-evil_fail_half-027",
+  "winner": "unknown"
+}

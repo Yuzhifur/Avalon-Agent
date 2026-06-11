@@ -1,0 +1,19 @@
+{
+  "agent_logs": "E:\\Local\\Avalon-Agent\\code\\evaluation\\policy_runs_overnight\\20260608T180435Z\\evil_blend_aggressive\\run_017\\agent",
+  "compose_log": "E:\\Local\\Avalon-Agent\\code\\evaluation\\policy_runs_overnight\\20260608T180435Z\\evil_blend_aggressive\\run_017\\compose.log",
+  "duration_seconds": 2304.281,
+  "error": "",
+  "game_log": "E:\\Local\\Avalon-Agent\\code\\evaluation\\policy_runs_overnight\\20260608T180435Z\\evil_blend_aggressive\\run_017\\server\\EIZG.json",
+  "metadata": {
+    "candidate": "evil_blend_aggressive",
+    "candidate_run": 17,
+    "group": "evil_blend_aggressive",
+    "side": "evil"
+  },
+  "project": "avalon-20260608t180435z-evil_blend_aggr-27b32619",
+  "return_code": 0,
+  "run": 47,
+  "status": "completed",
+  "task_id": "20260608t180435z-evil_blend_aggressive-017",
+  "winner": "evil"
+}
