@@ -11,7 +11,7 @@ from tqdm import tqdm
 # from pomegranate.distributions import EgoNeuralDistribution
 from .pomegranate.factor_graph import FactorGraph
 
-from agent_base import ATEAM
+from agent_enums import ATEAM
 
 import sys
 import argparse

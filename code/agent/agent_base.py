@@ -14,25 +14,10 @@ from utils import bcolors
 from enum import Enum
 import os
 
-
-class LLM(Enum):
-    LOCAL = 1
-    GPT = 2
-    DEEPSEEK = 3
-
-
-class ATEAM(Enum):
-    GOOD = 1
-    EVIL = 2
-
-
-class AROLE(Enum):
-    MERLIN = 1
-    PERCIVAL = 2
-    SERVANT = 3
-    MORGANA = 4
-    ASSASSIN = 5
-    EVIL = 6
+# Shared enums live in agent_enums (dependency-free) so offline tooling can
+# import the belief/policy stack without pulling in the LLM client.
+# Re-exported here for all existing `from agent_base import ...` call sites.
+from agent_enums import LLM, ATEAM, AROLE
 
 
 class BaseAgent(object):
