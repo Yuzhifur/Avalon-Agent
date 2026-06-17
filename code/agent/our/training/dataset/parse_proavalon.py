@@ -150,6 +150,7 @@ def parse_game(data, game_id):
         if len(proposal_counts) != 1:
             raise SkipGame(f"ragged voteHistory in mission {mission_index + 1}")
         num_proposals = proposal_counts.pop()
+        mission_has_accepted = False
         for proposal_index in range(num_proposals):
             leader_seat = None
             team_seats = []
@@ -169,13 +170,23 @@ def parse_game(data, game_id):
             if not team_seats:
                 raise SkipGame(f"empty team in mission {mission_index + 1}")
             accepted = sum(approves) > NUM_PLAYERS / 2
+            mission_has_accepted = mission_has_accepted or accepted
             quest = mission_index + 1
             round_idx = proposal_index + 1
             events.append(
                 proposal_event(quest, round_idx, leader_seat, team_seats))
             events.append(vote_event(quest, round_idx, approves, accepted))
-        if mission_index < len(mission_history) and mission_history[mission_index] in (
-                "succeeded", "failed"):
+        # A quest only resolves when a team was actually sent. Hammer games
+        # (howTheGameWasWon == "Hammer rejected.") record the final mission as
+        # "failed" in missionHistory even though its five proposals were all
+        # rejected and the quest was never played — emitting a QuestEvent there
+        # would be a result with no accepted proposal to attach it to. The
+        # rejected proposals themselves are kept as ProposalEvent/VoteEvents:
+        # they are real votes and exactly the rejected-history signal phase 3
+        # is built to use.
+        if (mission_has_accepted
+                and mission_index < len(mission_history)
+                and mission_history[mission_index] in ("succeeded", "failed")):
             events.append(
                 quest_event(mission_index + 1,
                             mission_history[mission_index] == "succeeded"))

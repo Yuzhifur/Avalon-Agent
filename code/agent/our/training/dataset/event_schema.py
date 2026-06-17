@@ -99,6 +99,7 @@ class GameRecord:
         if self.win_reason not in WIN_REASONS:
             raise ValueError(f"{self.game_id}: bad win_reason {self.win_reason!r}")
         pending = None
+        accepted_quests = set()   # quests that had at least one accepted team
         for ev in self.events:
             kind = ev.get("type")
             if kind == "proposal":
@@ -110,10 +111,21 @@ class GameRecord:
                     raise ValueError(
                         f"{self.game_id}: vote {ev['quest']}.{ev['round_idx']} "
                         f"does not follow its proposal (pending={pending})")
+                if ev["accepted"]:
+                    accepted_quests.add(ev["quest"])
                 pending = None
             elif kind == "quest":
                 if pending is not None:
                     raise ValueError(f"{self.game_id}: quest event amid open proposal")
+                # A quest can only resolve if a team was actually sent. This
+                # guards the hammer case (final mission rejected into oblivion
+                # yet logged as "failed") and any parser that emits a result
+                # for an unplayed quest — cards_from_events would otherwise
+                # have no accepted card to attach the outcome to.
+                if ev["quest"] not in accepted_quests:
+                    raise ValueError(
+                        f"{self.game_id}: quest {ev['quest']} result without an "
+                        f"accepted proposal")
             else:
                 raise ValueError(f"{self.game_id}: unknown event type {kind!r}")
         if pending is not None:

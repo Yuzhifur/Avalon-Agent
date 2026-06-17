@@ -178,6 +178,7 @@ yarn-error.log*
 code/evaluation/policy_runs/
 code/evaluation/parallel_runs/
 code/evaluation/.parallel_workspaces/
+code/evaluation/stage_b_runs/
 
 # Phase-3 generated data (corpora/datasets are rebuilt from sources by
 # build_corpus.py; stats and splits ARE committed)
@@ -202,3 +203,6 @@ usersDB.json
 # Agentic Coding Tools
 .claude
 .codex
+
+# ProAvalon dataset and the full-dump scrape (hundreds of MB; not in git)
+/dataset
