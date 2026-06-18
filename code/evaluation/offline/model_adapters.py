@@ -92,8 +92,12 @@ class FactorV3Backend:
 
     name = "factor_v3"
 
-    def __init__(self, model_dir="v4_trackA/", algorithm="sum"):
+    def __init__(self, model_dir="v4_trackA/", algorithm="sum", ablation="none"):
         self.algorithm = algorithm
+        # Score a feature-ablated model in-distribution: apply the same mask it
+        # was trained under. Without this a no_rejected model is fed the full
+        # card stream it never saw, which inverts its self-play evidence.
+        self.ablation = ablation
         with _quiet_in_agent_dir():
             from our.model_v3 import FactorGraphModelV3
             self.model = FactorGraphModelV3()
@@ -103,14 +107,15 @@ class FactorV3Backend:
         cards = cards_from_events(events)
         probs = self.model.predict_probs(
             cards, self_role=str(_team_enum(ego_role).name).lower(),
-            self_index=ego_index, algorithm=self.algorithm)
+            self_index=ego_index, algorithm=self.algorithm,
+            ablation=self.ablation)
         return {i: probs[i + 1]["evil"] for i in range(6)}
 
     def predict_pairs(self, events, ego_index, ego_role):
         cards = cards_from_events(events)
         return self.model.pair_posterior(
             cards, self_role=str(_team_enum(ego_role).name).lower(),
-            self_index=ego_index)
+            self_index=ego_index, ablation=self.ablation)
 
 
 class SeqV1Backend:

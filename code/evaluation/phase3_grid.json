@@ -12,9 +12,20 @@
       "name": "c2_promoted_good",
       "group": "current_rule",
       "side": "good",
-      "overrides": {},
+      "overrides": {
+        "good": {
+          "reject_thresholds": {"1": 0.45, "2": 0.45, "3": 0.45, "4": 0.45, "5": 0.45},
+          "failed_quest_member_penalty": 0.0,
+          "approved_failed_quest_penalty": 0.0,
+          "proposed_failed_quest_penalty": 0.0,
+          "rejected_successful_quest_penalty": 0.0,
+          "rejected_proposal_leader_penalty": 0.0,
+          "approved_rejected_proposal_penalty": 0.0
+        }
+      },
       "environment": {
-        "GRAIL_BELIEF_MODEL_GOOD": "factor_v3"
+        "GRAIL_BELIEF_MODEL_GOOD": "factor_v3:v4_trackA_proavalon",
+        "GRAIL_BELIEF_MODEL_EVIL": "factor_v2"
       }
     },
     {
@@ -30,9 +41,20 @@
       "name": "c4_promoted_good_forced_fifth",
       "group": "forced_fifth_rule",
       "side": "good",
-      "overrides": {},
+      "overrides": {
+        "good": {
+          "reject_thresholds": {"1": 0.45, "2": 0.45, "3": 0.45, "4": 0.45, "5": 0.45},
+          "failed_quest_member_penalty": 0.0,
+          "approved_failed_quest_penalty": 0.0,
+          "proposed_failed_quest_penalty": 0.0,
+          "rejected_successful_quest_penalty": 0.0,
+          "rejected_proposal_leader_penalty": 0.0,
+          "approved_rejected_proposal_penalty": 0.0
+        }
+      },
       "environment": {
-        "GRAIL_BELIEF_MODEL_GOOD": "factor_v3",
+        "GRAIL_BELIEF_MODEL_GOOD": "factor_v3:v4_trackA_proavalon",
+        "GRAIL_BELIEF_MODEL_EVIL": "factor_v2",
         "AVALON_HAMMER_RULE": "forced_fifth"
       }
     }

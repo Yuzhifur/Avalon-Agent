@@ -25,10 +25,10 @@ import torch
 
 try:
     from .card_encoder import ProposalSetDistribution, load_card_model
-    from .proposal_cards import NUM_PLAYERS, cards_to_tensor
+    from .proposal_cards import NUM_PLAYERS, apply_feature_ablation, cards_to_tensor
 except ImportError:  # imported top-level by training/eval scripts
     from card_encoder import ProposalSetDistribution, load_card_model
-    from proposal_cards import NUM_PLAYERS, cards_to_tensor
+    from proposal_cards import NUM_PLAYERS, apply_feature_ablation, cards_to_tensor
 
 EVIL_PAIRS = list(combinations(range(NUM_PLAYERS), 2))  # 15 valid assignments
 
@@ -70,9 +70,15 @@ class FactorGraphModelV3:
                 return
         raise ValueError(f"No card model checkpoint found for '{folder_path}'")
 
-    def evidence_probs(self, cards):
+    def evidence_probs(self, cards, ablation="none"):
         """Per-player calibrated P(evil) from the card encoder alone
-        (no constraint, no priors). Returns a [6] float list."""
+        (no constraint, no priors). Returns a [6] float list.
+
+        `ablation` applies the same feature mask the model was trained under
+        (proposal_cards.apply_feature_ablation) so a model trained with, e.g.,
+        --feature-ablation no_rejected is scored in-distribution rather than on
+        the full card stream it never saw. "none" is the normal path.
+        """
         if self.encoder is None:
             raise ValueError("Model not constructed/loaded")
         batch_cards, batch_mask = [], []
@@ -80,14 +86,17 @@ class FactorGraphModelV3:
             feats, mask = cards_to_tensor(cards, target)
             batch_cards.append(feats)
             batch_mask.append(mask)
+        cards_t = torch.stack(batch_cards)
+        mask_t = torch.stack(batch_mask)
+        if ablation != "none":
+            cards_t, mask_t = apply_feature_ablation(cards_t, mask_t, ablation)
         with torch.no_grad():
-            logits = self.encoder(torch.stack(batch_cards),
-                                  torch.stack(batch_mask))
+            logits = self.encoder(cards_t, mask_t)
             probs = torch.sigmoid(logits.squeeze(-1) / self.temperature)
         return probs.tolist()
 
     def predict_probs(self, game_state, self_role=None, self_index=None,
-                      algorithm="sum"):
+                      algorithm="sum", ablation="none"):
         """game_state: canonical card list (see proposal_cards).
 
         self_role/self_index condition on the agent's own known alignment
@@ -95,14 +104,15 @@ class FactorGraphModelV3:
         {1: {'good': g, 'evil': e}, ...} like FactorGraphModelV2.
         """
         assert algorithm in ("max", "sum")
-        evidence = self.evidence_probs(game_state)
+        evidence = self.evidence_probs(game_state, ablation=ablation)
         return self.constrained_posterior(
             evidence, self_role=self_role, self_index=self_index,
             algorithm=algorithm, priors=self._priors)
 
-    def pair_posterior(self, game_state, self_role=None, self_index=None):
+    def pair_posterior(self, game_state, self_role=None, self_index=None,
+                       ablation="none"):
         """{(i, j): P(pair)} over the valid evil pairs, ego-conditioned."""
-        evidence = self.evidence_probs(game_state)
+        evidence = self.evidence_probs(game_state, ablation=ablation)
         weights = self._pair_weights(
             evidence, self_role=self_role, self_index=self_index,
             priors=self._priors)
