@@ -19,7 +19,7 @@ diagnosis: `phase2_results.md`; pre-data scaffolding: `phase3_days1_3_status.md`
   the deployed-style config and stay open.
 - **Rejected-proposal history is a real, distribution-specific component of the
   signal.** Under matched train/eval ablation, removing rejected-proposal cards
-  drops self-play AUC 0.722 → **0.539** and human AUC 0.646 → 0.592 — a large
+  drops self-play AUC 0.722 → **0.539** and human AUC 0.646 → 0.623 — a large
   self-play effect, smaller on human. (An earlier "collapse to 0.454, below
   chance" was an artifact of scoring the ablated model on full card streams it
   never saw in training; an independent verification caught it and a new
@@ -124,12 +124,12 @@ which an independent verification traced to the train/eval mismatch.
 | variant (matched eval) | self-play AUC | proavalon-test AUC |
 |---|---|---|
 | full | 0.722 | 0.646 |
-| no_rejected | 0.539 | 0.592 |
+| no_rejected | 0.539 | 0.623 |
 | no_proposer | 0.796 | 0.641 |
 
 - **Rejected proposals carry most of the self-play signal, less on human.**
   Removing them drops self-play AUC 0.722 → 0.539 (a large effect) but human AUC
-  only 0.646 → 0.592. So the phase-2 hypothesis — that the tell against
+  only 0.646 → 0.623. So the phase-2 hypothesis — that the tell against
   GRAIL-evil lives substantially in rejection dynamics — is **supported** (and
   is distribution-specific: it helps the patterned GRAIL adversary more than
   varied humans). It is **not** "almost entirely" rejected dynamics; the
@@ -209,7 +209,7 @@ deployed-style configuration and remain open.
   any live game. Until then the 40 % flip target is undemonstrated either way.
 - **Rejected-proposal attribution: supported, not "almost entirely."** Under
   matched inference, rejected dynamics carry most of the self-play signal
-  (0.722 → 0.539) and a small share on human (0.646 → 0.592).
+  (0.722 → 0.539) and a small share on human (0.646 → 0.623).
 
 ## Threshold recalibration (pre-live, the blocker-clearing step)
 
