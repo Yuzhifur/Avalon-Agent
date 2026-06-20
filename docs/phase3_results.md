@@ -1,11 +1,11 @@
 # Phase 3 Results — Rebuilt Good Detection (offline)
 
 **Status:** offline portion complete on branch `phase3-proavalon` (2026-06-17);
-Gate-0 passed, the threshold sweep is done, and the live Gates 1–2 are now in
-progress with the recalibrated config (the operational stack — Docker, keys,
-frozen evil — is all present). This document reports the data pipeline,
-training, the full offline evaluation (Gate 0), and the recalibration that
-unblocks the live phase. Rationale and design: `phase3_plan.md`; phase-2
+Gate-0 passed, the threshold sweep is done, and **Gate-1 (live smoke) PASSED
+on 2026-06-19** with the recalibrated config. Gate-2 (70-game confirmation) is
+the next step. This document reports the data pipeline, training, the full
+offline evaluation (Gate 0), the recalibration that unblocks the live phase,
+and the Gate-1 smoke result. Rationale and design: `phase3_plan.md`; phase-2
 diagnosis: `phase2_results.md`; pre-data scaffolding: `phase3_days1_3_status.md`.
 
 ## TL;DR
@@ -246,21 +246,56 @@ The operating point is wired into `evaluation/phase3_gate1.json` and the C2/C4
 cells of `phase3_grid.json` (`GRAIL_BELIEF_MODEL_GOOD=factor_v3:v4_trackA_proavalon`,
 the recalibrated `GRAIL_POLICY_OVERRIDES_GOOD`, evil frozen).
 
-## Live phase (in progress) and what remains
+## Gate-1 smoke result (live, 2026-06-19) — PASS
 
-The operational prerequisites are all present on this machine — Docker 29.5.2,
-the headless compose stack, both LLM keys, all six roles automated, and the
-frozen-evil baseline. The real blocker was never tooling; it was the
-threshold-recalibration above, which is now done. The live runs are proceeding:
+Run `evaluation/phase3_live_runs/20260619T033023Z`: 30 games of c2 (promoted
+Good = factor_v3 Track A + flat-0.45 reject thresholds + behavior-penalties off)
+vs frozen GRAIL-evil (factor_v2), concurrency 3, 90-min per-game timeout.
 
-- **Gate 1 smoke** (30 games, c2 = promoted Good + flat-0.45/penalties-off vs
-  frozen GRAIL-evil): bar = no crashes, latency OK, ≥ +10 pts Good win rate over
-  the 23 % phase-2 baseline. The runtime `GameInfo → cards → factor_v3` path has
-  never run live, so a 1-game pre-flight runs first.
+| Gate-1 criterion | result | verdict |
+|---|---|---|
+| no crashes / abandonments | 0 / 30 failed; durations 19–85 min (avg 45) | PASS |
+| Good win rate ≥ +10 pts over 23 % baseline | **40.0 % (12/30)** = **+17 pts** | PASS |
+| ≥ ~10/30 Good wins | 12 / 30 | PASS |
+
+The recalibrated operating point converts the offline AUC edge into a decisive
+live win-rate lift (23 % → 40 %). The early 71 % (n=7) was small-sample noise;
+40 % is the settled rate.
+
+**Loss-mode attribution (all 30 games):** every one of the 18 Evil wins was a
+legitimate **3-failed-quest** loss; **zero hammer auto-wins** (terminal
+`failed_party_votes` ranged 0–4, never the 5 that triggers the reject auto-win).
+Four games reached fpv=4 — real reject pressure from flat-0.45 — but none tipped
+into a hammer. This **resolves the threshold sweep's deferred hammer caveat**:
+flat-0.45/penalties-off is hammer-safe in practice, so the conservative fallback
+(flat 0.50/off) is **not** needed. When Good loses it is because the detector
+still doesn't keep Evil off quest teams late-game (consistent with the offline
+calibration-compression finding), not because of reject spirals.
+
+**Operational note:** the first Gate-1 attempt (`20260618T061557Z`) deadlocked —
+not a game/model fault (all its games completed and recorded winners) but an
+orchestration one: the launcher was run as a session-bound background task and
+got reaped mid-run, skipping `parallel_games.run_game`'s in-process
+`finally: docker compose down`; two completed games' containers leaked and held
+both slots + ~7 GB RAM for ~20 h. Fix: `evaluation/run_gate1_smoke.ps1` wrapper
+with a pre-launch reaper (force-removes stale `avalon-*` containers + prunes
+`.parallel_workspaces`), run detached/babysat rather than session-bound. The
+per-game timeout + teardown were verified sound (a 120 s-timeout test abandoned
+its game and reaped to zero) — they only protect while the launcher is alive.
+
+## What remains
+
 - **Gate 2** (C2 = 70 games; C1 = the phase-2 90-game set reused after a config
   diff, Good win ≈ 23 %): two-proportion test at α = 0.05, target 23 % → ≥ 45 %,
-  then the loss-attribution rerun on C2 losses. ~1 hr/game at concurrency 2 →
-  multi-night. C3/C4 forced-fifth cells are exploratory afterward.
+  then the loss-attribution rerun on C2 losses. At concurrency 3 (~45 min/game,
+  RAM-safe at ~9.6 GiB / 12 GiB), 70 games ≈ 17–18 h. Gate-2 is statistically
+  necessary, not just confirmatory: at Gate-1's n=30, 40 % vs the 23 % baseline
+  is only z ≈ 1.8, **p ≈ 0.07 — trending, not yet significant**. If the ~40 %
+  rate holds at n=70 it clears significance (z ≈ 2.3, p ≈ 0.02 vs the n=90
+  baseline), though it sits below the 45 % aspirational target. Keep flat-0.45
+  (hammer caveat resolved above). C3/C4 forced-fifth cells are exploratory after.
+- **Self-play fine-tune** and **proposer-free retrain** remain deferred (need the
+  nightly self-play campaign / a schema change), as detailed below.
 
 Still genuinely deferred (need more data / a schema change, not just time):
 
