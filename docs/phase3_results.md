@@ -1,12 +1,14 @@
 # Phase 3 Results — Rebuilt Good Detection (offline)
 
 **Status:** offline portion complete on branch `phase3-proavalon` (2026-06-17);
-Gate-0 passed, the threshold sweep is done, and **Gate-1 (live smoke) PASSED
-on 2026-06-19** with the recalibrated config. Gate-2 (70-game confirmation) is
-the next step. This document reports the data pipeline, training, the full
-offline evaluation (Gate 0), the recalibration that unblocks the live phase,
-and the Gate-1 smoke result. Rationale and design: `phase3_plan.md`; phase-2
-diagnosis: `phase2_results.md`; pre-data scaffolding: `phase3_days1_3_status.md`.
+Gate-0 passed, the threshold sweep is done, **Gate-1 (live smoke) PASSED on
+2026-06-19**, and **Gate-2 (live confirmation) PASSED on 2026-06-20** — Good
+self-play win rate against frozen GRAIL-evil rose from the 23.3 % phase-2
+baseline to **51.1 % (47/92 pooled, p = 0.0001)**. This document reports the data
+pipeline, training, the full offline evaluation (Gate 0), the recalibration that
+unblocks the live phase, and the Gate-1/Gate-2 live results. Rationale and
+design: `phase3_plan.md`; phase-2 diagnosis: `phase2_results.md`; pre-data
+scaffolding: `phase3_days1_3_status.md`.
 
 ## TL;DR
 
@@ -283,17 +285,55 @@ with a pre-launch reaper (force-removes stale `avalon-*` containers + prunes
 per-game timeout + teardown were verified sound (a 120 s-timeout test abandoned
 its game and reaped to zero) — they only protect while the launcher is alive.
 
+## Gate-2 confirmation result (live, 2026-06-20) — PASS
+
+Run on a 64 GB / 18-core Apple-Silicon Mac (Gate-1 was the Windows host; game
+outcomes depend only on config + prompts + the DeepSeek `deepseek-v4-flash`
+backend, not the host, so the two runs pool validly). **C2 = the 30 Gate-1 games
++ 62 new completed games here** (identical frozen `evaluation/phase3_gate1.json`:
+promoted Good = factor_v3 Track A + flat-0.45 reject thresholds +
+behavior-penalties off; frozen GRAIL-evil = factor_v2), tested against **C1 = the
+phase-2 90-game baseline (21/90, 23.3 %)** with a two-proportion z-test at
+α = 0.05.
+
+| Gate-2 metric | result |
+|---|---|
+| new Good wins (this machine) | **35 / 62 = 56.5 %** |
+| **C2 pooled Good win rate** | **47 / 92 = 51.1 %**  (95 % CI 40.9–61.3 %) |
+| C1 baseline | 21 / 90 = 23.3 % |
+| two-proportion z-test | **z = 3.87, p = 0.0001 — significant** |
+| aspirational target (≥ 45 %) | **cleared** |
+
+The recalibrated factor_v3 detector roughly **doubles Good's self-play win rate**
+(23.3 % → 51.1 %) against frozen Evil, decisively confirming the Gate-1 trend
+(40 %, p ≈ 0.07 at n=30) at n=92. The sub-runs were 3/3, 26/52, and 6/7 Good —
+the low/mid-50s rate is stable across batches.
+
+**Loss-mode attribution (62 new games):** all 27 Evil wins were legitimate
+**3-failed-quest** losses; **zero hammer auto-wins** (`failed_party_votes` never
+reached 5), reproducing the Gate-1 hammer-safety finding at larger n. Flat-0.45 /
+penalties-off remains the operating point.
+
+**Operational notes (this run):** launched at concurrency 15 — measured ~3.1–3.3
+GiB/game (46.9 GiB of the 54.8 GiB Docker VM) after raising Docker Desktop's
+memory on the 64 GB host; CPU is not the bottleneck (games are DeepSeek-bound).
+5 of the first-batch games hung and were abandoned at the 90-min per-game timeout
+— all in batch 1, a transient DeepSeek load spike when 15 games fire their first
+calls at once (a gentler concurrency-7 top-up went 7/7 with no hangs) — so they
+are excluded as technical failures, not game outcomes. macOS has no `setsid`, so
+the launcher (`evaluation/run_gate2.sh`, the bash port of the Windows `.ps1` with
+the same pre/post `avalon-*` reaper) was detached via a double-fork daemon
+(`evaluation/daemonize.py`) to survive independent of the agent session; the
+per-game timeout + `finally: docker compose down` again held (0 leaked
+containers). Total DeepSeek cost: **$5.47** (~$0.08/game). Pooling, z-test, and
+loss-mode classification: `evaluation/gate2_analysis.py`.
+
 ## What remains
 
-- **Gate 2** (C2 = 70 games; C1 = the phase-2 90-game set reused after a config
-  diff, Good win ≈ 23 %): two-proportion test at α = 0.05, target 23 % → ≥ 45 %,
-  then the loss-attribution rerun on C2 losses. At concurrency 3 (~45 min/game,
-  RAM-safe at ~9.6 GiB / 12 GiB), 70 games ≈ 17–18 h. Gate-2 is statistically
-  necessary, not just confirmatory: at Gate-1's n=30, 40 % vs the 23 % baseline
-  is only z ≈ 1.8, **p ≈ 0.07 — trending, not yet significant**. If the ~40 %
-  rate holds at n=70 it clears significance (z ≈ 2.3, p ≈ 0.02 vs the n=90
-  baseline), though it sits below the 45 % aspirational target. Keep flat-0.45
-  (hammer caveat resolved above). C3/C4 forced-fifth cells are exploratory after.
+- **Gate 2 — DONE** (see the Gate-2 section above): C2 = 92 pooled games,
+  **51.1 % vs the 23.3 % baseline, z = 3.87, p = 0.0001**, hammer-safe (0/27 Evil
+  wins were hammer). Clears the 45 % aspirational target. The C3/C4 forced-fifth
+  cells remain optional exploratory follow-ups.
 - **Self-play fine-tune** and **proposer-free retrain** remain deferred (need the
   nightly self-play campaign / a schema change), as detailed below.
 
