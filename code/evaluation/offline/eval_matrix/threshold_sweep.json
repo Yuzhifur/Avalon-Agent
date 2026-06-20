@@ -1,0 +1,174 @@
+{
+ "model": "factor_v3",
+ "model_dir": "v4_trackA_proavalon",
+ "games": "E:\\Local\\Avalon-Agent\\data\\corpora\\selfplay90.jsonl",
+ "n_states": 2824,
+ "rows": [
+  {
+   "config": "default (0.65-0.55), pen=default",
+   "policy_config": {},
+   "flip": 0.2782485875706215,
+   "clean_false_reject": 0.15428571428571428,
+   "ratio": 1.8034630675873615,
+   "approved_evil_teams": 708,
+   "approved_clean_teams": 350
+  },
+  {
+   "config": "flat 0.50, pen=default",
+   "policy_config": {
+    "good": {
+     "reject_thresholds": {
+      "1": 0.5,
+      "2": 0.5,
+      "3": 0.5,
+      "4": 0.5,
+      "5": 0.5
+     }
+    }
+   },
+   "flip": 0.461864406779661,
+   "clean_false_reject": 0.27714285714285714,
+   "ratio": 1.6665210553905294,
+   "approved_evil_teams": 708,
+   "approved_clean_teams": 350
+  },
+  {
+   "config": "flat 0.45, pen=default",
+   "policy_config": {
+    "good": {
+     "reject_thresholds": {
+      "1": 0.45,
+      "2": 0.45,
+      "3": 0.45,
+      "4": 0.45,
+      "5": 0.45
+     }
+    }
+   },
+   "flip": 0.557909604519774,
+   "clean_false_reject": 0.34,
+   "ratio": 1.640910601528747,
+   "approved_evil_teams": 708,
+   "approved_clean_teams": 350
+  },
+  {
+   "config": "flat 0.50, pen=off",
+   "policy_config": {
+    "good": {
+     "reject_thresholds": {
+      "1": 0.5,
+      "2": 0.5,
+      "3": 0.5,
+      "4": 0.5,
+      "5": 0.5
+     },
+     "failed_quest_member_penalty": 0.0,
+     "approved_failed_quest_penalty": 0.0,
+     "proposed_failed_quest_penalty": 0.0,
+     "rejected_successful_quest_penalty": 0.0,
+     "rejected_proposal_leader_penalty": 0.0,
+     "approved_rejected_proposal_penalty": 0.0
+    }
+   },
+   "flip": 0.3135593220338983,
+   "clean_false_reject": 0.14285714285714285,
+   "ratio": 2.194915254237288,
+   "approved_evil_teams": 708,
+   "approved_clean_teams": 350
+  },
+  {
+   "config": "flat 0.45, pen=off",
+   "policy_config": {
+    "good": {
+     "reject_thresholds": {
+      "1": 0.45,
+      "2": 0.45,
+      "3": 0.45,
+      "4": 0.45,
+      "5": 0.45
+     },
+     "failed_quest_member_penalty": 0.0,
+     "approved_failed_quest_penalty": 0.0,
+     "proposed_failed_quest_penalty": 0.0,
+     "rejected_successful_quest_penalty": 0.0,
+     "rejected_proposal_leader_penalty": 0.0,
+     "approved_rejected_proposal_penalty": 0.0
+    }
+   },
+   "flip": 0.423728813559322,
+   "clean_false_reject": 0.22857142857142856,
+   "ratio": 1.853813559322034,
+   "approved_evil_teams": 708,
+   "approved_clean_teams": 350
+  },
+  {
+   "config": "questaware A {.60,.55,.48,.45,.45}, pen=off",
+   "policy_config": {
+    "good": {
+     "reject_thresholds": {
+      "1": 0.6,
+      "2": 0.55,
+      "3": 0.48,
+      "4": 0.45,
+      "5": 0.45
+     },
+     "failed_quest_member_penalty": 0.0,
+     "approved_failed_quest_penalty": 0.0,
+     "proposed_failed_quest_penalty": 0.0,
+     "rejected_successful_quest_penalty": 0.0,
+     "rejected_proposal_leader_penalty": 0.0,
+     "approved_rejected_proposal_penalty": 0.0
+    }
+   },
+   "flip": 0.2570621468926554,
+   "clean_false_reject": 0.15142857142857144,
+   "ratio": 1.6975802153288562,
+   "approved_evil_teams": 708,
+   "approved_clean_teams": 350
+  },
+  {
+   "config": "questaware B {.58,.52,.45,.42,.42}, pen=off",
+   "policy_config": {
+    "good": {
+     "reject_thresholds": {
+      "1": 0.58,
+      "2": 0.52,
+      "3": 0.45,
+      "4": 0.42,
+      "5": 0.42
+     },
+     "failed_quest_member_penalty": 0.0,
+     "approved_failed_quest_penalty": 0.0,
+     "proposed_failed_quest_penalty": 0.0,
+     "rejected_successful_quest_penalty": 0.0,
+     "rejected_proposal_leader_penalty": 0.0,
+     "approved_rejected_proposal_penalty": 0.0
+    }
+   },
+   "flip": 0.3220338983050847,
+   "clean_false_reject": 0.1742857142857143,
+   "ratio": 1.847735482078355,
+   "approved_evil_teams": 708,
+   "approved_clean_teams": 350
+  },
+  {
+   "config": "questaware A, pen=default",
+   "policy_config": {
+    "good": {
+     "reject_thresholds": {
+      "1": 0.6,
+      "2": 0.55,
+      "3": 0.48,
+      "4": 0.45,
+      "5": 0.45
+     }
+    }
+   },
+   "flip": 0.3912429378531073,
+   "clean_false_reject": 0.26,
+   "ratio": 1.504780530204259,
+   "approved_evil_teams": 708,
+   "approved_clean_teams": 350
+  }
+ ]
+}

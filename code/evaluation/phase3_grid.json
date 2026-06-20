@@ -1,0 +1,62 @@
+{
+  "comment": "Phase-3 live eval cells (Workstream 6). DECLARED ONLY — do not run until the offline Gate 0 promotes a track and Gate 1 smoke passes. good_v4 placeholders assume Track A promotion; switch GRAIL_BELIEF_MODEL_GOOD to seq_v1 if Track B wins offline. Evil stays frozen (factor_v2 + default policy) in every cell.",
+  "candidates": [
+    {
+      "name": "c1_baseline_v2",
+      "group": "current_rule",
+      "side": "good",
+      "overrides": {},
+      "environment": {}
+    },
+    {
+      "name": "c2_promoted_good",
+      "group": "current_rule",
+      "side": "good",
+      "overrides": {
+        "good": {
+          "reject_thresholds": {"1": 0.45, "2": 0.45, "3": 0.45, "4": 0.45, "5": 0.45},
+          "failed_quest_member_penalty": 0.0,
+          "approved_failed_quest_penalty": 0.0,
+          "proposed_failed_quest_penalty": 0.0,
+          "rejected_successful_quest_penalty": 0.0,
+          "rejected_proposal_leader_penalty": 0.0,
+          "approved_rejected_proposal_penalty": 0.0
+        }
+      },
+      "environment": {
+        "GRAIL_BELIEF_MODEL_GOOD": "factor_v3:v4_trackA_proavalon",
+        "GRAIL_BELIEF_MODEL_EVIL": "factor_v2"
+      }
+    },
+    {
+      "name": "c3_baseline_v2_forced_fifth",
+      "group": "forced_fifth_rule",
+      "side": "good",
+      "overrides": {},
+      "environment": {
+        "AVALON_HAMMER_RULE": "forced_fifth"
+      }
+    },
+    {
+      "name": "c4_promoted_good_forced_fifth",
+      "group": "forced_fifth_rule",
+      "side": "good",
+      "overrides": {
+        "good": {
+          "reject_thresholds": {"1": 0.45, "2": 0.45, "3": 0.45, "4": 0.45, "5": 0.45},
+          "failed_quest_member_penalty": 0.0,
+          "approved_failed_quest_penalty": 0.0,
+          "proposed_failed_quest_penalty": 0.0,
+          "rejected_successful_quest_penalty": 0.0,
+          "rejected_proposal_leader_penalty": 0.0,
+          "approved_rejected_proposal_penalty": 0.0
+        }
+      },
+      "environment": {
+        "GRAIL_BELIEF_MODEL_GOOD": "factor_v3:v4_trackA_proavalon",
+        "GRAIL_BELIEF_MODEL_EVIL": "factor_v2",
+        "AVALON_HAMMER_RULE": "forced_fifth"
+      }
+    }
+  ]
+}

@@ -50,6 +50,10 @@ def candidate_environment(candidate):
         environment["GRAIL_POLICY_OVERRIDES_GOOD"] = encoded
     else:
         environment["GRAIL_POLICY_OVERRIDES_EVIL"] = encoded
+    # phase-3 cells: arbitrary env passthrough (GRAIL_BELIEF_MODEL_GOOD,
+    # GRAIL_DISABLE_VIBES, AVALON_HAMMER_RULE, ...) — values must be strings
+    for key, value in (candidate.get("environment") or {}).items():
+        environment[str(key)] = str(value)
     return environment
 
 
@@ -173,6 +177,20 @@ def main():
         build_images(root)
     results = run_tasks(root, tasks, args.concurrency, args.dry_run)
     rows = [policy_row(result) for result in results]
+
+    # Log-retention rule (phase 3): archive POLICY_DECISION streams as
+    # committed-friendly JSONL right away — the raw DEBUG_*.log files are
+    # gitignored and the phase-2 ones were nearly lost.
+    if not args.dry_run:
+        try:
+            from offline.phase2_artifacts import extract_decisions_jsonl
+            for result in results:
+                if result.game_log:
+                    game_id = Path(result.game_log).stem
+                    run_dir = str(Path(result.game_log).parent.parent)
+                    extract_decisions_jsonl(run_dir, game_id)
+        except Exception as exc:  # never fail a run over archiving
+            print(f"decision-log extraction failed: {exc}")
 
     summary = write_results(output_root, candidates, rows)
     print(json.dumps(summary, indent=2, sort_keys=True))

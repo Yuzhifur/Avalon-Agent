@@ -12,7 +12,7 @@ import hashlib
 import json
 import os
 
-from agent_base import ATEAM
+from agent_enums import ATEAM
 
 
 DEFAULT_POLICY_CONFIG = {

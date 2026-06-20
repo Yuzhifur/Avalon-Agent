@@ -1,0 +1,17 @@
+train examples: 1521966, val examples: 317520
+CardSeqGRU parameters: 205071
+epoch 1/100 train_loss=1.9169 val_loss=1.8507 pair_top1 train=0.2548 val=0.2779
+epoch 2/100 train_loss=1.8242 val_loss=1.7925 pair_top1 train=0.2886 val=0.2979
+epoch 3/100 train_loss=1.7749 val_loss=1.7684 pair_top1 train=0.3046 val=0.3079
+epoch 4/100 train_loss=1.7514 val_loss=1.7609 pair_top1 train=0.3160 val=0.3125
+epoch 5/100 train_loss=1.7335 val_loss=1.7613 pair_top1 train=0.3264 val=0.3123
+epoch 6/100 train_loss=1.7154 val_loss=1.7713 pair_top1 train=0.3363 val=0.3107
+epoch 7/100 train_loss=1.6896 val_loss=1.7782 pair_top1 train=0.3499 val=0.3073
+epoch 8/100 train_loss=1.6532 val_loss=1.8125 pair_top1 train=0.3679 val=0.3002
+epoch 9/100 train_loss=1.6035 val_loss=1.8598 pair_top1 train=0.3912 val=0.2955
+epoch 10/100 train_loss=1.5425 val_loss=1.9162 pair_top1 train=0.4182 val=0.2871
+epoch 11/100 train_loss=1.4754 val_loss=1.9991 pair_top1 train=0.4465 val=0.2797
+epoch 12/100 train_loss=1.4108 val_loss=2.1028 pair_top1 train=0.4729 val=0.2728
+early stopping at epoch 12 (best epoch 4, val_loss 1.7609)
+Temperature scaling: T=0.9923 NLL 1.7609 -> 1.7609
+saved Track B weights to E:/Local/Avalon-Agent/code/agent/our/models/seq_v1_proavalon (best val_loss 1.7609, pair_top1 0.3125, T=0.992)

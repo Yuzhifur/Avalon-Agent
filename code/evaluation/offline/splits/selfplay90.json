@@ -1,0 +1,321 @@
+{
+ "eval_only": true,
+ "games": [
+  {
+   "game_id": "VFTG",
+   "winner": "evil"
+  },
+  {
+   "game_id": "BYCO",
+   "winner": "evil"
+  },
+  {
+   "game_id": "STXL",
+   "winner": "evil"
+  },
+  {
+   "game_id": "XPDC",
+   "winner": "good"
+  },
+  {
+   "game_id": "WFJB",
+   "winner": "good"
+  },
+  {
+   "game_id": "WGZQ",
+   "winner": "evil"
+  },
+  {
+   "game_id": "QJSV",
+   "winner": "evil"
+  },
+  {
+   "game_id": "BGQQ",
+   "winner": "evil"
+  },
+  {
+   "game_id": "WBWM",
+   "winner": "good"
+  },
+  {
+   "game_id": "TMJW",
+   "winner": "evil"
+  },
+  {
+   "game_id": "FSWW",
+   "winner": "evil"
+  },
+  {
+   "game_id": "AMCT",
+   "winner": "evil"
+  },
+  {
+   "game_id": "HOXH",
+   "winner": "evil"
+  },
+  {
+   "game_id": "ASWN",
+   "winner": "good"
+  },
+  {
+   "game_id": "QNOC",
+   "winner": "evil"
+  },
+  {
+   "game_id": "IWTJ",
+   "winner": "evil"
+  },
+  {
+   "game_id": "ADIU",
+   "winner": "evil"
+  },
+  {
+   "game_id": "EIVP",
+   "winner": "evil"
+  },
+  {
+   "game_id": "UHWL",
+   "winner": "evil"
+  },
+  {
+   "game_id": "GZXR",
+   "winner": "evil"
+  },
+  {
+   "game_id": "ZLUM",
+   "winner": "evil"
+  },
+  {
+   "game_id": "KDKH",
+   "winner": "evil"
+  },
+  {
+   "game_id": "KOJH",
+   "winner": "good"
+  },
+  {
+   "game_id": "MOKK",
+   "winner": "evil"
+  },
+  {
+   "game_id": "HUGC",
+   "winner": "evil"
+  },
+  {
+   "game_id": "AIVI",
+   "winner": "good"
+  },
+  {
+   "game_id": "GFJS",
+   "winner": "evil"
+  },
+  {
+   "game_id": "BHAX",
+   "winner": "evil"
+  },
+  {
+   "game_id": "EDAP",
+   "winner": "evil"
+  },
+  {
+   "game_id": "XJNT",
+   "winner": "evil"
+  },
+  {
+   "game_id": "KVDP",
+   "winner": "evil"
+  },
+  {
+   "game_id": "VKJH",
+   "winner": "evil"
+  },
+  {
+   "game_id": "VURU",
+   "winner": "evil"
+  },
+  {
+   "game_id": "OIOG",
+   "winner": "evil"
+  },
+  {
+   "game_id": "GQXW",
+   "winner": "evil"
+  },
+  {
+   "game_id": "VJRL",
+   "winner": "good"
+  },
+  {
+   "game_id": "GYYY",
+   "winner": "good"
+  },
+  {
+   "game_id": "WZIC",
+   "winner": "evil"
+  },
+  {
+   "game_id": "XXYT",
+   "winner": "evil"
+  },
+  {
+   "game_id": "GVUH",
+   "winner": "evil"
+  },
+  {
+   "game_id": "ITGC",
+   "winner": "evil"
+  },
+  {
+   "game_id": "ABDC",
+   "winner": "good"
+  },
+  {
+   "game_id": "EIZG",
+   "winner": "evil"
+  },
+  {
+   "game_id": "ELEO",
+   "winner": "evil"
+  },
+  {
+   "game_id": "MUKI",
+   "winner": "evil"
+  },
+  {
+   "game_id": "ZCEY",
+   "winner": "evil"
+  },
+  {
+   "game_id": "HNEJ",
+   "winner": "good"
+  },
+  {
+   "game_id": "OUZG",
+   "winner": "evil"
+  },
+  {
+   "game_id": "YHGV",
+   "winner": "good"
+  },
+  {
+   "game_id": "NCUQ",
+   "winner": "good"
+  },
+  {
+   "game_id": "TBTC",
+   "winner": "evil"
+  },
+  {
+   "game_id": "GZWF",
+   "winner": "evil"
+  },
+  {
+   "game_id": "LHDW",
+   "winner": "evil"
+  },
+  {
+   "game_id": "FADJ",
+   "winner": "evil"
+  },
+  {
+   "game_id": "QYJX",
+   "winner": "evil"
+  },
+  {
+   "game_id": "XGRO",
+   "winner": "good"
+  },
+  {
+   "game_id": "ZRXB",
+   "winner": "evil"
+  },
+  {
+   "game_id": "UXDI",
+   "winner": "evil"
+  },
+  {
+   "game_id": "NZEO",
+   "winner": "evil"
+  },
+  {
+   "game_id": "OASJ",
+   "winner": "good"
+  },
+  {
+   "game_id": "TADE",
+   "winner": "evil"
+  },
+  {
+   "game_id": "JVFV",
+   "winner": "good"
+  },
+  {
+   "game_id": "PKIH",
+   "winner": "evil"
+  },
+  {
+   "game_id": "ZYGJ",
+   "winner": "evil"
+  },
+  {
+   "game_id": "DYRU",
+   "winner": "evil"
+  },
+  {
+   "game_id": "GLJO",
+   "winner": "good"
+  },
+  {
+   "game_id": "GWTF",
+   "winner": "evil"
+  },
+  {
+   "game_id": "UEMT",
+   "winner": "good"
+  },
+  {
+   "game_id": "ZLKU",
+   "winner": "evil"
+  },
+  {
+   "game_id": "CKIA",
+   "winner": "evil"
+  },
+  {
+   "game_id": "KCZJ",
+   "winner": "evil"
+  },
+  {
+   "game_id": "OWFI",
+   "winner": "evil"
+  },
+  {
+   "game_id": "HLPE",
+   "winner": "evil"
+  },
+  {
+   "game_id": "NLPI",
+   "winner": "good"
+  },
+  {
+   "game_id": "NLQN",
+   "winner": "evil"
+  },
+  {
+   "game_id": "JQKU",
+   "winner": "evil"
+  },
+  {
+   "game_id": "ZJNT",
+   "winner": "evil"
+  },
+  {
+   "game_id": "YYXL",
+   "winner": "evil"
+  },
+  {
+   "game_id": "BLUN",
+   "winner": "evil"
+  }
+ ]
+}

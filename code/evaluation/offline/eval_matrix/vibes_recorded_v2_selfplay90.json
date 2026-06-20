@@ -1,0 +1,60 @@
+{
+ "beliefs": {
+  "n_samples": 14120,
+  "auc_pooled": 0.49279145166079497,
+  "brier": 0.2915132663894715,
+  "ece": 0.2151209494376126,
+  "nll": 0.8079565389300605,
+  "auc_by_quest": {
+   "1": 0.5,
+   "2": 0.6064545427693762,
+   "3": 0.4920841989843029,
+   "4": 0.467463296418916,
+   "5": 0.578080073864763
+  },
+  "mean_p_evil_on_true_evil_by_quest": {
+   "1": 0.5,
+   "2": 0.4960925075751932,
+   "3": 0.4210076169551987,
+   "4": 0.4054647710782072,
+   "5": 0.47348759474982394
+  },
+  "mean_p_evil_on_true_good_by_quest": {
+   "1": 0.5,
+   "2": 0.4545644169835293,
+   "3": 0.43269961383602207,
+   "4": 0.43085044850641036,
+   "5": 0.38778921795549437
+  },
+  "mean_p_evil_on_true_evil": 0.43993650918053767,
+  "median_p_evil_on_true_evil": 0.46895988285541534,
+  "share_true_evil_rated_good": 0.5548866855524079
+ },
+ "pairs": {
+  "n_states": 2824,
+  "pair_top1": 0.14022662889518414,
+  "pair_top3": 0.3155099150141643,
+  "pair_top1_by_quest": {
+   "1": 0.10443037974683544,
+   "2": 0.1956521739130435,
+   "3": 0.10921052631578948,
+   "4": 0.12167300380228137,
+   "5": 0.24390243902439024
+  }
+ },
+ "counterfactual": {
+  "approved_evil_teams": 708,
+  "evil_team_reject_flip_rate": 0.0,
+  "approved_clean_teams": 350,
+  "clean_team_new_false_reject_rate": 0.0
+ },
+ "n_decisions": 2824,
+ "config": {
+  "cell": "vibes_recorded_v2_selfplay90",
+  "n_games": 79,
+  "backend": "recorded",
+  "penalties": "default",
+  "vibes": "recorded",
+  "seconds": 0.4
+ }
+}

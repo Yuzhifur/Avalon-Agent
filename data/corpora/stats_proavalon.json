@@ -1,0 +1,78 @@
+{
+ "source": "proavalon",
+ "n_games": 97594,
+ "winner": {
+  "evil": 54866,
+  "good": 42728
+ },
+ "win_reason": {
+  "assassination": 72836,
+  "three_fails": 21103,
+  "hammer": 3228,
+  "three_successes": 427
+ },
+ "variant_roles": {
+  "ASSASSIN+MERLIN+MORGANA+PERCIVAL": 95428,
+  "ASSASSIN+MERLIN+MORGANA": 48,
+  "ASSASSIN+MERLIN": 1075,
+  "vanilla": 850,
+  "MERLIN": 16,
+  "ASSASSIN+MERLIN+PERCIVAL": 144,
+  "ASSASSIN+MORGANA+PERCIVAL": 3,
+  "ASSASSIN": 13,
+  "MORGANA+PERCIVAL": 3,
+  "ASSASSIN+MORGANA": 4,
+  "MORGANA": 1,
+  "MERLIN+MORGANA+PERCIVAL": 4,
+  "MERLIN+MORGANA": 1,
+  "MERLIN+PERCIVAL": 1,
+  "PERCIVAL": 2,
+  "ASSASSIN+PERCIVAL": 1
+ },
+ "proposals_per_quest": {
+  "1": 4.604,
+  "2": 4.267,
+  "3": 2.898,
+  "4": 3.192,
+  "5": 3.064
+ },
+ "rejected_per_game": {
+  "0": 2494,
+  "1": 1766,
+  "2": 1318,
+  "3": 922,
+  "4": 1344,
+  "5": 1542,
+  "6": 1605,
+  "7": 1953,
+  "8": 6671,
+  "9": 6227,
+  "10": 6701,
+  "11": 8013,
+  "12": 14314,
+  "13": 8192,
+  "14": 7983,
+  "15": 8212,
+  "16": 8783,
+  "17": 3627,
+  "18": 2489,
+  "19": 1963,
+  "20": 1349,
+  "21": 126
+ },
+ "proposal_depth": {
+  "1": 421265,
+  "2": 337973,
+  "3": 299662,
+  "4": 266605,
+  "5": 227769
+ },
+ "voted_proposals_total": 1553274,
+ "skipped": {
+  "variant_roles": 3051
+ },
+ "chat_check": {
+  "games_scanned": 200,
+  "chat_like_fields": {}
+ }
+}

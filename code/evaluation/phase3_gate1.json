@@ -1,0 +1,25 @@
+{
+  "comment": "Gate-1 smoke / Gate-2 C2 cell: promoted Good detector (Track A = factor_v3 trained on ProAvalon) with recalibrated reject thresholds (flat 0.45) and behavior-risk penalties OFF (the card model already ingests rejected/failed-quest signal — see the threshold sweep in phase3_results.md). Evil frozen (factor_v2 + default policy). Hammer rule = evil_win (default). Run: python -m evaluation.tune_policy --grid evaluation/phase3_gate1.json --runs 30 --concurrency 2 --output evaluation/phase3_live_runs. Baseline C1 = the phase-2 90-game set (Good win ~23%); do not re-run unless config drift is found.",
+  "candidates": [
+    {
+      "name": "c2_promoted_good",
+      "group": "current_rule",
+      "side": "good",
+      "overrides": {
+        "good": {
+          "reject_thresholds": {"1": 0.45, "2": 0.45, "3": 0.45, "4": 0.45, "5": 0.45},
+          "failed_quest_member_penalty": 0.0,
+          "approved_failed_quest_penalty": 0.0,
+          "proposed_failed_quest_penalty": 0.0,
+          "rejected_successful_quest_penalty": 0.0,
+          "rejected_proposal_leader_penalty": 0.0,
+          "approved_rejected_proposal_penalty": 0.0
+        }
+      },
+      "environment": {
+        "GRAIL_BELIEF_MODEL_GOOD": "factor_v3:v4_trackA_proavalon",
+        "GRAIL_BELIEF_MODEL_EVIL": "factor_v2"
+      }
+    }
+  ]
+}

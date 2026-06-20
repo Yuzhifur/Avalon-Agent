@@ -1,0 +1,10 @@
+train examples: 1521966, val examples: 317520
+ProposalSetDistribution parameters: 8545
+epoch 5/300 train_loss=0.5751 val_loss=0.5768 train_acc=0.6980 val_acc=0.6965
+epoch 10/300 train_loss=0.5742 val_loss=0.5773 train_acc=0.6984 val_acc=0.6961
+epoch 15/300 train_loss=0.5736 val_loss=0.5770 train_acc=0.6991 val_acc=0.6956
+epoch 20/300 train_loss=0.5730 val_loss=0.5770 train_acc=0.6993 val_acc=0.6960
+epoch 25/300 train_loss=0.5725 val_loss=0.5774 train_acc=0.6997 val_acc=0.6961
+early stopping at epoch 25 (best epoch 5, val_loss 0.5768)
+Temperature scaling: T=1.0000 NLL 0.5768 -> 0.5768
+saved Track A weights to E:/Local/Avalon-Agent/code/agent/our/models/v4_trackA_proavalon_no_rejected (best val_loss 0.5768, T=1.000)
