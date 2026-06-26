@@ -16,6 +16,8 @@ See `code/README.md` for full documentation on code structure, agent training, a
 
 For a beginner-friendly explanation of GRAIL's factor graph, neural factor functions, action heuristic, and training data, see [docs/grail_beginner_guide.md](docs/grail_beginner_guide.md).
 
+For a high-level overview of the whole project — the original GRAIL contribution plus the Phase 2–3 work that rebuilt Good's evil-detection (lifting its self-play win rate from ~23% to 51%) — see [docs/project_overview.md](docs/project_overview.md).
+
 ## Human Experiment Data
 
 The `data/` directory contains logs from human-vs-agent experiments. These are the same games from the [human experiment dataset](https://huggingface.co/datasets/shahabrahimirad/bayesian-social-deduction/tree/main/human_experiments), but they have been specifically formatted to be replayable within the Avalon Game Client.
