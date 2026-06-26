@@ -1,0 +1,888 @@
+{
+  "new_games": [
+    {
+      "game": "run_001",
+      "status": "completed",
+      "winner": "good",
+      "klass": "good_win",
+      "failed_party_votes": 0,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "success",
+        "success"
+      ]
+    },
+    {
+      "game": "run_002",
+      "status": "completed",
+      "winner": "good",
+      "klass": "good_win",
+      "failed_party_votes": 0,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "success",
+        "success"
+      ]
+    },
+    {
+      "game": "run_003",
+      "status": "completed",
+      "winner": "good",
+      "klass": "good_win",
+      "failed_party_votes": 0,
+      "quest_results": [
+        "success",
+        "fail",
+        "success",
+        "success"
+      ]
+    },
+    {
+      "game": "run_001",
+      "status": "completed",
+      "winner": "evil",
+      "klass": "evil_3fail",
+      "failed_party_votes": 2,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "fail"
+      ]
+    },
+    {
+      "game": "run_002",
+      "status": "failed",
+      "winner": "unknown",
+      "klass": "incomplete",
+      "failed_party_votes": null,
+      "quest_results": null
+    },
+    {
+      "game": "run_003",
+      "status": "completed",
+      "winner": "evil",
+      "klass": "evil_3fail",
+      "failed_party_votes": 0,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "fail"
+      ]
+    },
+    {
+      "game": "run_004",
+      "status": "completed",
+      "winner": "good",
+      "klass": "good_win",
+      "failed_party_votes": 0,
+      "quest_results": [
+        "success",
+        "fail",
+        "success",
+        "success"
+      ]
+    },
+    {
+      "game": "run_005",
+      "status": "completed",
+      "winner": "evil",
+      "klass": "evil_3fail",
+      "failed_party_votes": 0,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "fail"
+      ]
+    },
+    {
+      "game": "run_006",
+      "status": "completed",
+      "winner": "evil",
+      "klass": "evil_3fail",
+      "failed_party_votes": 0,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "fail"
+      ]
+    },
+    {
+      "game": "run_007",
+      "status": "completed",
+      "winner": "evil",
+      "klass": "evil_3fail",
+      "failed_party_votes": 0,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "fail"
+      ]
+    },
+    {
+      "game": "run_008",
+      "status": "completed",
+      "winner": "good",
+      "klass": "good_win",
+      "failed_party_votes": 0,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "success",
+        "success"
+      ]
+    },
+    {
+      "game": "run_009",
+      "status": "failed",
+      "winner": "unknown",
+      "klass": "incomplete",
+      "failed_party_votes": null,
+      "quest_results": null
+    },
+    {
+      "game": "run_010",
+      "status": "failed",
+      "winner": "unknown",
+      "klass": "incomplete",
+      "failed_party_votes": null,
+      "quest_results": null
+    },
+    {
+      "game": "run_011",
+      "status": "failed",
+      "winner": "unknown",
+      "klass": "incomplete",
+      "failed_party_votes": null,
+      "quest_results": null
+    },
+    {
+      "game": "run_012",
+      "status": "failed",
+      "winner": "unknown",
+      "klass": "incomplete",
+      "failed_party_votes": null,
+      "quest_results": null
+    },
+    {
+      "game": "run_013",
+      "status": "completed",
+      "winner": "evil",
+      "klass": "evil_3fail",
+      "failed_party_votes": 4,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "fail"
+      ]
+    },
+    {
+      "game": "run_014",
+      "status": "completed",
+      "winner": "good",
+      "klass": "good_win",
+      "failed_party_votes": 0,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "success",
+        "success"
+      ]
+    },
+    {
+      "game": "run_015",
+      "status": "completed",
+      "winner": "evil",
+      "klass": "evil_3fail",
+      "failed_party_votes": 0,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "fail"
+      ]
+    },
+    {
+      "game": "run_016",
+      "status": "completed",
+      "winner": "evil",
+      "klass": "evil_3fail",
+      "failed_party_votes": 0,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "fail"
+      ]
+    },
+    {
+      "game": "run_017",
+      "status": "completed",
+      "winner": "evil",
+      "klass": "evil_3fail",
+      "failed_party_votes": 0,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "fail"
+      ]
+    },
+    {
+      "game": "run_018",
+      "status": "completed",
+      "winner": "good",
+      "klass": "good_win",
+      "failed_party_votes": 4,
+      "quest_results": [
+        "success",
+        "success",
+        "success"
+      ]
+    },
+    {
+      "game": "run_019",
+      "status": "completed",
+      "winner": "good",
+      "klass": "good_win",
+      "failed_party_votes": 1,
+      "quest_results": [
+        "success",
+        "success",
+        "success"
+      ]
+    },
+    {
+      "game": "run_020",
+      "status": "completed",
+      "winner": "good",
+      "klass": "good_win",
+      "failed_party_votes": 0,
+      "quest_results": [
+        "success",
+        "success",
+        "success"
+      ]
+    },
+    {
+      "game": "run_021",
+      "status": "completed",
+      "winner": "good",
+      "klass": "good_win",
+      "failed_party_votes": 2,
+      "quest_results": [
+        "success",
+        "success",
+        "success"
+      ]
+    },
+    {
+      "game": "run_022",
+      "status": "completed",
+      "winner": "evil",
+      "klass": "evil_3fail",
+      "failed_party_votes": 3,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "fail"
+      ]
+    },
+    {
+      "game": "run_023",
+      "status": "completed",
+      "winner": "evil",
+      "klass": "evil_3fail",
+      "failed_party_votes": 0,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "fail"
+      ]
+    },
+    {
+      "game": "run_024",
+      "status": "completed",
+      "winner": "good",
+      "klass": "good_win",
+      "failed_party_votes": 0,
+      "quest_results": [
+        "success",
+        "success",
+        "fail",
+        "success"
+      ]
+    },
+    {
+      "game": "run_025",
+      "status": "completed",
+      "winner": "good",
+      "klass": "good_win",
+      "failed_party_votes": 1,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "success",
+        "success"
+      ]
+    },
+    {
+      "game": "run_026",
+      "status": "completed",
+      "winner": "evil",
+      "klass": "evil_3fail",
+      "failed_party_votes": 1,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "fail"
+      ]
+    },
+    {
+      "game": "run_027",
+      "status": "completed",
+      "winner": "evil",
+      "klass": "evil_3fail",
+      "failed_party_votes": 4,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "fail"
+      ]
+    },
+    {
+      "game": "run_028",
+      "status": "completed",
+      "winner": "evil",
+      "klass": "evil_3fail",
+      "failed_party_votes": 0,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "fail"
+      ]
+    },
+    {
+      "game": "run_029",
+      "status": "completed",
+      "winner": "good",
+      "klass": "good_win",
+      "failed_party_votes": 1,
+      "quest_results": [
+        "success",
+        "success",
+        "success"
+      ]
+    },
+    {
+      "game": "run_030",
+      "status": "completed",
+      "winner": "good",
+      "klass": "good_win",
+      "failed_party_votes": 0,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "success",
+        "success"
+      ]
+    },
+    {
+      "game": "run_031",
+      "status": "completed",
+      "winner": "good",
+      "klass": "good_win",
+      "failed_party_votes": 2,
+      "quest_results": [
+        "success",
+        "success",
+        "fail",
+        "success"
+      ]
+    },
+    {
+      "game": "run_032",
+      "status": "completed",
+      "winner": "good",
+      "klass": "good_win",
+      "failed_party_votes": 1,
+      "quest_results": [
+        "success",
+        "success",
+        "success"
+      ]
+    },
+    {
+      "game": "run_033",
+      "status": "completed",
+      "winner": "evil",
+      "klass": "evil_3fail",
+      "failed_party_votes": 1,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "fail"
+      ]
+    },
+    {
+      "game": "run_034",
+      "status": "completed",
+      "winner": "evil",
+      "klass": "evil_3fail",
+      "failed_party_votes": 0,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "fail"
+      ]
+    },
+    {
+      "game": "run_035",
+      "status": "completed",
+      "winner": "evil",
+      "klass": "evil_3fail",
+      "failed_party_votes": 2,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "fail"
+      ]
+    },
+    {
+      "game": "run_036",
+      "status": "completed",
+      "winner": "evil",
+      "klass": "evil_3fail",
+      "failed_party_votes": 0,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "fail"
+      ]
+    },
+    {
+      "game": "run_037",
+      "status": "completed",
+      "winner": "good",
+      "klass": "good_win",
+      "failed_party_votes": 0,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "success",
+        "success"
+      ]
+    },
+    {
+      "game": "run_038",
+      "status": "completed",
+      "winner": "good",
+      "klass": "good_win",
+      "failed_party_votes": 2,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "success",
+        "success"
+      ]
+    },
+    {
+      "game": "run_039",
+      "status": "completed",
+      "winner": "good",
+      "klass": "good_win",
+      "failed_party_votes": 1,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "success",
+        "success"
+      ]
+    },
+    {
+      "game": "run_040",
+      "status": "completed",
+      "winner": "good",
+      "klass": "good_win",
+      "failed_party_votes": 1,
+      "quest_results": [
+        "success",
+        "success",
+        "success"
+      ]
+    },
+    {
+      "game": "run_041",
+      "status": "completed",
+      "winner": "good",
+      "klass": "good_win",
+      "failed_party_votes": 2,
+      "quest_results": [
+        "success",
+        "success",
+        "fail",
+        "success"
+      ]
+    },
+    {
+      "game": "run_042",
+      "status": "completed",
+      "winner": "evil",
+      "klass": "evil_3fail",
+      "failed_party_votes": 2,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "fail"
+      ]
+    },
+    {
+      "game": "run_043",
+      "status": "completed",
+      "winner": "evil",
+      "klass": "evil_3fail",
+      "failed_party_votes": 0,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "fail"
+      ]
+    },
+    {
+      "game": "run_044",
+      "status": "completed",
+      "winner": "good",
+      "klass": "good_win",
+      "failed_party_votes": 1,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "success",
+        "success"
+      ]
+    },
+    {
+      "game": "run_045",
+      "status": "completed",
+      "winner": "good",
+      "klass": "good_win",
+      "failed_party_votes": 2,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "success",
+        "success"
+      ]
+    },
+    {
+      "game": "run_046",
+      "status": "completed",
+      "winner": "good",
+      "klass": "good_win",
+      "failed_party_votes": 0,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "success",
+        "success"
+      ]
+    },
+    {
+      "game": "run_047",
+      "status": "completed",
+      "winner": "good",
+      "klass": "good_win",
+      "failed_party_votes": 0,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "success",
+        "success"
+      ]
+    },
+    {
+      "game": "run_048",
+      "status": "completed",
+      "winner": "evil",
+      "klass": "evil_3fail",
+      "failed_party_votes": 2,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "fail"
+      ]
+    },
+    {
+      "game": "run_049",
+      "status": "completed",
+      "winner": "good",
+      "klass": "good_win",
+      "failed_party_votes": 1,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "success",
+        "success"
+      ]
+    },
+    {
+      "game": "run_050",
+      "status": "completed",
+      "winner": "evil",
+      "klass": "evil_3fail",
+      "failed_party_votes": 4,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "fail"
+      ]
+    },
+    {
+      "game": "run_051",
+      "status": "completed",
+      "winner": "evil",
+      "klass": "evil_3fail",
+      "failed_party_votes": 0,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "fail"
+      ]
+    },
+    {
+      "game": "run_052",
+      "status": "completed",
+      "winner": "good",
+      "klass": "good_win",
+      "failed_party_votes": 0,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "success",
+        "success"
+      ]
+    },
+    {
+      "game": "run_053",
+      "status": "completed",
+      "winner": "evil",
+      "klass": "evil_3fail",
+      "failed_party_votes": 1,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "fail"
+      ]
+    },
+    {
+      "game": "run_054",
+      "status": "completed",
+      "winner": "evil",
+      "klass": "evil_3fail",
+      "failed_party_votes": 1,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "fail"
+      ]
+    },
+    {
+      "game": "run_055",
+      "status": "completed",
+      "winner": "evil",
+      "klass": "evil_3fail",
+      "failed_party_votes": 1,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "fail"
+      ]
+    },
+    {
+      "game": "run_056",
+      "status": "completed",
+      "winner": "good",
+      "klass": "good_win",
+      "failed_party_votes": 0,
+      "quest_results": [
+        "success",
+        "success",
+        "fail",
+        "success"
+      ]
+    },
+    {
+      "game": "run_057",
+      "status": "completed",
+      "winner": "good",
+      "klass": "good_win",
+      "failed_party_votes": 1,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "success",
+        "success"
+      ]
+    },
+    {
+      "game": "run_001",
+      "status": "completed",
+      "winner": "good",
+      "klass": "good_win",
+      "failed_party_votes": 0,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "success",
+        "success"
+      ]
+    },
+    {
+      "game": "run_002",
+      "status": "completed",
+      "winner": "good",
+      "klass": "good_win",
+      "failed_party_votes": 0,
+      "quest_results": [
+        "success",
+        "fail",
+        "success",
+        "success"
+      ]
+    },
+    {
+      "game": "run_003",
+      "status": "completed",
+      "winner": "good",
+      "klass": "good_win",
+      "failed_party_votes": 0,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "success",
+        "success"
+      ]
+    },
+    {
+      "game": "run_004",
+      "status": "completed",
+      "winner": "good",
+      "klass": "good_win",
+      "failed_party_votes": 1,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "success",
+        "success"
+      ]
+    },
+    {
+      "game": "run_005",
+      "status": "completed",
+      "winner": "good",
+      "klass": "good_win",
+      "failed_party_votes": 0,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "success",
+        "success"
+      ]
+    },
+    {
+      "game": "run_006",
+      "status": "completed",
+      "winner": "evil",
+      "klass": "evil_3fail",
+      "failed_party_votes": 4,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "fail"
+      ]
+    },
+    {
+      "game": "run_007",
+      "status": "completed",
+      "winner": "good",
+      "klass": "good_win",
+      "failed_party_votes": 0,
+      "quest_results": [
+        "success",
+        "fail",
+        "fail",
+        "success",
+        "success"
+      ]
+    }
+  ],
+  "new_good": 35,
+  "new_n": 62,
+  "c1": {
+    "good": 21,
+    "n": 90,
+    "rate": 0.23333333333333334
+  },
+  "c2": {
+    "good": 47,
+    "n": 92,
+    "rate": 0.5108695652173914,
+    "ci95": [
+      0.40872164791947896,
+      0.6130174825153037
+    ]
+  },
+  "z": -3.8695785583949442,
+  "p": 0.00010902364842597795,
+  "significant": true,
+  "loss_mode": {
+    "good_win": 35,
+    "evil_3fail": 27,
+    "evil_hammer": 0
+  }
+}
