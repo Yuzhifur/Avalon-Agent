@@ -133,6 +133,17 @@ via `daemonize.py` + `run_gate2.sh` (the hardened Gate-2 launcher: pre/post
 `.done` sentinel). Decision logs are archived to JSONL automatically by
 `tune_policy` (the phase-3 log-retention rule). Smoke = 1 game/cell first.
 
+**Smoke outcome (2026-07-09).** The smoke caught a real deadlock: with
+`GRAIL_NO_CHAT` nothing is ever said, so "message" never entered the per-turn
+action history and `agent_base`'s suggestion chain re-suggested it forever —
+`start_party_vote` was unreachable and the game cycled turns to the timeout.
+Fixed by having the no-chat branch fall through to the ripe party vote (same
+`this_leaders_turn` pacing as the chat flow). The re-smoked no-chat game
+completed in **5.0 minutes** with 0 player messages and a full quest structure
+(vs ~45 min for chat games). Persona assignment (all six voices, distinct,
+logged), Evil-side `factor_v3` loading, and the a2 policy-override env were
+all verified live in the other three smoke games.
+
 ```
 # win rates + z-tests vs C1/C2 + loss modes (+ a2-vs-a1 contrast)
 cd code/evaluation && python3 concluding_analysis.py phase3_concluding_runs/<ts> --json concluding_verdict.json

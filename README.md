@@ -35,6 +35,8 @@ The Phase-3 result is strong but **specific**: it is a *frozen-Evil, Good-detect
 
 **Likely next steps:** v3-vs-v3 self-play → human / mixed-population evaluation → a language-diversity + fingerprint-classifier experiment → self-play fine-tune. Full discussion, including the language-fingerprinting analysis, a menu of solutions with difficulty estimates, and a four-layer evaluation framework: **[docs/limitations_and_next_steps.md](docs/limitations_and_next_steps.md)**.
 
+**Concluding experiments (2026-07-09).** The two highest-priority items above were executed as the project's closing experiments — **[docs/concluding_experiments.md](docs/concluding_experiments.md)**: (1) **v3-vs-v3 self-play**, upgrading frozen Evil to the same `factor_v3` detector Good uses (its table-perception mirror was still v2 during Gate-2), plus a variant with Evil's policy retuned to starve the rejected-proposal signal the detector feeds on; and (2) the **language-diversity + fingerprint experiment** — a six-persona, role-symmetric prompt-variant bank, a no-chat ablation, and a stdlib fingerprint classifier. One result is already definitive: on templated Gate-2 chat, a plain naive-Bayes classifier identifies the evil players from public messages at **99.7% accuracy (AUC 1.000)** per player-game — the speech layer leaks more role signal than the entire mechanical game record (structured-detector AUC 0.722), quantifying the template-fingerprint concern.
+
 ## Code
 
 The `code/` directory contains the game engine and agent implementations.
