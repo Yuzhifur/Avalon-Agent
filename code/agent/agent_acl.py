@@ -475,8 +475,18 @@ class ACLAgent(BaseAgent):
             return {"success": True, "action": "message", "data": {"msg": message}}
         elif (taken_action == "message"):
             if self._no_chat:
-                # no-chat cell: discussion is disabled; pass the turn instead
-                # (end_turn is always a valid server action)
+                # no-chat cell: nothing is ever said, so "message" never enters
+                # the turn history and the suggestion layer would re-suggest it
+                # forever, starving start_party_vote (smoke-run deadlock). Do
+                # what the suggestion chain would do without the message
+                # option: start the ripe party vote, otherwise pass the turn.
+                if ("start_party_vote" in task.task
+                        and self.as_heuristic["this_leaders_turn"] > 4):
+                    self.vote_next = False
+                    self.debug("NO_CHAT: starting party vote instead of chatting\n")
+                    self._last_action.append("start_party_vote")
+                    print(" --> Starting party vote")
+                    return {"success": True, "action": "start_party_vote", "data": {}}
                 self.debug("NO_CHAT: ending turn instead of chatting\n")
                 time.sleep(2)
                 return {"success": True, "action": "end_turn"}
