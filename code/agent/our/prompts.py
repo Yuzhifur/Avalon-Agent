@@ -1,4 +1,7 @@
 from dataclasses import dataclass
+import hashlib
+import os
+import random
 
 
 @dataclass
@@ -107,3 +110,99 @@ class PromptHint:
         "Example output:\n"
         "{{'Sam': 'increase', 'Paul': 'increase', 'Luca': 'same', 'Jane': 'decrease', 'Kira': 'same', 'Mia': 'decrease'}}\n"
     )
+
+
+# =============================================================================
+# Phase-3 concluding experiment: persona / prompt-variant bank.
+#
+# docs/limitations_and_next_steps.md §4-5: the single shared `output_style`
+# gives every agent the same rhythm, length, and argument pattern — an easily
+# spotted template fingerprint — and agents almost never bluff, hedge, joke,
+# or push weak arguments. The bank below is the "least risky first move"
+# (prompt-variant bank + persistent personas): each persona is a ROLE-SYMMETRIC
+# replacement for `output_style` only. The strategic instructions surrounding
+# it (including the Evil cover/vote-alignment wording) are byte-identical to
+# the default template, so any behavior change is attributable to the public
+# speaking voice, not to changed strategy content.
+#
+# Off by default: agents use PromptHint unchanged unless
+# GRAIL_PROMPT_PERSONA_BANK is truthy (the ACLAgent reads it per game).
+# =============================================================================
+
+PERSONA_STYLES = {
+    # ~the default voice, plus an explicit license for human-messy behavior.
+    "casual": (
+        "Now, respond in the game chat as if you are a college student, typing informally (e.g., using abbreviations, casual language, and minimal punctuation). Do not use overly formal or structured responses and do not use emojis. Real players are not perfectly consistent: it is fine to hedge, joke, push a weak read, or change your mind when it fits the conversation. Shorter messages are more effective; don't use more than a few sentences and prefer fewer when possible.\n\n"
+    ),
+    "terse": (
+        "Now, respond in the game chat in a very terse, clipped voice: mostly lowercase, minimal punctuation, no emojis. Usually one short sentence or fragment (roughly 2 to 12 words). State your point without explaining everything; it is fine to leave your reasoning implicit, hedge with a single word, or fire off a quick gut read.\n\n"
+    ),
+    "analytical": (
+        "Now, respond in the game chat in a precise, analytical voice: complete sentences, no emojis, and refer to concrete public events (specific votes, proposals, quest outcomes) when you argue. Stay brief -- two or three tight sentences at most -- and qualify your confidence in words (e.g. 'weak read', 'fairly sure') instead of sounding absolute.\n\n"
+    ),
+    "hedger": (
+        "Now, respond in the game chat as a hesitant, self-questioning player, typing informally and without emojis. Hedge often (e.g. 'idk', 'maybe', 'could be wrong'), ask short questions, and feel free to change your mind mid-thought or admit you have no read. Keep messages short and a little scattered; showing real uncertainty is fine even when you do hold an opinion.\n\n"
+    ),
+    "blunt": (
+        "Now, respond in the game chat as a blunt, pushy player, typing informally and without emojis. Make direct calls and push your reads hard even when the evidence is thin -- projecting more confidence than you actually have is fine. Keep it punchy: one or two short sentences, no hedging, no apologies.\n\n"
+    ),
+    "playful": (
+        "Now, respond in the game chat as the table's joker: informal, no emojis, and light sarcasm, playful jabs, or a quick aside are welcome as long as an actual point is buried in there. Keep it to a couple of short sentences and don't let the bit completely replace the read.\n\n"
+    ),
+}
+
+_PERSONA_TEMPLATE_ATTRS = (
+    "intro",
+    "output_style",
+    "generate_message_from_log_good",
+    "generate_proposal_message_good",
+    "confirm_proposal_message_good",
+    "non_disclosure_evil",
+    "intro_evil",
+    "generate_message_from_log_evil",
+    "generate_proposal_message_evil",
+    "confirm_proposal_message_evil",
+    "get_vibes_player_agreement",
+)
+
+
+class PersonaPromptHint:
+    """PromptHint clone with `output_style` swapped for one persona voice.
+
+    Templates are copied from PromptHint with a literal substring replacement
+    of the default `output_style` (which was concatenated into them at class
+    definition), so everything else — including the vibes template, which
+    contains no output_style — is byte-identical to the default.
+    """
+
+    def __init__(self, persona_key):
+        style = PERSONA_STYLES[persona_key]
+        self.persona = persona_key
+        for attr in _PERSONA_TEMPLATE_ATTRS:
+            template = getattr(PromptHint, attr)
+            setattr(self, attr, template.replace(PromptHint.output_style, style))
+
+
+def persona_bank_enabled():
+    """GRAIL_PROMPT_PERSONA_BANK truthy -> per-game persona assignment."""
+    return os.environ.get("GRAIL_PROMPT_PERSONA_BANK", "").strip().lower() in (
+        "1", "true", "yes", "on")
+
+
+def assign_personas(game_id, player_names):
+    """Deterministic persona assignment for one game: every agent computes the
+    identical mapping locally (seeded by game_id), and the six players get six
+    DISTINCT personas ("six distinct speakers instead of six copies").
+
+    Returns {lowercase player name: persona key}.
+    """
+    keys = sorted(PERSONA_STYLES)
+    seed = int(hashlib.sha256(str(game_id).encode("utf-8")).hexdigest()[:16], 16)
+    shuffled = keys[:]
+    random.Random(seed).shuffle(shuffled)
+    ordered = sorted(str(name).lower() for name in player_names)
+    return {name: shuffled[i % len(shuffled)] for i, name in enumerate(ordered)}
+
+
+def build_prompt_hint(persona_key):
+    return PersonaPromptHint(persona_key)
