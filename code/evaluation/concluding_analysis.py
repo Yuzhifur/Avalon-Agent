@@ -92,9 +92,10 @@ def main():
                       f" {'(significant)' if p < 0.05 else '(ns)'}")
         report[cell] = entry
 
-    # direct a2-vs-a1 contrast (the co-adaptation escalation)
+    # direct a2-vs-a1 contrast (the co-adaptation escalation); needs real n
     a1, a2 = report.get("a1_v3_evil"), report.get("a2_v3_evil_quiet")
-    if a1 and a2 and a1.get("completed") and a2.get("completed"):
+    if (a1 and a2 and a1.get("completed", 0) >= 10
+            and a2.get("completed", 0) >= 10):
         z, p, _, _ = two_proportion_z(
             a1["good_wins"], a1["completed"], a2["good_wins"], a2["completed"])
         report["a2_vs_a1"] = {"z": z, "p": p}

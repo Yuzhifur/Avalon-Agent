@@ -161,15 +161,31 @@ exactly as Gate-1/Gate-2 pooled.
 
 ## Results
 
-**RUNS IN FLIGHT — this section is filled by `concluding_analysis.py` /
-`fingerprint_classifier.py` output as cells complete.**
+**a1/b1/a2 IN FLIGHT — remaining rows are filled by `concluding_analysis.py`
+/ `fingerprint_classifier.py` output as cells complete.**
 
 | cell | Good wins | rate | 95% CI | vs C2 (51.1%) | vs C1 (23.3%) | hammer |
 |---|---|---|---|---|---|---|
 | a1_v3_evil | — | — | — | — | — | — |
 | a2_v3_evil_quiet | — | — | — | — | — | — |
 | b1_diversified_chat | — | — | — | — | — | — |
-| b2_no_chat | — | — | — | — | — | — |
+| **b2_no_chat** (done 2026-07-09) | **19/43** | **44.2%** | [29.3%, 59.0%] | z = +0.75, p = 0.45 (ns) | z = −2.45, **p = 0.014** | **0** |
+
+**b2 verdict (first completed cell).** With the speech layer off entirely (no
+messages, no vibes), the promoted Good still wins **44.2%** — statistically
+indistinguishable from the with-chat C2 (51.1%) and still roughly **double**
+the phase-2 baseline (significantly above C1). Zero hammer auto-wins even
+with zero discussion. Per the pre-registered grid: **the Gate-2 win-rate
+result is essentially structural** — factor_v3 + recalibrated thresholds do
+the work; templated chat + vibes contribute at most a modest additive bump
+(point estimate ~7 pts, CI too wide to pin) to self-play outcomes. This also
+sharpens the fingerprint concern's practical reading: the speech layer leaks
+role information (baseline AUC 1.000) while adding little self-play win rate
+— high blind-side risk, low measured reward, in this ecology. (Ops: 42/45
+full-run games + the re-smoke game scored; 3 first-batch games were excluded
+as technical failures — a startup **registration race** when 12 compose-ups
+fire at once, agents never initialized, no game ever started — plus the one
+pre-fix deadlocked smoke game. No-chat games run ~4–6 min.)
 
 | fingerprint task | baseline (templated) | diversified (b1) |
 |---|---|---|
