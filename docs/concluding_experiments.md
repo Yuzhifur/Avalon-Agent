@@ -168,7 +168,7 @@ exactly as Gate-1/Gate-2 pooled.
 |---|---|---|---|---|---|---|
 | **a1_v3_evil** (done 2026-07-10) | **23/46** | **50.0%** | [35.6%, 64.4%] | z = +0.12, p = 0.90 (ns) | z = −3.14, **p = 0.0017** | **0** |
 | a2_v3_evil_quiet | — | — | — | — | — | — |
-| b1_diversified_chat | — | — | — | — | — | — |
+| **b1_diversified_chat** (done 2026-07-10) | **24/44** | **54.5%** | [39.8%, 69.3%] | z = −0.38, p = 0.71 (ns) | z = −3.59, **p = 0.0003** | **0** |
 | **b2_no_chat** (done 2026-07-09) | **19/43** | **44.2%** | [29.3%, 59.0%] | z = +0.75, p = 0.45 (ns) | z = −2.45, **p = 0.014** | **0** |
 
 **a1 verdict (the headline cell).** Upgrading Evil's belief model to the very
@@ -199,11 +199,30 @@ as technical failures — a startup **registration race** when 12 compose-ups
 fire at once, agents never initialized, no game ever started — plus the one
 pre-fix deadlocked smoke game. No-chat games run ~4–6 min.)
 
-| fingerprint task | baseline (templated) | diversified (b1) |
+| fingerprint task | baseline (templated, 62 games) | diversified (b1, 44 games) |
 |---|---|---|
-| role per player-game acc / AUC | 0.997 / 1.000 | — |
-| role per message acc / AUC | 0.749 / 0.769 | — |
-| persona id acc (want high) | n/a | — |
+| role per player-game acc / AUC | 0.997 / 1.000 | **0.962 / 0.997** |
+| role per message acc / AUC | 0.749 / 0.769 | 0.742 / 0.768 |
+| persona id acc (want high; majority 0.279) | n/a | **0.575** |
+| style: hedge / question rate, type-token | 0.128 / 0.062, 0.014 | 0.153 / **0.114**, **0.031** |
+
+(Condition classifier baseline-vs-diversified: acc 0.722 / AUC 0.788 — the
+intervention measurably changed the text distribution.)
+
+**b1 verdict.** The exact pre-registered case "*b1 ≈ C2 with role-AUC ≈ 1
+persisting*" obtained. The persona bank **worked as an intervention**: the
+six voices are identifiable well above chance (0.575 vs 0.279 majority),
+question rate nearly doubled, lexical diversity doubled, and a condition
+classifier separates the corpora (AUC 0.788) — all at **zero strategic
+cost** (54.5% ≈ C2's 51.1%). But the **role fingerprint survived intact**
+(per-player-game AUC 1.000 → 0.997): evil players remain essentially
+perfectly identifiable from chat. Conclusion: the fingerprint does not live
+in the surface voice — it lives in **template-shaped content** (what and
+whom agents argue for: Evil's plausible-support of evil-containing teams,
+deflection patterns, vote-aligned justifications). The next lever, per §5 of
+the limitations doc, is the **speech-act planner / role-symmetric content /
+explicit deception policy** tier — style banks alone are cosmetic against a
+listening opponent.
 
 ## Interpretation grid (pre-registered, so hindsight can't move the goalposts)
 
