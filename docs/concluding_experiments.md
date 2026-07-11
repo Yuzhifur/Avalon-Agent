@@ -161,15 +161,20 @@ exactly as Gate-1/Gate-2 pooled.
 
 ## Results
 
-**a1/b1/a2 IN FLIGHT — remaining rows are filled by `concluding_analysis.py`
-/ `fingerprint_classifier.py` output as cells complete.**
+**ALL FOUR CELLS COMPLETE (2026-07-10).** 184 games launched (45/cell + the
+4 smoke games), 170 scored, 14 excluded as technical failures + 1 pre-fix
+smoke game (see ops note). Machine-readable verdicts:
+`code/evaluation/phase3_concluding_verdict.json`,
+`code/evaluation/fingerprint_report.json`.
 
 | cell | Good wins | rate | 95% CI | vs C2 (51.1%) | vs C1 (23.3%) | hammer |
 |---|---|---|---|---|---|---|
-| **a1_v3_evil** (done 2026-07-10) | **23/46** | **50.0%** | [35.6%, 64.4%] | z = +0.12, p = 0.90 (ns) | z = −3.14, **p = 0.0017** | **0** |
-| a2_v3_evil_quiet | — | — | — | — | — | — |
-| **b1_diversified_chat** (done 2026-07-10) | **24/44** | **54.5%** | [39.8%, 69.3%] | z = −0.38, p = 0.71 (ns) | z = −3.59, **p = 0.0003** | **0** |
-| **b2_no_chat** (done 2026-07-09) | **19/43** | **44.2%** | [29.3%, 59.0%] | z = +0.75, p = 0.45 (ns) | z = −2.45, **p = 0.014** | **0** |
+| **a1_v3_evil** | **23/46** | **50.0%** | [35.6%, 64.4%] | z = +0.12, p = 0.90 (ns) | z = −3.14, **p = 0.0017** | **0** |
+| **a2_v3_evil_quiet** | **19/37** | **51.4%** | [35.2%, 67.5%] | z = −0.03, p = 0.98 (ns) | z = −3.09, **p = 0.0020** | **0** |
+| **b1_diversified_chat** | **24/44** | **54.5%** | [39.8%, 69.3%] | z = −0.38, p = 0.71 (ns) | z = −3.59, **p = 0.0003** | **0** |
+| **b2_no_chat** | **19/43** | **44.2%** | [29.3%, 59.0%] | z = +0.75, p = 0.45 (ns) | z = −2.45, **p = 0.014** | **0** |
+
+Direct co-adaptation contrast a2-vs-a1: z = −0.12, p = 0.90 (ns).
 
 **a1 verdict (the headline cell).** Upgrading Evil's belief model to the very
 same `factor_v3` checkpoint Good uses moves Good's win rate from 51.1% to
@@ -182,6 +187,22 @@ clean-team rejects, bloc votes, and proposal habits), not by a
 miscalibrated belief mirror — better self-knowledge cannot hide behavior the
 policy keeps producing. The remaining co-adaptation question is therefore
 squarely about the policy, which is what a2 tests.
+
+**a2 verdict (the policy counter-adaptation).** Retuning Evil's policy to
+starve the detector's food — cover-approving 75% of clean teams, dropping the
+early clean-team-reject habit, splitting bloc votes, distancing more — moves
+nothing: **51.4%** Good, indistinguishable from C2 (p = 0.98) and from a1
+(p = 0.90). Per the pre-registered grid: *quieting starves Evil's own win
+pressure as much as the detector* — the rejection dynamics factor_v3 reads
+are the same mechanism Evil needs to keep good teams off quests, so
+suppressing the signal suppresses the sabotage. The default Evil policy was
+already near its exploitability frontier against this detector. (This also
+retires the phase-2 "evil knobs are inert" caveat properly: at n = 37+ per
+arm against a real detector, the knobs are *still* inert — now for a
+mechanistic reason rather than for lack of power.) **Censoring caveat:** 9 of
+46 a2 games timed out mid-game (see ops note) — but even imputing all nine
+as Evil wins gives 19/46 = 41.3%, still not significantly below C2
+(z ≈ −1.2), so the no-claw-back conclusion survives worst-case censoring.
 
 **b2 verdict (first completed cell).** With the speech layer off entirely (no
 messages, no vibes), the promoted Good still wins **44.2%** — statistically
@@ -252,19 +273,60 @@ listening opponent.
   language-layer change must be win-rate-gated, and Gate-2's number is partly
   a language-environment number.
 
+## Ops note (final accounting)
+
+184 games were launched: 45/cell in the full campaign
+(`phase3_concluding_runs/20260709T234200Z`) plus the 4 smoke games. 170
+scored. The 15 exclusions, all technical (no game outcome recorded, the same
+exclusion class as Gate-2's batch-1 hangs):
+
+- **3 × startup registration race** (b2 batch 1): 12 simultaneous compose-ups
+  left one agent per game half-registered (`port: None`); agents never
+  constructed, no game ever started. Killed manually after diagnosis.
+- **11 × 90-min per-game timeout** (2 b1, 9 a2): games stalled mid-quest with
+  low message counts — the LLM-hang class, clustered late in the campaign.
+  Completed a2 games are no longer than a1's (median 42 vs 41 min), so this
+  is an API/throughput episode, not an a2 design effect; the a2 verdict above
+  carries the worst-case-imputation bound.
+- **1 × pre-fix no-chat smoke game** (the deadlock the smoke caught).
+
+Zero hammer auto-wins in all 170 scored games — flat-0.45/penalties-off
+remains hammer-safe in every tested environment. Campaign wall-clock ~20 h at
+concurrency 12 (each timeout straggler holds a slot for 90 min; the b2-first
+ordering did defuse the LLM thundering herd — the a1/b1 first batches had 0/2
+hangs vs Gate-2's 5/15). DeepSeek spend: ~$0.08/game, ~$12 for the campaign.
+
 ## What this concludes (and what it leaves open)
 
-With these four cells the project's experimental arc closes as: *diagnose*
-(phase 2: Evil ~77%, Good detection at chance) → *rebuild* (phase 3: proposal-
-card detector, AUC 0.598 → 0.722, thresholds recalibrated) → *confirm live*
-(Gate-2: 23.3% → 51.1%, hammer-safe) → ***stress the two conditionals*** (this
-document: opponent co-adaptation, language environment) → and quantify the
-speech-layer fingerprint that self-play had been silently tolerating (baseline
-role AUC 1.000 per player-game).
+The project's experimental arc closes as: *diagnose* (phase 2: Evil ~77%,
+Good detection at chance) → *rebuild* (phase 3: proposal-card detector, AUC
+0.598 → 0.722, thresholds recalibrated) → *confirm live* (Gate-2:
+23.3% → 51.1%, hammer-safe) → ***stress the two conditionals*** (this
+document). The stress tests returned an unusually consistent answer:
+
+1. **The detector rebuild is the result, and it is robust in-ecology.** Good
+   holds 44–55% (every cell ns vs C2's 51.1%, every cell significantly above
+   C1's 23.3%) whether Evil gets the same v3 detector (a1), Evil's policy is
+   retuned to starve the rejection signal (a2), the speech layer is
+   diversified (b1), or chat is removed outright (b2). The rejection dynamics
+   Good now reads are load-bearing for *Evil's own win condition* — Evil
+   cannot stop producing them without giving up sabotage pressure. Within
+   GRAIL-vs-GRAIL self-play, phase 3's gain is not an artifact of the frozen
+   opponent, and not an artifact of the templated language environment.
+2. **The language layer is a transfer liability, not a self-play one.** Chat
+   contributes little win rate in this ecology (b2), but templated speech
+   identifies the evil players essentially perfectly (AUC 1.000), and — the
+   b1 finding — the fingerprint is **content-borne**: a demonstrably working
+   six-persona voice bank (personas identifiable at 0.575, style measurably
+   shifted, zero strategic cost) barely dents role identifiability
+   (AUC 0.997). Any opponent that *listens* — a human, or an LLM agent that
+   reads chat — gets the roles for free; human-transfer work must therefore
+   fix *what* agents say (speech-act planning, role-symmetric content, an
+   explicit deception policy), not how they phrase it.
 
 Still open beyond this (unchanged from the limitations doc, in priority
-order): human / mixed-population transfer (the original paper's claim), the
-self-play fine-tune (`*_ft`), the proposer-free retrain, C3/C4 forced-fifth
-cells, richer speech-act planning if b1 shows the fingerprint lives in
-content, and LLM/human blind panels to complement the classifier (the §6
-layer-1 metric we could not run without human raters).
+order): human / mixed-population transfer (the original paper's claim) — now
+with the concrete warning above; the self-play fine-tune (`*_ft`); the
+proposer-free retrain; C3/C4 forced-fifth cells; the content-level speech
+redesign that b1 motivates; and LLM/human blind panels to complement the
+classifier (the §6 layer-1 metric we could not run without human raters).
