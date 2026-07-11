@@ -180,6 +180,8 @@ code/evaluation/parallel_runs/
 code/evaluation/.parallel_workspaces/
 code/evaluation/stage_b_runs/
 code/evaluation/phase3_live_runs/
+code/evaluation/phase3_concluding_runs/
+code/evaluation/phase3_concluding_smoke/
 
 # Phase-3 generated data (corpora/datasets are rebuilt from sources by
 # build_corpus.py; stats and splits ARE committed)

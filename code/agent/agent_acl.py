@@ -10,7 +10,12 @@ from our.policy_models.consistency import MessageConsistencyChecker
 from our.proposal_cards import cards_from_history
 import os
 import csv
-from our.prompts import PromptHint
+from our.prompts import (
+    PromptHint,
+    assign_personas,
+    build_prompt_hint,
+    persona_bank_enabled,
+)
 
 
 
@@ -155,6 +160,13 @@ class ACLAgent(BaseAgent):
         self._turn = 0
         self._prompt_hint = PromptHint
         self.game_log = []
+
+        # Phase-3 concluding cells: GRAIL_NO_CHAT truthy runs the game with the
+        # speech layer off (no proposal/discussion messages; mechanics only).
+        self._no_chat = os.environ.get("GRAIL_NO_CHAT", "").strip().lower() in (
+            "1", "true", "yes", "on")
+        if self._no_chat:
+            self.debug("NO_CHAT enabled: speech layer disabled for this game\n")
 
         self.vote_next = False # this is used to check if the agent has to vote for the party
         self._forced_fifth_pending = False # forced-fifth hammer variant marker seen
@@ -310,6 +322,17 @@ class ACLAgent(BaseAgent):
         self.debug(f"Known evil teammates: {self._evil_teammates}\n")
         self.policy_selector.set_identity(self_name, self._evil_teammates)
 
+        # Phase-3 concluding (language-diversity cell): once the roster is
+        # known, swap in this game's persona voice. Every agent computes the
+        # same game-seeded assignment, so the six players speak with six
+        # distinct personas. Default (env unset) keeps PromptHint unchanged.
+        if persona_bank_enabled():
+            personas = assign_personas(self._gid, self.game.players_to_index.keys())
+            persona = personas[self._name.lower()]
+            self._prompt_hint = build_prompt_hint(persona)
+            self.debug(f"PROMPT_PERSONA {persona}\n")
+            self.log(f"PROMPT_PERSONA {persona}\n")
+
         return {}
     
 
@@ -422,13 +445,18 @@ class ACLAgent(BaseAgent):
                         party.append(i)
                         break
             self.log(f"current proposed party: {self.game.current_proposed_party}  and party is {party}\n")
-            message = self.make_prompt_propose_party(party)
-            message = self._repair_and_record_message(
-                message,
-                mode="proposal",
-                party=party,
-            )
-            self._messages.append(message)
+            if self._no_chat:
+                # no-chat cell: propose mechanically, queue no justification
+                # message (the server rejects empty messages, so send none)
+                self.debug("NO_CHAT: skipping proposal message\n")
+            else:
+                message = self.make_prompt_propose_party(party)
+                message = self._repair_and_record_message(
+                    message,
+                    mode="proposal",
+                    party=party,
+                )
+                self._messages.append(message)
             self.self_proposed_party = party
             party = sorted([self.game.players_to_index[i] for i in party])
             self._last_action.append("propose_party")
@@ -446,6 +474,22 @@ class ACLAgent(BaseAgent):
             self.debug(f"+++++++ Agent is Sending message: {message}\n")
             return {"success": True, "action": "message", "data": {"msg": message}}
         elif (taken_action == "message"):
+            if self._no_chat:
+                # no-chat cell: nothing is ever said, so "message" never enters
+                # the turn history and the suggestion layer would re-suggest it
+                # forever, starving start_party_vote (smoke-run deadlock). Do
+                # what the suggestion chain would do without the message
+                # option: start the ripe party vote, otherwise pass the turn.
+                if ("start_party_vote" in task.task
+                        and self.as_heuristic["this_leaders_turn"] > 4):
+                    self.vote_next = False
+                    self.debug("NO_CHAT: starting party vote instead of chatting\n")
+                    self._last_action.append("start_party_vote")
+                    print(" --> Starting party vote")
+                    return {"success": True, "action": "start_party_vote", "data": {}}
+                self.debug("NO_CHAT: ending turn instead of chatting\n")
+                time.sleep(2)
+                return {"success": True, "action": "end_turn"}
             self.debug(f"------> selected action: message from condition 2\n")
             self.update_predictions_based_on_chat(None)
             self._last_action.append("message")

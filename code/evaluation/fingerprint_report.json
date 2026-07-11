@@ -1,0 +1,62 @@
+{
+  "baseline": {
+    "style": {
+      "games": 62,
+      "messages": 13063,
+      "messages_per_game": 210.7,
+      "words_per_message_mean": 10.66,
+      "words_per_message_p90": 18,
+      "hedge_rate": 0.128,
+      "question_rate": 0.062,
+      "type_token_ratio": 0.014
+    },
+    "role_per_message": {
+      "n": 13063,
+      "accuracy": 0.7492918931332772,
+      "majority_baseline": 0.707417897879507,
+      "auc": 0.7694205107479799
+    },
+    "role_per_player_game": {
+      "n": 372,
+      "accuracy": 0.9973118279569892,
+      "majority_baseline": 0.6666666666666666,
+      "auc": 1.0
+    }
+  },
+  "diversified": {
+    "style": {
+      "games": 44,
+      "messages": 8389,
+      "messages_per_game": 190.7,
+      "words_per_message_mean": 10.16,
+      "words_per_message_p90": 18,
+      "hedge_rate": 0.153,
+      "question_rate": 0.114,
+      "type_token_ratio": 0.031
+    },
+    "role_per_message": {
+      "n": 8389,
+      "accuracy": 0.7422815591846466,
+      "majority_baseline": 0.7172487781618786,
+      "auc": 0.7684639516311429
+    },
+    "role_per_player_game": {
+      "n": 264,
+      "accuracy": 0.9621212121212122,
+      "majority_baseline": 0.6666666666666666,
+      "auc": 0.9973527892561983
+    },
+    "persona": {
+      "n": 8389,
+      "accuracy": 0.5752771486470378,
+      "majority_baseline": 0.27941351770175227,
+      "auc": null
+    }
+  },
+  "condition_baseline_vs_diversified": {
+    "n": 21452,
+    "accuracy": 0.721797501398471,
+    "majority_baseline": 0.6089408912921872,
+    "auc": 0.7877549537640959
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "comment": "Phase-3 CONCLUDING cells (docs/limitations_and_next_steps.md \u00a77 items 1 and 3). Every cell keeps the promoted Good exactly as Gate-2's C2 (factor_v3 Track A + flat-0.45 reject thresholds + behavior-penalties off + vibes ON) so results are directly comparable to C2 = 47/92 = 51.1% and C1 = 21/90 = 23.3%. Cell order matters: the executor drains candidates in order. b2 (LLM-free, ~5 min/game) runs FIRST \u2014 it fail-fasts the harness and its finish times stagger the LLM games' first calls, defusing the DeepSeek batch-1 thundering herd that hung 5/15 Gate-2 games; the headline a1 cell follows. a1: Evil's belief model (its mirror of how the table perceives players, feeding blend-in proposals, teammate distancing, and the public cover plan) upgraded factor_v2 -> factor_v3 \u2014 the co-adaptation/equilibrium probe. a2: same, plus an Evil policy retuned to STARVE the rejection signal factor_v3 feeds on (approve clean teams more, stop early clean-team rejects, split bloc votes, distance more) \u2014 rejected-proposal dynamics carry most of the self-play detection signal (AUC 0.722 -> 0.539 without them), so a quieter Evil is the natural counter-adaptation. b1: frozen Evil, persona/variant bank ON (GRAIL_PROMPT_PERSONA_BANK) \u2014 does the detector gain survive a diversified speech layer, and does the role fingerprint drop (see fingerprint_classifier.py)? b2: frozen Evil, speech layer OFF (GRAIL_NO_CHAT, vibes off too since there is no chat to read) \u2014 isolates how much of the win-rate result depends on language at all. Launch: setsid/daemonized bash code/evaluation/run_gate2.sh --grid evaluation/phase3_concluding.json --runs 45 --concurrency 12 --output evaluation/phase3_concluding_runs --tag concluding",
+  "candidates": [
+    {
+      "name": "b2_no_chat",
+      "group": "exp_b_language",
+      "side": "good",
+      "overrides": {
+        "good": {
+          "reject_thresholds": {
+            "1": 0.45,
+            "2": 0.45,
+            "3": 0.45,
+            "4": 0.45,
+            "5": 0.45
+          },
+          "failed_quest_member_penalty": 0.0,
+          "approved_failed_quest_penalty": 0.0,
+          "proposed_failed_quest_penalty": 0.0,
+          "rejected_successful_quest_penalty": 0.0,
+          "rejected_proposal_leader_penalty": 0.0,
+          "approved_rejected_proposal_penalty": 0.0
+        }
+      },
+      "environment": {
+        "GRAIL_BELIEF_MODEL_GOOD": "factor_v3:v4_trackA_proavalon",
+        "GRAIL_BELIEF_MODEL_EVIL": "factor_v2",
+        "GRAIL_NO_CHAT": "1",
+        "GRAIL_DISABLE_VIBES": "1"
+      }
+    },
+    {
+      "name": "a1_v3_evil",
+      "group": "exp_a_v3_vs_v3",
+      "side": "good",
+      "overrides": {
+        "good": {
+          "reject_thresholds": {
+            "1": 0.45,
+            "2": 0.45,
+            "3": 0.45,
+            "4": 0.45,
+            "5": 0.45
+          },
+          "failed_quest_member_penalty": 0.0,
+          "approved_failed_quest_penalty": 0.0,
+          "proposed_failed_quest_penalty": 0.0,
+          "rejected_successful_quest_penalty": 0.0,
+          "rejected_proposal_leader_penalty": 0.0,
+          "approved_rejected_proposal_penalty": 0.0
+        }
+      },
+      "environment": {
+        "GRAIL_BELIEF_MODEL_GOOD": "factor_v3:v4_trackA_proavalon",
+        "GRAIL_BELIEF_MODEL_EVIL": "factor_v3:v4_trackA_proavalon"
+      }
+    },
+    {
+      "name": "b1_diversified_chat",
+      "group": "exp_b_language",
+      "side": "good",
+      "overrides": {
+        "good": {
+          "reject_thresholds": {
+            "1": 0.45,
+            "2": 0.45,
+            "3": 0.45,
+            "4": 0.45,
+            "5": 0.45
+          },
+          "failed_quest_member_penalty": 0.0,
+          "approved_failed_quest_penalty": 0.0,
+          "proposed_failed_quest_penalty": 0.0,
+          "rejected_successful_quest_penalty": 0.0,
+          "rejected_proposal_leader_penalty": 0.0,
+          "approved_rejected_proposal_penalty": 0.0
+        }
+      },
+      "environment": {
+        "GRAIL_BELIEF_MODEL_GOOD": "factor_v3:v4_trackA_proavalon",
+        "GRAIL_BELIEF_MODEL_EVIL": "factor_v2",
+        "GRAIL_PROMPT_PERSONA_BANK": "1"
+      }
+    },
+    {
+      "name": "a2_v3_evil_quiet",
+      "group": "exp_a_v3_vs_v3",
+      "side": "good",
+      "overrides": {
+        "good": {
+          "reject_thresholds": {
+            "1": 0.45,
+            "2": 0.45,
+            "3": 0.45,
+            "4": 0.45,
+            "5": 0.45
+          },
+          "failed_quest_member_penalty": 0.0,
+          "approved_failed_quest_penalty": 0.0,
+          "proposed_failed_quest_penalty": 0.0,
+          "rejected_successful_quest_penalty": 0.0,
+          "rejected_proposal_leader_penalty": 0.0,
+          "approved_rejected_proposal_penalty": 0.0
+        }
+      },
+      "environment": {
+        "GRAIL_BELIEF_MODEL_GOOD": "factor_v3:v4_trackA_proavalon",
+        "GRAIL_BELIEF_MODEL_EVIL": "factor_v3:v4_trackA_proavalon",
+        "GRAIL_POLICY_OVERRIDES_EVIL": "{\"evil\":{\"clean_team_cover_approve_rate\":0.75,\"clean_team_reject_through_quest\":1,\"evil_vote_split_rate\":0.5,\"teammate_distance_rate\":0.5}}"
+      }
+    }
+  ]
+}
